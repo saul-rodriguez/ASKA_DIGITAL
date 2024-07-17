@@ -1,0 +1,1477 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+Options:	
+Date:		Mon Jul 15 10:42:03 2024
+Host:		phoenix (x86_64 w/Linux 3.10.0-1160.105.1.el7.x86_64) (7cores*7cpus*11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz 16384KB)
+OS:		CentOS Linux 7 (Core)
+
+License:
+		[10:42:03.088401] Configured Lic search path (21.01-s002): 3000@lic08.ug.kth.se
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (34 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 23.10 fill procedures
+<CMD> win
+<CMD> setOaxMode -compressLevel 0
+<CMD> setOaxMode -allowBitConnection true
+<CMD> setOaxMode -allowTechUpdate false
+<CMD> setOaxMode -updateMode true
+<CMD> setDesignMode -process 180
+##  Process: 180           (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+<CMD> setViaGenMode -symmetrical_via_only true
+<CMD> set_table_style -no_frame_fix_width
+<CMD> set_global timing_report_enable_auto_column_width true
+<CMD> setMultiCpuUsage -localCpu 4
+<CMD> set init_gnd_net gnd3i
+<CMD> set init_verilog ../genus/genus_output/dig_aska_synth.v
+<CMD> set init_mmmc_file xh018_ji3v.view
+<CMD> set init_oa_ref_lib {D_CELLS_JI3V ASKA_DIG}
+<CMD> set init_pwr_net vdd3i
+<CMD> init_design
+#% Begin Load MMMC data ... (date=07/15 10:47:12, mem=824.2M)
+#% End Load MMMC data ... (date=07/15 10:47:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=824.9M, current mem=824.9M)
+min_rc max_rc typ_rc
+Reading tech data from OA library 'D_CELLS_JI3V' ...
+FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+**WARN: (IMPOAX-1645):	'minWidth' constraint is not supported on layer 'POLY1'. This constraint will be ignored by tool.
+**WARN: (IMPOAX-1645):	'minSpacing' constraint is not supported on layer 'POLY1'. This constraint will be ignored by tool.
+Set DBUPerIGU to M2 pitch 560.
+**WARN: (IMPOAX-718):	ENCLOSURE OVERHANG2 '0.232' on Layer M2 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+**WARN: (IMPOAX-718):	ENCLOSURE OVERHANG2 '0.232' on Layer M2 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+**WARN: (IMPOAX-718):	ENCLOSURE OVERHANG1 '0.232' on Layer M3 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+**WARN: (IMPOAX-718):	ENCLOSURE OVERHANG1 '0.232' on Layer M3 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+LEFDefaultRouteSpec(LDRS) is read from rule 'LEFDefaultRouteSpec_HD' and library 'TECH_XH018_HD'. Only default vias, routing layers, pitch, routing width, routing direction, layer offset, wire extension constraints are read from it and rest of rules are read from foundry constraint group.
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+**WARN: (IMPOAX-740):	Viarule 'ND_C_auto' specified in NonDefault UseViaRule section is not defined in Innovus. Check the non Default Rule Section of OpenAccess database.
+**WARN: (IMPOAX-740):	Viarule 'PD_C_auto' specified in NonDefault UseViaRule section is not defined in Innovus. Check the non Default Rule Section of OpenAccess database.
+**WARN: (IMPOAX-722):	Layer 'MET5' read from technology data is not defined in Innovus database. Check the layer information in OpenAccess technology database.
+**WARN: (IMPOAX-1594):	While reading blockage/OBS  of cell 'MPROBEBUJI3VX8' from library 'D_CELLS_JI3V', shape with bounding box '11.46 -0.56 18.345 5.04' is found on layer 'MET5'. This will be ignored by tool.
+**WARN: (IMPOAX-6021):	Blockages for cell can not read for cell 'MPROBEBUJI3VX8'  as layer 'MET5' is not defined in Innovus database.
+**WARN: (IMPOAX-722):	Layer 'MET5' read from technology data is not defined in Innovus database. Check the layer information in OpenAccess technology database.
+**WARN: (IMPOAX-1594):	While reading blockage/OBS  of cell 'MPROBEJI3V' from library 'D_CELLS_JI3V', shape with bounding box '0.28 -0.56 7.165 5.04' is found on layer 'MET5'. This will be ignored by tool.
+**WARN: (IMPOAX-6021):	Blockages for cell can not read for cell 'MPROBEJI3V'  as layer 'MET5' is not defined in Innovus database.
+Reading OA reference library 'ASKA_DIG' ...
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'MPROBEJI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLP2JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLP5JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLNP2JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLN2JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLN5JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+Loading view definition file from xh018_ji3v.view
+Starting library reading in 'Multi-threaded flow' (with '4' threads)
+Reading slow_liberty timing library /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/liberty_LPMOS_MOS3LP/v2_1_2/PVT_3_30V_range/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib.
+Read 304 cells in library D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.
+Library reading multithread flow ended.
+Starting library reading in 'Multi-threaded flow' (with '4' threads)
+Reading fast_liberty timing library /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/liberty_LPMOS_MOS3LP/v2_1_2/PVT_3_30V_range/D_CELLS_JI3V_LPMOS_MOS3LP_fast_3_60V_m40C.lib.
+Read 304 cells in library D_CELLS_JI3V_LPMOS_MOS3LP_fast_3_60V_m40C.
+Library reading multithread flow ended.
+*** End library_loading (cpu=0.01min, real=0.02min, mem=36.5M, fe_cpu=0.37min, fe_real=5.17min, fe_mem=1083.4M) ***
+#% Begin Load netlist data ... (date=07/15 10:47:13, mem=862.0M)
+*** Begin netlist parsing (mem=1083.4M) ***
+Searching cell 'CLKVBUFJI3V' in refLibs ...
+Created 304 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../genus/genus_output/dig_aska_synth.v'
+
+*** Memory Usage v#1 (Current mem = 1083.430M, initial mem = 478.105M) ***
+*** End netlist parsing (cpu=0:00:00.8, real=0:00:01.0, mem=1083.4M) ***
+#% End Load netlist data ... (date=07/15 10:47:14, total cpu=0:00:00.8, real=0:00:01.0, peak res=869.2M, current mem=869.2M)
+Top level cell is aska_dig.
+Hooked 608 DB cells to tlib cells.
+** Removed 1 unused lib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell aska_dig ...
+*** Netlist is unique.
+** info: there are 608 modules.
+** info: there are 1140 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1105.844M, initial mem = 478.105M) ***
+Start create_tracks
+Extraction setup Started 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+Reading Capacitance Table File CAPTBL/xh018_xx43_MET4_METMID_METTHK_max.capTbl ...
+Process name: XH018.
+Reading Capacitance Table File CAPTBL/xh018_xx43_MET4_METMID_METTHK_min.capTbl ...
+Process name: XX018.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: slow_functional_mode
+    RC-Corner Name        : max_rc
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : 'CAPTBL/xh018_xx43_MET4_METMID_METTHK_max.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+ 
+ Analysis View: fast_functional_mode
+    RC-Corner Name        : min_rc
+    RC-Corner Index       : 1
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : 'CAPTBL/xh018_xx43_MET4_METMID_METTHK_min.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../genus/genus_output/design.sdc' ...
+Current (total cpu=0:00:23.6, real=0:05:11, peak res=1161.7M, current mem=1161.7M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../genus/genus_output/design.sdc, Line 9).
+
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../genus/genus_output/design.sdc, Line 10).
+
+aska_dig
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../genus/genus_output/design.sdc, Line 319).
+
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (EMS-27):	Message (IMPCTE-290) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+INFO (CTE): Reading of timing constraints file ../genus/genus_output/design.sdc completed, with 3 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1203.2M, current mem=1203.2M)
+Current (total cpu=0:00:23.7, real=0:05:11, peak res=1203.2M, current mem=1203.2M)
+Total number of combinational cells: 147
+Total number of sequential cells: 76
+Total number of tristate cells: 8
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 72
+List of usable buffers: BUJI3VX1 BUJI3VX0 BUJI3VX12 BUJI3VX16 BUJI3VX2 BUJI3VX3 BUJI3VX4 BUJI3VX6 BUJI3VX8
+Total number of usable buffers: 9
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INJI3VX1 INJI3VX0 INJI3VX12 INJI3VX16 INJI3VX2 INJI3VX3 INJI3VX4 INJI3VX6 INJI3VX8
+Total number of usable inverters: 9
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1JI3VX1 DLY2JI3VX1 DLY4JI3VX1 DLY8JI3VX1
+Total number of identified usable delay cells: 4
+List of identified unusable delay cells: STEJI3VX1 STEJI3VX2 STEJI3VX3 STEJI3VX4
+Total number of identified unusable delay cells: 4
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPOAX-1594          2  While reading %s of cell '%s' from libra...
+WARNING   IMPOAX-1645          2  '%s' constraint is not supported on laye...
+WARNING   IMPOAX-718           4  %s '%g' on %s %s is not aligned to manuf...
+WARNING   IMPOAX-722           2  Layer '%s' read from technology data is ...
+WARNING   IMPOAX-740           2  Viarule '%s' specified in NonDefault Use...
+WARNING   IMPOAX-773           6  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPOAX-6021          2  Blockages for cell can not read for cell...
+WARNING   IMPCTE-290          32  Could not locate cell %s in any library ...
+WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+*** Message Summary: 55 warning(s), 0 error(s)
+
+<CMD> clearGlobalNets
+<CMD> globalNetConnect gnd3i -type pgpin -pin gnd3i -instanceBasename * -hierarchicalInstance {}
+<CMD> globalNetConnect vdd3i -type pgpin -pin vdd3i -instanceBasename * -hierarchicalInstance {}
+<CMD> saveDesign aska_dig_loaded
+Design is saved in OA mode instead of non-OA mode with library name as 'FEOADesignlib'. Upgrading is done because RefLibs are available and Lef files are not present.
+#% Begin save design ... (date=07/15 10:48:37, mem=1241.2M)
+----- oaOut ---------------------------
+Saving OpenAccess database: Lib: FEOADesignlib, Cell: aska_dig, View: aska_dig_loaded
+FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+Special routes: 0 strips and 0 vias are created in OpenAccess database.
+Signal Routes: Created 0 routes.
+Created 1140 insts; 2280 instTerms; 1205 nets; 0 routes.
+TIMER: Write OA to disk: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: Purge OA from memory: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: oaOut total process: 0h 0m  0.07s cpu {0h 0m 0s elapsed} Memory = 0.0.
+% Begin Save ccopt configuration ... (date=07/15 10:48:37, mem=1243.9M)
+% End Save ccopt configuration ... (date=07/15 10:48:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=1244.9M, current mem=1244.9M)
+% Begin Save AAE data ... (date=07/15 10:48:37, mem=1244.9M)
+Saving AAE Data ...
+% End Save AAE data ... (date=07/15 10:48:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=1244.9M, current mem=1244.9M)
+Saving preference file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/inn_data/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+Saving thumbnail file...
+% Begin Save power constraints data ... (date=07/15 10:48:38, mem=1249.5M)
+% End Save power constraints data ... (date=07/15 10:48:38, total cpu=0:00:00.0, real=0:00:00.0, peak res=1249.6M, current mem=1249.6M)
+min_rc max_rc typ_rc
+Generated self-contained design: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus
+Saving property file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/inn_data/aska_dig.prop
+*** Completed saveOALibCellAnnotation (cpu=0:00:00.0 real=0:00:00.0 mem=1523.3M) ***
+#% End save design ... (date=07/15 10:48:38, total cpu=0:00:00.4, real=0:00:01.0, peak res=1280.2M, current mem=1250.7M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_ji3v -r 0.979068934984 0.5 20.0 20 20 20
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> saveDesign aska_dig_loaded_fp
+Design is saved in OA mode instead of non-OA mode with library name as 'FEOADesignlib'. Upgrading is done because RefLibs are available and Lef files are not present.
+#% Begin save design ... (date=07/15 10:51:00, mem=1255.1M)
+----- oaOut ---------------------------
+Saving OpenAccess database: Lib: FEOADesignlib, Cell: aska_dig, View: aska_dig_loaded_fp
+FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+Special routes: 0 strips and 0 vias are created in OpenAccess database.
+Signal Routes: Created 0 routes.
+Created 1140 insts; 2280 instTerms; 1205 nets; 0 routes.
+TIMER: Write OA to disk: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: Purge OA from memory: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: oaOut total process: 0h 0m  0.06s cpu {0h 0m 0s elapsed} Memory = 0.0.
+% Begin Save ccopt configuration ... (date=07/15 10:51:00, mem=1255.2M)
+% End Save ccopt configuration ... (date=07/15 10:51:00, total cpu=0:00:00.0, real=0:00:00.0, peak res=1255.2M, current mem=1255.2M)
+% Begin Save AAE data ... (date=07/15 10:51:00, mem=1255.2M)
+Saving AAE Data ...
+% End Save AAE data ... (date=07/15 10:51:00, total cpu=0:00:00.0, real=0:00:00.0, peak res=1255.2M, current mem=1255.2M)
+Saving preference file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded_fp/inn_data/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+Saving thumbnail file...
+% Begin Save power constraints data ... (date=07/15 10:51:00, mem=1259.7M)
+% End Save power constraints data ... (date=07/15 10:51:00, total cpu=0:00:00.0, real=0:00:00.0, peak res=1259.7M, current mem=1259.7M)
+min_rc max_rc typ_rc
+Generated self-contained design: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus
+Saving property file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded_fp/inn_data/aska_dig.prop
+*** Completed saveOALibCellAnnotation (cpu=0:00:00.0 real=0:00:00.0 mem=1559.5M) ***
+#% End save design ... (date=07/15 10:51:01, total cpu=0:00:00.3, real=0:00:01.0, peak res=1290.4M, current mem=1259.9M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+
+viaInitial starts at Mon Jul 15 10:52:59 2024
+viaInitial ends at Mon Jul 15 10:52:59 2024
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {gnd3i vdd3i} -type core_rings -follow core -layer {top MET1 bottom MET1 left MET2 right MET2} -width {top 8 bottom 8 left 8 right 8} -spacing {top 0.23 bottom 0.23 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+-parameterized_via_only is set to 1. ViaGen will generate parameterized vias only, which means the DEF syntax of generated vias is with +VIARULE.
+'setViaGenMode -parameterized_via_only true' is set by default for this OA design. 
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1570.0M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  MET1  |        4       |       NA       |
+|  VIA1  |        8       |        0       |
+|  MET2  |        4       |       NA       |
++--------+----------------+----------------+
+'setViaGenMode -parameterized_via_only true' is set by default for this OA design. 
+setViaGenMode -parameterized_via_only is reset to default value: true.
+<CMD> zoomBox -0.33800 -43.36700 333.71900 357.21600
+<CMD> zoomBox 0.87300 12.58600 284.82200 353.08200
+<CMD> zoomBox 1.90300 59.54000 243.26000 348.96200
+<CMD> zoomBox 3.13900 98.67900 208.29200 344.68800
+<CMD> zoomBox 4.19000 131.81600 178.57000 340.92300
+<CMD> getMultiCpuUsage -localCpu
+<CMD> get_verify_drc_mode -disable_rules -quiet
+<CMD> get_verify_drc_mode -quiet -area
+<CMD> get_verify_drc_mode -quiet -layer_range
+<CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+<CMD> get_verify_drc_mode -check_only -quiet
+<CMD> get_verify_drc_mode -check_same_via_cell -quiet
+<CMD> get_verify_drc_mode -exclude_pg_net -quiet
+<CMD> get_verify_drc_mode -ignore_trial_route -quiet
+<CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+<CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+<CMD> get_verify_drc_mode -limit -quiet
+<CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+<CMD> verify_drc
+#-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+#-check_same_via_cell true               # bool, default=false, user setting
+#-report aska_dig.drc.rpt                # string, default="", user setting
+ *** Starting Verify DRC (MEM: 1572.2) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+ VERIFY DRC ...... Thread : 3 finished.
+ VERIFY DRC ...... Thread : 0 finished.
+ VERIFY DRC ...... Thread : 2 finished.
+ VERIFY DRC ...... Thread : 1 finished.
+
+  Verification Complete : 0 Viols.
+
+ *** End Verify DRC (CPU: 0:00:00.0  ELAPSED TIME: 0.00  MEM: 288.1M) ***
+
+<CMD> set_verify_drc_mode -area {0 0 0 0}
+<CMD> fit
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.28 -number_of_sets 2 -start_from left -start_offset 20 -stop_offset 20 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1874.3M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1874.3M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1874.3M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1874.3M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1874.3M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 4 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  VIA1  |        8       |        0       |
+|  MET2  |        4       |       NA       |
++--------+----------------+----------------+
+<CMD> undo
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 8 -spacing 0.28 -number_of_sets 2 -start_from left -start_offset 80 -stop_offset 80 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1874.3M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1874.3M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1874.3M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1874.3M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1874.3M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 4 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  VIA1  |        8       |        0       |
+|  MET2  |        4       |       NA       |
++--------+----------------+----------------+
+<CMD> setSrouteMode -viaConnectToShape { stripe }
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { MET1(1) METTPL(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { MET1(1) METTPL(6) } -nets { gnd3i vdd3i } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { MET1(1) METTPL(6) }
+*** Begin SPECIAL ROUTE on Mon Jul 15 11:00:56 2024 ***
+SPECIAL ROUTE ran on directory: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus
+SPECIAL ROUTE ran on machine: phoenix (Linux 3.10.0-1160.105.1.el7.x86_64 x86_64 3.60Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "gnd3i vdd3i"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 6
+srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring ring blockring blockpin coverpin noshape blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 6
+srouteTopTargetLayerLimit set to 6
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3125.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 13 layers, 6 routing layers, 1 overlap layer
+Read in 1 nondefault rule, 0 used
+Read in 303 macros, 54 used
+Read in 49 components
+  49 core components: 49 unplaced, 0 placed, 0 fixed
+Read in 80 logical pins
+Read in 80 nets
+Read in 2 special nets, 2 routed
+Read in 98 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the vdd3i net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
+**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the vdd3i net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net vdd3i. Check net list, or change port class in the technology file, or change option to include pin in given range.
+**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the gnd3i net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
+**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the gnd3i net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net gnd3i. Check net list, or change port class in the technology file, or change option to include pin in given range.
+CPU time for vdd3i FollowPin 0 seconds
+CPU time for gnd3i FollowPin 0 seconds
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 138
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Followpin connections: 69
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3137.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+sroute created 207 wires.
+ViaGen created 276 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  MET1  |       207      |       NA       |
+|  VIA1  |       276      |        0       |
++--------+----------------+----------------+
+<CMD> zoomBox 14.14700 -31.93900 255.50400 257.48300
+<CMD> zoomBox 28.91300 -18.03000 203.29500 191.07900
+<CMD> zoomBox 34.64300 -12.78500 182.86800 164.95900
+<CMD> zoomBox 43.65300 -4.59400 150.74600 123.82600
+<CMD> get_verify_drc_mode -disable_rules -quiet
+<CMD> get_verify_drc_mode -quiet -area
+<CMD> get_verify_drc_mode -quiet -layer_range
+<CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+<CMD> get_verify_drc_mode -check_only -quiet
+<CMD> get_verify_drc_mode -check_same_via_cell -quiet
+<CMD> get_verify_drc_mode -exclude_pg_net -quiet
+<CMD> get_verify_drc_mode -ignore_trial_route -quiet
+<CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+<CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+<CMD> get_verify_drc_mode -limit -quiet
+<CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+<CMD> verify_drc
+#-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+#-check_same_via_cell true               # bool, default=false, user setting
+#-report aska_dig.drc.rpt                # string, default="", user setting
+ *** Starting Verify DRC (MEM: 1647.2) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+ VERIFY DRC ...... Thread : 0 finished.
+ VERIFY DRC ...... Thread : 2 finished.
+ VERIFY DRC ...... Thread : 1 finished.
+ VERIFY DRC ...... Thread : 3 finished.
+
+  Verification Complete : 0 Viols.
+
+ *** End Verify DRC (CPU: 0:00:00.0  ELAPSED TIME: 0.00  MEM: 256.1M) ***
+
+<CMD> set_verify_drc_mode -area {0 0 0 0}
+<CMD> zoomBox 36.87800 -12.55200 162.87000 138.53100
+<CMD> zoomBox 19.53100 -32.92800 193.91500 176.18400
+<CMD> fit
+<CMD> saveDesign aska_dig_loaded_fp_pw
+Design is saved in OA mode instead of non-OA mode with library name as 'FEOADesignlib'. Upgrading is done because RefLibs are available and Lef files are not present.
+#% Begin save design ... (date=07/15 11:01:49, mem=1312.3M)
+----- oaOut ---------------------------
+Saving OpenAccess database: Lib: FEOADesignlib, Cell: aska_dig, View: aska_dig_loaded_fp_pw
+FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+Special routes: 219 strips and 292 vias are created in OpenAccess database.
+Signal Routes: Created 0 routes.
+Created 1140 insts; 2280 instTerms; 1205 nets; 0 routes.
+TIMER: Write OA to disk: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: Purge OA from memory: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: oaOut total process: 0h 0m  0.06s cpu {0h 0m 0s elapsed} Memory = 0.0.
+% Begin Save ccopt configuration ... (date=07/15 11:01:50, mem=1310.7M)
+% End Save ccopt configuration ... (date=07/15 11:01:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=1311.0M, current mem=1311.0M)
+% Begin Save AAE data ... (date=07/15 11:01:50, mem=1311.0M)
+Saving AAE Data ...
+% End Save AAE data ... (date=07/15 11:01:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=1311.0M, current mem=1311.0M)
+Saving preference file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded_fp_pw/inn_data/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+Saving thumbnail file...
+% Begin Save power constraints data ... (date=07/15 11:01:50, mem=1311.4M)
+% End Save power constraints data ... (date=07/15 11:01:50, total cpu=0:00:00.0, real=0:00:00.0, peak res=1311.4M, current mem=1311.4M)
+min_rc max_rc typ_rc
+Generated self-contained design: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus
+Saving property file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded_fp_pw/inn_data/aska_dig.prop
+*** Completed saveOALibCellAnnotation (cpu=0:00:00.0 real=0:00:00.0 mem=1648.8M) ***
+#% End save design ... (date=07/15 11:01:50, total cpu=0:00:00.4, real=0:00:01.0, peak res=1342.2M, current mem=1312.2M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 2 -pin {clk reset_l SPI_CS SPI_Clk SPI_MOSI {IC_addr[0]} {IC_addr[1]}}
+Successfully spread [7] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1654.3M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 4 -pin {clk reset_l SPI_CS SPI_Clk SPI_MOSI {IC_addr[0]} {IC_addr[1]}}
+Successfully spread [7] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1649.3M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 4.48 -pin {clk reset_l SPI_CS SPI_Clk SPI_MOSI {IC_addr[0]} {IC_addr[1]}}
+Successfully spread [7] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1649.9M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 8 -pin {clk reset_l SPI_CS SPI_Clk SPI_MOSI {IC_addr[0]} {IC_addr[1]}}
+Successfully spread [7] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1649.4M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 8.4 -pin {clk reset_l SPI_CS SPI_Clk SPI_MOSI {IC_addr[0]} {IC_addr[1]}}
+Successfully spread [7] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1649.9M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 2 -pin {{up_switches[0]} {up_switches[1]} {up_switches[2]} {up_switches[3]} {up_switches[4]} {up_switches[5]} {up_switches[6]} {up_switches[7]} {up_switches[8]} {up_switches[9]} {up_switches[10]} {up_switches[11]} {up_switches[12]} {up_switches[13]} {up_switches[14]} {up_switches[15]} {up_switches[16]} {up_switches[17]} {up_switches[18]} {up_switches[19]} {up_switches[20]} {up_switches[21]} {up_switches[22]} {up_switches[23]} {up_switches[24]} {up_switches[25]} {up_switches[26]} {up_switches[27]} {up_switches[28]} {up_switches[29]} {up_switches[30]} {up_switches[31]} {down_switches[0]} {down_switches[1]} {down_switches[2]} {down_switches[3]} {down_switches[4]} {down_switches[5]} {down_switches[6]} {down_switches[7]} {down_switches[8]} {down_switches[9]} {down_switches[10]} {down_switches[11]} {down_switches[12]} {down_switches[13]} {down_switches[14]} {down_switches[15]} {down_switches[16]} {down_switches[17]} {down_switches[18]} {down_switches[19]} {down_switches[20]} {down_switches[21]} {down_switches[22]} {down_switches[23]} {down_switches[24]} {down_switches[25]} {down_switches[26]} {down_switches[27]} {down_switches[28]} {down_switches[29]} {down_switches[30]} {down_switches[31]} {DAC[0]} {DAC[1]} {DAC[2]} {DAC[3]} {DAC[4]} {DAC[5]} pulse_active enable}
+Successfully spread [72] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1650.4M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 4 -pin {{up_switches[0]} {up_switches[1]} {up_switches[2]} {up_switches[3]} {up_switches[4]} {up_switches[5]} {up_switches[6]} {up_switches[7]} {up_switches[8]} {up_switches[9]} {up_switches[10]} {up_switches[11]} {up_switches[12]} {up_switches[13]} {up_switches[14]} {up_switches[15]} {up_switches[16]} {up_switches[17]} {up_switches[18]} {up_switches[19]} {up_switches[20]} {up_switches[21]} {up_switches[22]} {up_switches[23]} {up_switches[24]} {up_switches[25]} {up_switches[26]} {up_switches[27]} {up_switches[28]} {up_switches[29]} {up_switches[30]} {up_switches[31]} {down_switches[0]} {down_switches[1]} {down_switches[2]} {down_switches[3]} {down_switches[4]} {down_switches[5]} {down_switches[6]} {down_switches[7]} {down_switches[8]} {down_switches[9]} {down_switches[10]} {down_switches[11]} {down_switches[12]} {down_switches[13]} {down_switches[14]} {down_switches[15]} {down_switches[16]} {down_switches[17]} {down_switches[18]} {down_switches[19]} {down_switches[20]} {down_switches[21]} {down_switches[22]} {down_switches[23]} {down_switches[24]} {down_switches[25]} {down_switches[26]} {down_switches[27]} {down_switches[28]} {down_switches[29]} {down_switches[30]} {down_switches[31]} {DAC[0]} {DAC[1]} {DAC[2]} {DAC[3]} {DAC[4]} {DAC[5]} pulse_active enable}
+Successfully spread [72] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1651.0M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType center -spacing 0.56 -pin porborn
+Successfully placed the IO pin porborn at location (178.9200 0.0000) on layer MET3.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1650.5M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType center -spacing 0.56 -pin porborn
+Successfully placed the IO pin porborn at location (178.9200 0.0000) on layer MET3.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1651.0M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> zoomBox 40.33200 -4.03800 374.38900 396.54500
+<CMD> zoomBox 131.41000 88.75500 372.76700 378.17700
+<CMD> zoomBox 196.95700 155.54000 371.33800 364.64800
+<CMD> zoomBox 222.14700 181.43600 370.37100 359.17800
+<CMD> zoomBox 243.55800 203.47900 369.54900 354.56100
+<CMD> saveDesign aska_dig_loaded_fp_pw_pn
+Design is saved in OA mode instead of non-OA mode with library name as 'FEOADesignlib'. Upgrading is done because RefLibs are available and Lef files are not present.
+#% Begin save design ... (date=07/15 11:08:50, mem=1376.4M)
+----- oaOut ---------------------------
+Saving OpenAccess database: Lib: FEOADesignlib, Cell: aska_dig, View: aska_dig_loaded_fp_pw_pn
+FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+Special routes: 219 strips and 292 vias are created in OpenAccess database.
+Signal Routes: Created 0 routes.
+Created 1140 insts; 2280 instTerms; 1205 nets; 0 routes.
+TIMER: Write OA to disk: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: Purge OA from memory: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: oaOut total process: 0h 0m  0.06s cpu {0h 0m 0s elapsed} Memory = 0.0.
+% Begin Save ccopt configuration ... (date=07/15 11:08:51, mem=1376.6M)
+% End Save ccopt configuration ... (date=07/15 11:08:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=1376.6M, current mem=1376.6M)
+% Begin Save AAE data ... (date=07/15 11:08:51, mem=1376.6M)
+Saving AAE Data ...
+% End Save AAE data ... (date=07/15 11:08:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=1376.6M, current mem=1376.6M)
+Saving preference file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded_fp_pw_pn/inn_data/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+Saving thumbnail file...
+% Begin Save power constraints data ... (date=07/15 11:08:51, mem=1376.9M)
+% End Save power constraints data ... (date=07/15 11:08:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=1376.9M, current mem=1376.9M)
+min_rc max_rc typ_rc
+Generated self-contained design: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus
+Saving property file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded_fp_pw_pn/inn_data/aska_dig.prop
+*** Completed saveOALibCellAnnotation (cpu=0:00:00.0 real=0:00:00.0 mem=1656.1M) ***
+#% End save design ... (date=07/15 11:08:51, total cpu=0:00:00.4, real=0:00:01.0, peak res=1407.7M, current mem=1373.3M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> fit
+<CMD> redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+<CMD> timeDesign -prePlace -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_prePlace -outDir timingReports
+*** timeDesign #1 [begin] : totSession cpu/real = 0:01:12.0/0:27:24.6 (0.0), mem = 1661.7M
+Multithreaded Timing Analysis is initialized with 4 threads
+
+Setting timing_disable_library_data_to_data_checks to 'true'.
+Setting timing_disable_user_data_to_data_checks to 'true'.
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+Set Default Input Pin Transition as 1 ps.
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 0
+AAE DB initialization (MEM=1970.32 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: aska_dig
+# Design Mode: 180nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (4 T). (MEM=1998.85)
+Total number of fetched objects 1178
+End delay calculation. (MEM=2317.07 CPU=0:00:00.2 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2227.83 CPU=0:00:00.3 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.8 real=0:00:01.0 totSessionCpu=0:01:13 mem=2261.8M)
+
+------------------------------------------------------------------
+          timeDesign Summary
+------------------------------------------------------------------
+
+Setup views included:
+ slow_functional_mode 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):|  0.249  |  9.274  |  0.249  |
+|           TNS (ns):|  0.000  |  0.000  |  0.000  |
+|    Violating Paths:|    0    |    0    |    0    |
+|          All Paths:|   780   |   299   |   481   |
++--------------------+---------+---------+---------+
+
+Density: 49.992%
+------------------------------------------------------------------
+Set Using Default Delay Limit as 1000.
+Resetting back High Fanout Nets as non-ideal
+Set Default Net Delay as 1000 ps.
+Set Default Input Pin Transition as 0.1 ps.
+Set Default Net Load as 0.5 pF. 
+Reported timing to dir timingReports
+Total CPU time: 1.12 sec
+Total Real time: 1.0 sec
+Total Memory Usage: 2093.78125 Mbytes
+*** timeDesign #1 [finish] : cpu/real = 0:00:01.1/0:00:01.1 (1.0), totSession cpu/real = 0:01:13.1/0:27:25.7 (0.0), mem = 2093.8M
+<CMD> setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+<CMD> setEndCapMode -reset
+<CMD> setEndCapMode -boundary_tap false
+<CMD> setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+<CMD> setNanoRouteMode -quiet -droutePostRouteWidenWireRule virtuosoDefaultSetup
+<CMD> setNanoRouteMode -quiet -timingEngine {}
+<CMD> setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+<CMD> setTieHiLoMode -reset
+<CMD> setTieHiLoMode -cell {  LOGIC1JI3V LOGIC0JI3V } -maxFanOut 10 -honorDontTouch false -createHierPort false
+<CMD> setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+<CMD> setEndCapMode -reset
+<CMD> setEndCapMode -boundary_tap false
+<CMD> setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+<CMD> setTieHiLoMode -reset
+<CMD> setTieHiLoMode -cell {  LOGIC1JI3V LOGIC0JI3V } -maxFanOut 10 -honorDontTouch false -createHierPort false
+<CMD> setRouteMode -earlyGlobalMaxRouteLayer 4
+**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
+<CMD> getPlaceMode -place_hierarchical_flow -quiet
+<CMD> report_message -start_cmd
+<CMD> getRouteMode -maxRouteLayer -quiet
+<CMD> getRouteMode -user -maxRouteLayer
+<CMD> getPlaceMode -place_global_place_io_pins -quiet
+<CMD> getPlaceMode -user -maxRouteLayer
+<CMD> getPlaceMode -quiet -adaptiveFlowMode
+<CMD> getPlaceMode -timingDriven -quiet
+<CMD> getPlaceMode -adaptive -quiet
+<CMD> getPlaceMode -relaxSoftBlockageMode -quiet
+<CMD> getPlaceMode -user -relaxSoftBlockageMode
+<CMD> getPlaceMode -ignoreScan -quiet
+<CMD> getPlaceMode -user -ignoreScan
+<CMD> getPlaceMode -repairPlace -quiet
+<CMD> getPlaceMode -user -repairPlace
+<CMD> getPlaceMode -inPlaceOptMode -quiet
+<CMD> getPlaceMode -quiet -bypassFlowEffortHighChecking
+<CMD> getPlaceMode -quiet -place_global_exp_enable_3d
+*** placeDesign #1 [begin] : totSession cpu/real = 0:01:20.0/0:30:36.5 (0.0), mem = 2098.3M
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> um::push_snapshot_stack
+<CMD> getDesignMode -quiet -flowEffort
+<CMD> getDesignMode -highSpeedCore -quiet
+<CMD> getPlaceMode -quiet -adaptive
+<CMD> set spgFlowInInitialPlace 1
+<CMD> getPlaceMode -sdpAlignment -quiet
+<CMD> getPlaceMode -softGuide -quiet
+<CMD> getPlaceMode -useSdpGroup -quiet
+<CMD> getPlaceMode -sdpAlignment -quiet
+<CMD> getPlaceMode -enableDbSaveAreaPadding -quiet
+<CMD> getPlaceMode -quiet -wireLenOptEffort
+<CMD> getPlaceMode -sdpPlace -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getPlaceMode -sdpPlace -quiet
+<CMD> getPlaceMode -groupHighLevelClkGate -quiet
+<CMD_INTERNAL> setvar spgRptErrorForScanConnection 0
+<CMD> getPlaceMode -place_global_exp_allow_missing_scan_chain -quiet
+<CMD> getPlaceMode -ignoreScan -quiet
+**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined for 5.94% flops. Placement and timing QoR can be severely impacted in this case!
+It is highly recommend to define scan chains either through input scan def (preferred) or specifyScanChain.
+<CMD_INTERNAL> setvar spgRptErrorForScanConnection 1
+<CMD> getPlaceMode -place_design_floorplan_mode -quiet
+<CMD> getPlaceMode -place_global_timing_effort -quiet
+<CMD> getPlaceMode -place_check_library -quiet
+<CMD> getPlaceMode -trimView -quiet
+<CMD> getPlaceMode -expTrimOptBeforeTDGP -quiet
+<CMD> getPlaceMode -quiet -useNonTimingDeleteBufferTree
+<CMD> getPlaceMode -congEffort -quiet
+<CMD> getPlaceMode -relaxSoftBlockageMode -quiet
+<CMD> getPlaceMode -user -relaxSoftBlockageMode
+<CMD> getPlaceMode -ignoreScan -quiet
+<CMD> getPlaceMode -user -ignoreScan
+<CMD> getPlaceMode -repairPlace -quiet
+<CMD> getPlaceMode -user -repairPlace
+<CMD> getPlaceMode -congEffort -quiet
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -timingDriven -quiet
+<CMD> getPlaceMode -user -timingDriven
+<CMD> getPlaceMode -fastFp -quiet
+<CMD> getPlaceMode -clusterMode -quiet
+<CMD> get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+<CMD> getPlaceMode -inPlaceOptMode -quiet
+<CMD> getPlaceMode -quiet -bypassFlowEffortHighChecking
+<CMD> getPlaceMode -ultraCongEffortFlow -quiet
+<CMD> getPlaceMode -forceTiming -quiet
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -fastfp -quiet
+<CMD> getPlaceMode -timingDriven -quiet
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -fastfp -quiet
+<CMD> getPlaceMode -powerDriven -quiet
+<CMD> getExtractRCMode -quiet -engine
+<CMD> getAnalysisMode -quiet -clkSrcPath
+<CMD> getAnalysisMode -quiet -clockPropagation
+<CMD> getAnalysisMode -quiet -cppr
+<CMD> setExtractRCMode -engine preRoute
+<CMD> setAnalysisMode -clkSrcPath false -clockPropagation forcedIdeal
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD_INTERNAL> isAnalysisModeSetup
+<CMD> getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+<CMD> getPlaceMode -quiet -NMPsuppressInfo
+<CMD> getPlaceMode -quiet -place_global_exp_wns_focus_v2
+<CMD> getPlaceMode -quiet -place_incr_exp_isolation_flow
+<CMD> getPlaceMode -enableDistPlace -quiet
+<CMD> getPlaceMode -quiet -clusterMode
+<CMD> getPlaceMode -wl_budget_mode -quiet
+<CMD> setPlaceMode -reset -place_global_exp_balance_buffer_chain
+<CMD> getPlaceMode -wl_budget_mode -quiet
+<CMD> setPlaceMode -reset -place_global_exp_balance_pipeline
+<CMD> getPlaceMode -place_global_exp_balance_buffer_chain -quiet
+<CMD> getPlaceMode -place_global_exp_balance_pipeline -quiet
+<CMD> getPlaceMode -tdgpMemFlow -quiet
+<CMD> getPlaceMode -user -resetCombineRFLevel
+<CMD> getPlaceMode -quiet -resetCombineRFLevel
+<CMD> setPlaceMode -resetCombineRFLevel 1000
+<CMD_INTERNAL> setvar spgSpeedupBuildVSM 1
+<CMD> getPlaceMode -tdgpResetCteTG -quiet
+<CMD> getPlaceMode -macroPlaceMode -quiet
+<CMD> getPlaceMode -place_global_replace_QP -quiet
+<CMD> getPlaceMode -macroPlaceMode -quiet
+<CMD> getPlaceMode -enableDistPlace -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getPlaceMode -place_global_ignore_spare -quiet
+<CMD> getPlaceMode -enableDistPlace -quiet
+<CMD> getPlaceMode -quiet -expNewFastMode
+<CMD> setPlaceMode -expHiddenFastMode 1
+<CMD> setPlaceMode -reset -ignoreScan
+<CMD> getPlaceMode -quiet -place_global_exp_auto_finish_floorplan
+<CMD_INTERNAL> colorizeGeometry
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+<CMD> getPlaceMode -quiet -IOSlackAdjust
+*** Starting placeDesign default flow ***
+<CMD> getPlaceMode -tdgpCteZeroDelayModeDelBuf -quiet
+<CMD> set_global timing_enable_zero_delay_analysis_mode true
+<CMD> getPlaceMode -quiet -useNonTimingDeleteBufferTree
+<CMD> getPlaceMode -quiet -prePlaceOptSimplifyNetlist
+<CMD> getPlaceMode -quiet -enablePrePlaceOptimizations
+<CMD> getPlaceMode -quiet -prePlaceOptDecloneInv
+<CMD> deleteBufferTree -decloneInv
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+
+*summary: 34 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.1) ***
+<CMD> getPlaceMode -tdgpCteZeroDelayModeDelBuf -quiet
+<CMD> set_global timing_enable_zero_delay_analysis_mode false
+<CMD> getAnalysisMode -quiet -honorClockDomains
+<CMD> getPlaceMode -honorUserPathGroup -quiet
+<CMD> getAnalysisMode -quiet -honorClockDomains
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+<CMD> set delaycal_use_default_delay_limit 101
+Set Default Net Delay as 0 ps.
+<CMD> set delaycal_default_net_delay 0
+Set Default Net Load as 0 pF. 
+<CMD> set delaycal_default_net_load 0
+<CMD> set delaycal_default_net_load_ignore_for_ilm 0
+<CMD> getAnalysisMode -clkSrcPath -quiet
+<CMD> getAnalysisMode -clockPropagation -quiet
+<CMD> getAnalysisMode -checkType -quiet
+<CMD> buildTimingGraph
+<CMD> getDelayCalMode -ignoreNetLoad -quiet
+<CMD> getDelayCalMode -ignoreNetLoad -quiet
+<CMD> setDelayCalMode -ignoreNetLoad true -quiet
+**INFO: Analyzing IO path groups for slack adjustment
+<CMD> get_global timing_enable_path_group_priority
+<CMD> get_global timing_constraint_enable_group_path_resetting
+<CMD> set_global timing_enable_path_group_priority false
+<CMD> set_global timing_constraint_enable_group_path_resetting false
+<CMD> getOptMode -allowPreCTSClkSrcPaths -quiet
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name in2reg_tmp.2252 -from {0x20e 0x211} -to 0x212 -ignore_source_of_trigger_arc
+<CMD> getOptMode -allowPreCTSClkSrcPaths -quiet
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name in2out_tmp.2252 -from {0x219 0x21c} -to 0x21d -ignore_source_of_trigger_arc
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name reg2reg_tmp.2252 -from 0x223 -to 0x228
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name reg2out_tmp.2252 -from 0x233 -to 0x238
+<CMD> setPathGroupOptions reg2reg_tmp.2252 -effortLevel high
+Effort level <high> specified for reg2reg_tmp.2252 path_group
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: aska_dig
+# Design Mode: 180nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (4 T). (MEM=2097.4)
+Total number of fetched objects 1144
+End delay calculation. (MEM=2260.64 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2260.64 CPU=0:00:00.1 REAL=0:00:00.0)
+<CMD> reset_path_group -name in2reg_tmp.2252
+<CMD> set_global _is_ipo_interactive_path_groups 0
+<CMD> reset_path_group -name in2out_tmp.2252
+<CMD> set_global _is_ipo_interactive_path_groups 0
+**INFO: Disable pre-place timing setting for timing analysis
+<CMD> setDelayCalMode -ignoreNetLoad false
+Set Using Default Delay Limit as 1000.
+<CMD> set delaycal_use_default_delay_limit 1000
+Set Default Net Delay as 1000 ps.
+<CMD> set delaycal_default_net_delay 1000ps
+Set Default Net Load as 0.5 pF. 
+<CMD> set delaycal_default_net_load 0.5pf
+<CMD> set delaycal_default_net_load_ignore_for_ilm 0
+<CMD> all_setup_analysis_views
+<CMD> getPlaceMode -place_global_exp_ignore_low_effort_path_groups -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getAnalysisMode -quiet -honorClockDomains
+**INFO: Pre-place timing setting for timing analysis already disabled
+<CMD> getPlaceMode -quiet -place_global_exp_inverter_rewiring
+<CMD> getPlaceMode -ignoreUnproperPowerInit -quiet
+<CMD> getPlaceMode -quiet -expSkipGP
+Deleted 0 physical inst  (cell - / prefix -).
+**Info: 'setTieHiLoMode -cell' setting is detected. The placed tie cells will be deleted from the design before placement. You can use command 'addTieHiLo' to add them back later in the flow.
+  Deleted 0 logical insts of cell LOGIC1JI3V
+  Deleted 0 logical insts of cell LOGIC0JI3V
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#4 (mem=2251.1M)" ...
+<CMD> setDelayCalMode -engine feDc
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:00.2 mem=2283.1M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:00.3 mem=2283.1M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 531 (46.4%) nets
+3		: 413 (36.1%) nets
+4     -	14	: 186 (16.3%) nets
+15    -	39	: 9 (0.8%) nets
+40    -	79	: 2 (0.2%) nets
+80    -	159	: 0 (0.0%) nets
+160   -	319	: 1 (0.1%) nets
+320   -	639	: 2 (0.2%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+Scan chains were not defined.
+#std cell=1106 (0 fixed + 1106 movable) #buf cell=0 #inv cell=104 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=1144 #term=4619 #term/net=4.04, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=80
+stdCell: 1106 single + 0 double + 0 multi
+Total standard cell length = 10.6490 (mm), area = 0.0477 (mm^2)
+Average module density = 0.494.
+Density for the design = 0.494.
+       = stdcell_area 19016 sites (47707 um^2) / alloc_area 38488 sites (96559 um^2).
+Pin Density = 0.1200.
+            = total # of pins 4619 / total area 38488.
+Enabling multi-CPU acceleration with 4 CPU(s) for placement
+=== lastAutoLevel = 7 
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 2.775e+04 (1.89e+04 8.84e+03)
+              Est.  stn bbox = 2.983e+04 (2.05e+04 9.35e+03)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2257.2M
+Iteration  2: Total net bbox = 2.775e+04 (1.89e+04 8.84e+03)
+              Est.  stn bbox = 2.983e+04 (2.05e+04 9.35e+03)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2257.2M
+Iteration  3: Total net bbox = 2.366e+04 (1.38e+04 9.82e+03)
+              Est.  stn bbox = 2.816e+04 (1.71e+04 1.10e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2356.3M
+Active setup views:
+    slow_functional_mode
+Iteration  4: Total net bbox = 3.169e+04 (1.66e+04 1.51e+04)
+              Est.  stn bbox = 3.888e+04 (2.04e+04 1.85e+04)
+              cpu = 0:00:00.2 real = 0:00:00.0 mem = 2356.3M
+Iteration  5: Total net bbox = 3.150e+04 (1.64e+04 1.51e+04)
+              Est.  stn bbox = 3.951e+04 (2.02e+04 1.93e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2356.3M
+Iteration  6: Total net bbox = 3.345e+04 (1.70e+04 1.64e+04)
+              Est.  stn bbox = 4.227e+04 (2.09e+04 2.14e+04)
+              cpu = 0:00:00.3 real = 0:00:00.0 mem = 2421.9M
+<CMD> psp::embedded_egr_init_
+<CMD> psp::embedded_egr_term_
+Iteration  7: Total net bbox = 3.498e+04 (1.83e+04 1.67e+04)
+              Est.  stn bbox = 4.403e+04 (2.23e+04 2.17e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2327.5M
+Iteration  8: Total net bbox = 3.498e+04 (1.83e+04 1.67e+04)
+              Est.  stn bbox = 4.403e+04 (2.23e+04 2.17e+04)
+              cpu = 0:00:00.5 real = 0:00:01.0 mem = 2334.5M
+Iteration  9: Total net bbox = 3.789e+04 (1.89e+04 1.90e+04)
+              Est.  stn bbox = 4.706e+04 (2.27e+04 2.43e+04)
+              cpu = 0:00:00.3 real = 0:00:00.0 mem = 2462.6M
+Iteration 10: Total net bbox = 3.939e+04 (2.02e+04 1.92e+04)
+              Est.  stn bbox = 4.882e+04 (2.42e+04 2.46e+04)
+              cpu = 0:00:01.2 real = 0:00:01.0 mem = 2334.5M
+Iteration 11: Total net bbox = 3.939e+04 (2.02e+04 1.92e+04)
+              Est.  stn bbox = 4.882e+04 (2.42e+04 2.46e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 2334.5M
+*** cost = 3.939e+04 (2.02e+04 1.92e+04) (cpu for global=0:00:02.5) real=0:00:03.0***
+Placement multithread real runtime: 0:00:03.0 with 4 threads.
+Info: 0 clock gating cells identified, 0 (on average) moved 0/3
+Solver runtime cpu: 0:00:01.8 real: 0:00:01.3
+Core Placement runtime cpu: 0:00:01.9 real: 0:00:02.0
+<CMD> scanReorder
+**WARN: (IMPSP-9025):	No scan chain specified/traced.
+Type 'man IMPSP-9025' for more detail.
+*** Starting refinePlace (0:01:24 mem=2337.6M) ***
+Total net bbox length = 3.939e+04 (2.016e+04 1.923e+04) (ext = 5.047e+03)
+Move report: Detail placement moves 1106 insts, mean move: 4.05 um, max move: 58.51 um 
+	Max move on inst (spi1_conf0_reg[14]): (228.81, 132.13) --> (287.28, 132.16)
+	Runtime: CPU: 0:00:00.2 REAL: 0:00:00.0 MEM: 2455.8MB
+Summary Report:
+Instances move: 1106 (out of 1106 movable)
+Instances flipped: 0
+Mean displacement: 4.05 um
+Max displacement: 58.51 um (Instance: spi1_conf0_reg[14]) (228.806, 132.128) -> (287.28, 132.16)
+	Length: 27 sites, height: 1 rows, site name: core_ji3v, cell type: DFRRQJI3VX1
+Total net bbox length = 3.904e+04 (1.904e+04 2.000e+04) (ext = 5.031e+03)
+Runtime: CPU: 0:00:00.2 REAL: 0:00:00.0 MEM: 2455.8MB
+*** Finished refinePlace (0:01:24 mem=2455.8M) ***
+*** End of Placement (cpu=0:00:03.3, real=0:00:04.0, mem=2453.8M) ***
+default core: bins with density > 0.750 = 16.07 % ( 9 / 56 )
+Density distribution unevenness ratio = 25.111%
+*** Free Virtual Timing Model ...(mem=2453.8M)
+<CMD> setDelayCalMode -engine aae
+<CMD> all_setup_analysis_views
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> reset_path_group -name reg2reg_tmp.2252
+<CMD> set_global _is_ipo_interactive_path_groups 0
+<CMD> reset_path_group -name reg2out_tmp.2252
+<CMD> set_global _is_ipo_interactive_path_groups 0
+<CMD> set_global timing_enable_path_group_priority $gpsPrivate::optSave_ctePGPriority
+<CMD> set_global timing_constraint_enable_group_path_resetting $gpsPrivate::optSave_ctePGResetting
+<CMD> getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+<CMD> get_ccopt_clock_trees *
+<CMD> getPlaceMode -exp_insert_guidance_clock_tree -quiet
+<CMD> getPlaceMode -exp_cluster_based_high_fanout_buffering -quiet
+<CMD> getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+<CMD> getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+<CMD> getPlaceMode -quiet -timingEffort
+<CMD> getAnalysisMode -quiet -honorClockDomains
+<CMD> getPlaceMode -honorUserPathGroup -quiet
+<CMD> getAnalysisMode -quiet -honorClockDomains
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+<CMD> set delaycal_use_default_delay_limit 101
+Set Default Net Delay as 0 ps.
+<CMD> set delaycal_default_net_delay 0
+Set Default Net Load as 0 pF. 
+<CMD> set delaycal_default_net_load 0
+<CMD> set delaycal_default_net_load_ignore_for_ilm 0
+<CMD> getAnalysisMode -clkSrcPath -quiet
+<CMD> getAnalysisMode -clockPropagation -quiet
+<CMD> getAnalysisMode -checkType -quiet
+<CMD> buildTimingGraph
+<CMD> getDelayCalMode -ignoreNetLoad -quiet
+<CMD> getDelayCalMode -ignoreNetLoad -quiet
+<CMD> setDelayCalMode -ignoreNetLoad true -quiet
+**INFO: Analyzing IO path groups for slack adjustment
+<CMD> get_global timing_enable_path_group_priority
+<CMD> get_global timing_constraint_enable_group_path_resetting
+<CMD> set_global timing_enable_path_group_priority false
+<CMD> set_global timing_constraint_enable_group_path_resetting false
+<CMD> getOptMode -allowPreCTSClkSrcPaths -quiet
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name in2reg_tmp.2252 -from {0x244 0x247} -to 0x248 -ignore_source_of_trigger_arc
+<CMD> getOptMode -allowPreCTSClkSrcPaths -quiet
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name in2out_tmp.2252 -from {0x24f 0x252} -to 0x253 -ignore_source_of_trigger_arc
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name reg2reg_tmp.2252 -from 0x259 -to 0x25e
+<CMD> set_global _is_ipo_interactive_path_groups 1
+<CMD> group_path -name reg2out_tmp.2252 -from 0x269 -to 0x26e
+<CMD> setPathGroupOptions reg2reg_tmp.2252 -effortLevel high
+Effort level <high> specified for reg2reg_tmp.2252 path_group
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: aska_dig
+# Design Mode: 180nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (4 T). (MEM=2442.32)
+Total number of fetched objects 1144
+End delay calculation. (MEM=2582.46 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2582.46 CPU=0:00:00.1 REAL=0:00:00.0)
+<CMD> reset_path_group -name in2reg_tmp.2252
+<CMD> set_global _is_ipo_interactive_path_groups 0
+<CMD> reset_path_group -name in2out_tmp.2252
+<CMD> set_global _is_ipo_interactive_path_groups 0
+**INFO: Disable pre-place timing setting for timing analysis
+<CMD> setDelayCalMode -ignoreNetLoad false
+Set Using Default Delay Limit as 1000.
+<CMD> set delaycal_use_default_delay_limit 1000
+Set Default Net Delay as 1000 ps.
+<CMD> set delaycal_default_net_delay 1000ps
+Set Default Net Load as 0.5 pF. 
+<CMD> set delaycal_default_net_load 0.5pf
+<CMD> set delaycal_default_net_load_ignore_for_ilm 0
+<CMD> all_setup_analysis_views
+<CMD> getPlaceMode -place_global_exp_ignore_low_effort_path_groups -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getPlaceMode -quiet -cong_repair_commit_clock_net_route_attr
+<CMD> getPlaceMode -enableDbSaveAreaPadding -quiet
+<CMD> getPlaceMode -quiet -wireLenOptEffort
+<CMD> setPlaceMode -reset -improveWithPsp
+<CMD> getPlaceMode -quiet -debugGlobalPlace
+<CMD> getPlaceMode -congRepair -quiet
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -user -rplaceIncrNPClkGateAwareMode
+<CMD> getPlaceMode -user -congRepairMaxIter
+<CMD> getPlaceMode -quiet -congRepairPDClkGateMode4
+<CMD> setPlaceMode -rplaceIncrNPClkGateAwareMode 4
+<CMD> getPlaceMode -quiet -expCongRepairPDOneLoop
+<CMD> setPlaceMode -congRepairMaxIter 1
+<CMD> getPlaceMode -quickCTS -quiet
+<CMD> get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+<CMD> getPlaceMode -congRepairForceTrialRoute -quiet
+<CMD> getPlaceMode -user -congRepairForceTrialRoute
+<CMD> setPlaceMode -congRepairForceTrialRoute true
+<CMD> ::goMC::is_advanced_metrics_collection_running
+<CMD> congRepair
+Info: Disable timing driven in postCTS congRepair.
+
+Starting congRepair ...
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] MET1 has single uniform track structure
+[NR-eGR] MET2 has single uniform track structure
+[NR-eGR] MET3 has single uniform track structure
+[NR-eGR] MET4 has single uniform track structure
+[NR-eGR] METTP has single uniform track structure
+[NR-eGR] METTPL has single uniform track structure
+[NR-eGR] Read 300 PG shapes
+[NR-eGR] Read 0 clock shapes
+[NR-eGR] Read 0 other shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Instance Blockages : 0
+[NR-eGR] #PG Blockages       : 300
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] #Clock Blockages    : 0
+[NR-eGR] #Other Blockages    : 0
+[NR-eGR] Num Prerouted Nets = 0  Num Prerouted Wires = 0
+[NR-eGR] Read 1144 nets ( ignored 0 )
+[NR-eGR] There are 2 clock nets ( 0 with NDR ).
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Nets: 1144
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 1144 net(s) in layer range [2, 4]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 4.835264e+04um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]        Layer               (1)    OverCon
+[NR-eGR] ----------------------------------------------
+[NR-eGR]    MET1 ( 1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]    MET2 ( 2)         6( 0.11%)   ( 0.11%) 
+[NR-eGR]    MET3 ( 3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]    MET4 ( 4)         3( 0.05%)   ( 0.05%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]        Total         9( 0.05%)   ( 0.05%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+Early Global Route congestion estimation runtime: 0.03 seconds, mem = 2605.0M
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Skipped repairing congestion.
+[NR-eGR]                 Length (um)   Vias 
+[NR-eGR] -----------------------------------
+[NR-eGR]  MET1    (1H)             0   4539 
+[NR-eGR]  MET2    (2V)         21836   6496 
+[NR-eGR]  MET3    (3H)         23858    381 
+[NR-eGR]  MET4    (4V)          4907      0 
+[NR-eGR]  METTP   (5H)             0      0 
+[NR-eGR]  METTPL  (6V)             0      0 
+[NR-eGR] -----------------------------------
+[NR-eGR]          Total        50601  11416 
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total half perimeter of net bounding box: 39045um
+[NR-eGR] Total length: 50601um, number of vias: 11416
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total eGR-routed clock nets wire length: 3866um, number of vias: 962
+[NR-eGR] --------------------------------------------------------------------------
+Early Global Route wiring runtime: 0.01 seconds, mem = 2416.0M
+Tdgp not successfully inited but do clear! skip clearing
+End of congRepair (cpu=0:00:00.1, real=0:00:00.0)
+<CMD> ::goMC::is_advanced_metrics_collection_running
+<CMD> ::goMC::is_advanced_metrics_collection_running
+<CMD> ::goMC::is_advanced_metrics_collection_running
+<CMD> setPlaceMode -reset -congRepairForceTrialRoute
+<CMD> getPlaceMode -quiet -congRepairPDClkGateMode4
+<CMD> setPlaceMode -reset -rplaceIncrNPClkGateAwareMode
+<CMD> setPlaceMode -reset -congRepairMaxIter
+<CMD> getPlaceMode -congRepairCleanupPadding -quiet
+<CMD> getPlaceMode -quiet -wireLenOptEffort
+<CMD> all_setup_analysis_views
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> reset_path_group -name reg2reg_tmp.2252
+<CMD> set_global _is_ipo_interactive_path_groups 0
+<CMD> reset_path_group -name reg2out_tmp.2252
+<CMD> set_global _is_ipo_interactive_path_groups 0
+<CMD> set_global timing_enable_path_group_priority $gpsPrivate::optSave_ctePGPriority
+<CMD> set_global timing_constraint_enable_group_path_resetting $gpsPrivate::optSave_ctePGResetting
+<CMD> getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+<CMD> getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+<CMD> getPlaceMode -quiet -timingEffort
+<CMD> getPlaceMode -tdgpDumpStageTiming -quiet
+*** Finishing placeDesign default flow ***
+<CMD> getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined for 5.94% flops. Placement and timing QoR can be severely impacted in this case!
+It is highly recommend to define scan chains either through input scan def (preferred) or specifyScanChain.
+<CMD_INTERNAL> setvar spgRptErrorForScanConnection 0
+**placeDesign ... cpu = 0: 0: 4, real = 0: 0: 4, mem = 2416.0M **
+<CMD> getPlaceMode -trimView -quiet
+<CMD> getOptMode -quiet -viewOptPolishing
+<CMD> getOptMode -quiet -fastViewOpt
+<CMD_INTERNAL> spInternalUse deleteViewOptManager
+<CMD_INTERNAL> spInternalUse tdgp clearSkpData
+Tdgp not successfully inited but do clear! skip clearing
+<CMD> setAnalysisMode -clkSrcPath false -clockPropagation forcedIdeal
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> setExtractRCMode -engine preRoute
+<CMD> setPlaceMode -reset -relaxSoftBlockageMode
+<CMD> setPlaceMode -reset -ignoreScan
+<CMD> setPlaceMode -reset -repairPlace
+<CMD> getPlaceMode -quiet -NMPsuppressInfo
+<CMD_INTERNAL> setvar spgSpeedupBuildVSM 0
+<CMD> getPlaceMode -macroPlaceMode -quiet
+<CMD> getPlaceMode -place_global_replace_QP -quiet
+<CMD> getPlaceMode -macroPlaceMode -quiet
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> getPlaceMode -enableDistPlace -quiet
+<CMD> getPlaceMode -place_global_ignore_spare -quiet
+<CMD> getPlaceMode -tdgpMemFlow -quiet
+<CMD> setPlaceMode -reset -resetCombineRFLevel
+<CMD> getPlaceMode -enableDistPlace -quiet
+<CMD> getPlaceMode -quiet -clusterMode
+<CMD> getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+<CMD> getPlaceMode -enableDistPlace -quiet
+<CMD> setPlaceMode -reset -expHiddenFastMode
+<CMD> getPlaceMode -tcg2Pass -quiet
+<CMD> getPlaceMode -quiet -wireLenOptEffort
+<CMD> getPlaceMode -fp -quiet
+<CMD> getPlaceMode -fastfp -quiet
+<CMD> getPlaceMode -doRPlace -quiet
+<CMD> getPlaceMode -RTCPlaceDesignFlow -quiet
+<CMD> getPlaceMode -quickCTS -quiet
+<CMD> set spgFlowInInitialPlace 0
+<CMD> getPlaceMode -user -maxRouteLayer
+<CMD_INTERNAL> spInternalUse TDGP resetIgnoreNetLoad
+<CMD> getPlaceMode -place_global_exp_balance_pipeline -quiet
+<CMD> getDesignMode -quiet -flowEffort
+<CMD> report_message -end_cmd
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-1629           2  The default delay limit was set to %d. T...
+WARNING   IMPSP-9025           1  No scan chain specified/traced.          
+ERROR     IMPSP-9099           2  Scan chains exist in this design but are...
+*** Message Summary: 3 warning(s), 2 error(s)
+
+<CMD> um::create_snapshot -name final -auto min
+<CMD> um::pop_snapshot_stack
+<CMD> um::create_snapshot -name place_design
+*** placeDesign #1 [finish] : cpu/real = 0:00:04.3/0:00:04.5 (1.0), totSession cpu/real = 0:01:24.4/0:30:41.0 (0.0), mem = 2416.0M
+<CMD> getPlaceMode -exp_slack_driven -quiet
+<CMD> checkPlace output/TM_select_3.checkPlace
+** NOTE: Created directory path 'output' for file 'output/TM_select_3.checkPlace'.
+Begin checking placement ... (start mem=2416.0M, init mem=2416.0M)
+*info: Placed = 1106          
+*info: Unplaced = 0           
+Placement Density:49.41%(47707/96559)
+Placement Density (including fixed std cells):49.41%(47707/96559)
+Finished checkPlace (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=2383.9M)
+<CMD> setDrawView place
+<CMD> redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+<CMD> timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix TM_select_3_preCTS -outDir timingReports
+*** timeDesign #2 [begin] : totSession cpu/real = 0:01:24.4/0:30:41.0 (0.0), mem = 2383.9M
+Start to check current routing status for nets...
+All nets are already routed correctly.
+End to check current routing status for nets (mem=2383.9M)
+Extraction called for design 'aska_dig' of instances=1106 and nets=1171 using extraction engine 'preRoute' .
+PreRoute RC Extraction called for design aska_dig.
+RC Extraction called in multi-corner(2) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0       1   
+Capacitance Scaling Factor   : 1.00000 1.00000 
+Resistance Scaling Factor    : 1.00000 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 1.00000 
+Clock Res. Scaling Factor    : 1.00000 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using capacitance table file ...
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 2391.945M)
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: aska_dig
+# Design Mode: 180nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (4 T). (MEM=2465.69)
+Total number of fetched objects 1144
+End delay calculation. (MEM=2655.05 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2655.05 CPU=0:00:00.2 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.3 real=0:00:01.0 totSessionCpu=0:01:25 mem=2689.1M)
+
+------------------------------------------------------------------
+          timeDesign Summary
+------------------------------------------------------------------
+
+Setup views included:
+ slow_functional_mode 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):|-106.511 |  7.171  |-106.511 |
+|           TNS (ns):|-38258.7 |  0.000  |-38258.7 |
+|    Violating Paths:|   433   |    0    |   433   |
+|          All Paths:|   780   |   299   |   481   |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |     35 (35)      |   -5.510   |     35 (35)      |
+|   max_tran     |     35 (555)     |  -102.624  |     35 (555)     |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 49.408%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 0.57 sec
+Total Real time: 2.0 sec
+Total Memory Usage: 2501.820312 Mbytes
+*** timeDesign #2 [finish] : cpu/real = 0:00:00.6/0:00:01.2 (0.5), totSession cpu/real = 0:01:25.0/0:30:42.2 (0.0), mem = 2501.8M
+<CMD> zoomBox -63.73900 -105.58000 398.62400 448.86100
+<CMD> zoomBox -18.55500 -62.56700 374.45400 408.70800
+<CMD> addTieHiLo -cell {LOGIC1JI3V LOGIC0JI3V} -prefix LTIE
+Options: No distance constraint, Max Fan-out = 10.
+INFO: Total Number of Tie Cells (LOGIC1JI3V) placed: 0  
+INFO: Total Number of Tie Cells (LOGIC0JI3V) placed: 0  
+<CMD> setDrawView fplan
+<CMD> fit
+<CMD> selectObject Module npg1
+<CMD> setDrawView place
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> deselectAll
+<CMD> selectObject Module npg1
+<CMD> deselectAll
+<CMD> selectObject Module npg1
+<CMD> uiSetTool moveWire
+<CMD> deselectAll
+<CMD> selectObject Module npg1
+<CMD> deselectAll
+<CMD> selectObject Module npg1
+<CMD> deselectAll
+<CMD> selectObject Module npg1
+<CMD> deselectAll
+<CMD> selectObject Module npg1
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Mon Jul 15 11:23:40 2024
+  Total CPU time:     0:01:46
+  Total real time:    0:41:40
+  Peak memory (main): 1832.78MB
+
+
+*** Memory Usage v#1 (Current mem = 2561.316M, initial mem = 478.105M) ***
+*** Message Summary: 67 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:45, real=0:41:37, mem=2561.3M) ---

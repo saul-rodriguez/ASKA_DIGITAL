@@ -1,0 +1,23 @@
+Parameters:
+	-runDir
+	/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs
+	-ossdir
+	/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/
+	-cellmap
+	/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/lay_cellMap.txt
+	-ppid
+	18153
+	-form
+	-viewer
+	virtuoso
+	-schview
+	schematic
+	-tag
+	FIGOGAEBOARCDJMFM
+
+
+Checking out SoftShare license Phys_Ver_Sys_Results_Mgr 23.1 Qty: 1 ... failed.
+Checking out SoftShare license Pegasus_RV 23.1 Qty: 1 ... succeeded (1s).
+starting pvsProbeServer: port= 39865
+Starting probe server on port: 39865
+Checking in SoftShare license Pegasus_RV ... succeeded (1s).

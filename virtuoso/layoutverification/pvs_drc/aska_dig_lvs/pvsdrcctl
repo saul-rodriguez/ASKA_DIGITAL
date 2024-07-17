@@ -1,0 +1,40 @@
+text_depth -primary;
+virtual_connect -colon no;
+virtual_connect -semicolon_as_colon yes;
+virtual_connect -noname;
+virtual_connect -report no;
+virtual_connect -depth -primary;
+report_summary -drc "aska_dig_lvs_drc.sum" -replace;
+max_results -drc 1000;
+max_vertex -drc 4096;
+results_db -drc "/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs_drc.err" -ascii;
+keep_layers -none;
+abort_on_layout_error yes;
+layout_format gdsii;
+layout_path "/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs.gds";
+//=== Configurator controls ===
+//   DRC CONFIGURATION  
+//   #Select Density Rules#  
+#UNDEFINE DENSITY
+#UNDEFINE POPPING
+#UNDEFINE PIMIDE
+//   #Select DUMMY Pattern Generation#   
+#UNDEFINE DUMMY_FILL
+//   #Select Additional Antenna Check based on variable ratios#   
+#DEFINE VAR_ANT_RATIO
+VARIABLE VAR_R2P1 "200"
+VARIABLE VAR_RxM1P1 "400"
+VARIABLE VAR_RxM2P1 "400"
+VARIABLE VAR_RxM3P1 "400"
+VARIABLE VAR_RxM4P1 "400"
+VARIABLE VAR_RxM5P1 "400"
+VARIABLE VAR_RxMTP1 "400"
+VARIABLE VAR_RxMLP1 "200"
+VARIABLE VAR_R1CT "10"
+VARIABLE VAR_R1V1 "20"
+VARIABLE VAR_R1V2 "20"
+VARIABLE VAR_R1V3 "20"
+VARIABLE VAR_R1V4 "20"
+VARIABLE VAR_R1VT "20"
+VARIABLE VAR_R1VL "20"
+//=== End of configurator controls ===

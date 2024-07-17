@@ -1,0 +1,57 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Jul 15 11:24:09 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+#@(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+#@(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+#@(#)CDS: CPE v21.18-s053
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+restoreDesign -cellview {FEOADesignlib aska_dig aska_dig_loaded}
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+selectObject Module npg1
+fit
+deselectAll
+fit
+selectObject Module npg1
+deselectAll
+selectObject Module npg1
+deselectAll
+selectObject Module npg1
+uiSetTool moveWire
+deselectAll
+selectObject Module npg1
+deselectAll
+selectObject Module npg1
+deselectAll
+selectObject Module npg1
+deselectAll
+selectObject Module npg1
+deselectAll
+selectObject Module npg1
+zoomBox -180.09200 -36.82300 600.32300 358.78100
+deselectAll
+selectObject Module npg1
+zoomBox -75.91200 96.45300 -73.56500 97.86100
+zoomBox -76.38900 96.23600 -72.54400 98.18500
+fit
+uiSetTool moveWire
+deselectAll
+selectObject Module npg1
+deselectAll
+fit
+zoomBox -189.07800 -86.44000 591.33800 309.16500

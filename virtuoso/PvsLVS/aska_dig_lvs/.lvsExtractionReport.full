@@ -1,0 +1,156 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : aska_dig_lvs_lvs.sum
+ERC Summary File         : aska_dig_lvs.sum
+LVS Comparison Report    : aska_dig_lvs_lvs.sum.cls
+LVS Softchk Report       : aska_dig_lvs.softchk
+Layout Name              : /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/aska_dig_lvs.gds ("aska_dig_lvs")
+User Name                : saul
+Creation Time            : Mon Jul 15 19:51:22 2024
+Current directory        : /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs
+PVS Version              : 23.10-p043 Mon Oct 2 18:09:08 PDT 2023
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_SOFTCHK nwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK dnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hvnwtrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK ndftrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK hnw -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK catdiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK anodiff -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pwitrm -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK pdf -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK bulk -TYPE CONTACT   Total Result        0 (       0)
+
+Clean cell list (added by extraction report parser )
+ for cell "AN211JI3VX1"
+ for cell "AN21JI3VX1"
+ for cell "AN22JI3VX1"
+ for cell "AN31JI3VX1"
+ for cell "AND2JI3VX0"
+ for cell "AND2JI3VX1"
+ for cell "AO211JI3VX1"
+ for cell "AO21JI3VX1"
+ for cell "AO22JI3VX1"
+ for cell "BUJI3VX0"
+ for cell "BUJI3VX1"
+ for cell "BUJI3VX12"
+ for cell "BUJI3VX16"
+ for cell "BUJI3VX2"
+ for cell "BUJI3VX3"
+ for cell "BUJI3VX4"
+ for cell "BUJI3VX6"
+ for cell "BUJI3VX8"
+ for cell "DECAP10JI3V"
+ for cell "DECAP15JI3V"
+ for cell "DECAP25JI3V"
+ for cell "DECAP5JI3V"
+ for cell "DECAP7JI3V"
+ for cell "DFRRQJI3VX1"
+ for cell "DFRRQJI3VX2"
+ for cell "DFRRQJI3VX4"
+ for cell "DLY1JI3VX1"
+ for cell "DLY2JI3VX1"
+ for cell "DLY4JI3VX1"
+ for cell "EN2JI3VX0"
+ for cell "EN3JI3VX1"
+ for cell "EO2JI3VX0"
+ for cell "EO3JI3VX1"
+ for cell "FAJI3VX1"
+ for cell "FEED10JI3V"
+ for cell "FEED15JI3V"
+ for cell "FEED1JI3V"
+ for cell "FEED25JI3V"
+ for cell "FEED2JI3V"
+ for cell "FEED3JI3V"
+ for cell "FEED5JI3V"
+ for cell "FEED7JI3V"
+ for cell "HAJI3VX1"
+ for cell "INJI3VX0"
+ for cell "INJI3VX1"
+ for cell "INJI3VX2"
+ for cell "INJI3VX3"
+ for cell "INJI3VX6"
+ for cell "NA22JI3VX1"
+ for cell "NA2I1JI3VX1"
+ for cell "NA2I1JI3VX2"
+ for cell "NA2JI3VX0"
+ for cell "NA2JI3VX1"
+ for cell "NA2JI3VX2"
+ for cell "NA3I1JI3VX1"
+ for cell "NA3I2JI3VX1"
+ for cell "NA3JI3VX0"
+ for cell "NA4JI3VX0"
+ for cell "NO22JI3VX1"
+ for cell "NO2I1JI3VX1"
+ for cell "NO2I1JI3VX2"
+ for cell "NO2JI3VX0"
+ for cell "NO2JI3VX2"
+ for cell "NO3I1JI3VX1"
+ for cell "NO3I2JI3VX1"
+ for cell "NO3JI3VX0"
+ for cell "NO3JI3VX1"
+ for cell "OA21JI3VX1"
+ for cell "ON211JI3VX1"
+ for cell "ON21JI3VX1"
+ for cell "ON21JI3VX4"
+ for cell "ON22JI3VX1"
+ for cell "ON31JI3VX1"
+ for cell "OR2JI3VX0"
+ for cell "OR3JI3VX1"
+ for cell "OR4JI3VX1"
+ for cell "OR4JI3VX2"
+ for cell "SDFRRQJI3VX1"
+ for cell "VIA1_CH1_eo"
+ for cell "VIA1_CH1_so"
+ for cell "VIA1_CH1_so2"
+ for cell "VIA1_CH1_so_hd2"
+ for cell "VIA1_CH2_eo"
+ for cell "VIA1_CH2_hd"
+ for cell "VIA1_CH2_so"
+ for cell "VIA1_CH2_so2"
+ for cell "VIA1_CH2_so_hd2"
+ for cell "VIA1_CV1_hd"
+ for cell "VIA1_CV1_so"
+ for cell "VIA1_CV1e_beo"
+ for cell "VIA1_CV1w_beo"
+ for cell "VIA1_CV2_hd"
+ for cell "VIA1_CV2_so"
+ for cell "VIA1_CV2e_beo"
+ for cell "VIA1_CV2w_beo"
+ for cell "VIA1_C_CDNS_721087476940"
+ for cell "VIA1_C_CDNS_721087476941"
+ for cell "VIA1_C_CDNS_721087476942"
+ for cell "VIA1_C_CDNS_721087476943"
+ for cell "VIA1_X_so"
+ for cell "VIA1_Y_so"
+ for cell "VIA1_o"
+ for cell "VIA2_CH1_hd"
+ for cell "VIA2_CH1_so"
+ for cell "VIA2_CH1n_beo"
+ for cell "VIA2_CH1s_beo"
+ for cell "VIA2_CH2_so"
+ for cell "VIA2_CH2n_beo"
+ for cell "VIA2_CH2s_beo"
+ for cell "VIA2_CV1_so"
+ for cell "VIA2_CV1e_beo"
+ for cell "VIA2_CV2_so"
+ for cell "VIA2_o"
+ for cell "VIA3_CH1_so"
+ for cell "VIA3_CH2_so"
+ for cell "VIA3_CV1_so"
+ for cell "VIA3_CV2_so"
+ for cell "aska_dig"
+ for cell "aska_dig_lvs"

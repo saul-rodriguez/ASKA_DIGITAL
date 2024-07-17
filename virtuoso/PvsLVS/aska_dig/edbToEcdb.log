@@ -1,0 +1,17 @@
+
+/pkg/cadence/installs/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : aska_dig_20686.db
+ECDB dir        : ./
+Top Cell        : aska_dig
+CDL netlist     : svdb/aska_dig.net
+Layer map file  : svdb/aska_dig.ecdbmap
+Text map file   : svdb/aska_dig.ports
+Dependency map  : aska_dig.lmap.perc
+Lvs file        : svdb/aska_dig.lvsfile
+Float net file  : .aska_dig.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : aska_dig_20686

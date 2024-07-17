@@ -1,0 +1,26 @@
+Checking out SoftShare license Phys_Ver_Sys_Results_Mgr 23.1 Qty: 1 ... failed.
+Checking out SoftShare license Pegasus_RV 23.1 Qty: 1 ... succeeded (1s).
+lockFile: errno = 'Resource temporarily unavailable'
+********************************************************************************
+pvstdb 23.10-p043 64 bit (Mon Oct 2 18:09:08 PDT 2023)
+Build Ref No.: 043 Production (10-02-2023) [pvs_2310]
+
+Copyright 2023 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 3.10.0-693.el7.x86_64
+Executed on:     phoenix (Linux x86_64 3.10.0-1160.105.1.el7.x86_64)
+Process Id:      22518
+Starting Time:   Mon Jul 15 19:54:01 2024 (Mon Jul 15 23:54:01 2024 GMT)
+With parameters: -sf /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs_drc.err.index /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs_drc.err /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs_drc.err.pvstdb 
+********************************************************************************
+
+Waiting for write lock on /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs_drc.err.index.
+Obtained lock.
+
+Summary: 0 markers created.
+
+pvstdb completed.
+lockFile: errno = 'Resource temporarily unavailable'
+lockFile: errno = 'Resource temporarily unavailable'
+33956339563395633956Checking in SoftShare license Pegasus_RV ... succeeded (1s).

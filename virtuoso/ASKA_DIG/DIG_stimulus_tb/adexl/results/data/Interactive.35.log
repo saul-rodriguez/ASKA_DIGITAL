@@ -1,0 +1,15 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Sun Jul 14 06:18:23 2024 
+Best design point: 1
+Design specs: 
+	ASKA_DIG:DIG_stimulus_tb:1	corner	Nominal - 
+Design parameters: 
+	ADDR_0		3.3
+	ADDR_1		0
+
+Interactive.35
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.35 completed. 
+Current time: Sun Jul 14 06:18:42 2024 

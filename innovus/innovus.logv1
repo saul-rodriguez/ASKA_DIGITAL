@@ -1,0 +1,426 @@
+[07/15 11:23:47      0s] 
+[07/15 11:23:47      0s] Cadence Innovus(TM) Implementation System.
+[07/15 11:23:47      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[07/15 11:23:47      0s] 
+[07/15 11:23:47      0s] Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+[07/15 11:23:47      0s] Options:	
+[07/15 11:23:47      0s] Date:		Mon Jul 15 11:23:47 2024
+[07/15 11:23:47      0s] Host:		phoenix (x86_64 w/Linux 3.10.0-1160.105.1.el7.x86_64) (7cores*7cpus*11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz 16384KB)
+[07/15 11:23:47      0s] OS:		CentOS Linux 7 (Core)
+[07/15 11:23:47      0s] 
+[07/15 11:23:47      0s] License:
+[07/15 11:23:47      0s] 		[11:23:47.088465] Configured Lic search path (21.01-s002): 3000@lic08.ug.kth.se
+
+[07/15 11:23:47      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[07/15 11:23:47      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[07/15 11:24:05      8s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+[07/15 11:24:07     10s] @(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+[07/15 11:24:07     10s] @(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+[07/15 11:24:07     10s] @(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+[07/15 11:24:07     10s] @(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+[07/15 11:24:07     10s] @(#)CDS: CPE v21.18-s053
+[07/15 11:24:07     10s] @(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+[07/15 11:24:07     10s] @(#)CDS: OA 22.60-p087 Thu Feb  9 09:35:26 2023
+[07/15 11:24:07     10s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[07/15 11:24:07     10s] @(#)CDS: RCDB 11.15.0
+[07/15 11:24:07     10s] @(#)CDS: STYLUS 21.12-s019_1 (12/20/2022 05:13 PST)
+[07/15 11:24:07     10s] @(#)CDS: SystemPlanner-21.18-10439 (21.18) (2023-03-01 15:40:03+0800)
+[07/15 11:24:07     10s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_7960_phoenix_saul_UCjK5r.
+
+[07/15 11:24:07     10s] Change the soft stacksize limit to 0.2%RAM (34 mbytes). Set global soft_stack_size_limit to change the value.
+[07/15 11:24:10     11s] 
+[07/15 11:24:10     11s] **INFO:  MMMC transition support version v31-84 
+[07/15 11:24:10     11s] 
+[07/15 11:24:10     11s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[07/15 11:24:10     11s] <CMD> suppressMessage ENCEXT-2799
+[07/15 11:24:10     11s] <CMD> getVersion
+[07/15 11:24:10     11s] [INFO] Loading PVS 23.10 fill procedures
+[07/15 11:24:10     11s] <CMD> win
+[07/15 11:25:33     14s] <CMD> encMessage warning 0
+[07/15 11:25:33     14s] Suppress "**WARN ..." messages.
+[07/15 11:25:33     14s] <CMD> encMessage debug 0
+[07/15 11:25:33     14s] <CMD> restoreDesign -cellview {FEOADesignlib aska_dig aska_dig_loaded}
+[07/15 11:25:33     14s] #% Begin load design ... (date=07/15 11:25:33, mem=831.9M)
+[07/15 11:25:33     14s] Loading design 'aska_dig' saved by 'Innovus' '21.18-s099_1' on 'Mon Jul 15 10:48:38 2024'.
+[07/15 11:25:33     14s] % Begin Load MMMC data ... (date=07/15 11:25:33, mem=835.4M)
+[07/15 11:25:33     14s] % End Load MMMC data ... (date=07/15 11:25:33, total cpu=0:00:00.0, real=0:00:00.0, peak res=836.5M, current mem=836.5M)
+[07/15 11:25:33     14s] Reading tech data from OA library 'FEOADesignlib' ...
+[07/15 11:25:33     14s] FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+[07/15 11:25:33     14s] **WARN: (IMPOAX-1645):	'minWidth' constraint is not supported on layer 'POLY1'. This constraint will be ignored by tool.
+[07/15 11:25:33     14s] **WARN: (IMPOAX-1645):	'minSpacing' constraint is not supported on layer 'POLY1'. This constraint will be ignored by tool.
+[07/15 11:25:33     14s] Set DBUPerIGU to M2 pitch 560.
+[07/15 11:25:34     14s] **WARN: (IMPOAX-718):	ENCLOSURE OVERHANG2 '0.232' on Layer M2 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+[07/15 11:25:34     14s] **WARN: (IMPOAX-718):	ENCLOSURE OVERHANG2 '0.232' on Layer M2 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+[07/15 11:25:34     14s] **WARN: (IMPOAX-718):	ENCLOSURE OVERHANG1 '0.232' on Layer M3 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+[07/15 11:25:34     14s] **WARN: (IMPOAX-718):	ENCLOSURE OVERHANG1 '0.232' on Layer M3 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+[07/15 11:25:34     14s] LEFDefaultRouteSpec(LDRS) is read from rule 'LEFDefaultRouteSpec_HD' and library 'TECH_XH018_HD'. Only default vias, routing layers, pitch, routing width, routing direction, layer offset, wire extension constraints are read from it and rest of rules are read from foundry constraint group.
+[07/15 11:25:34     14s] 
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[07/15 11:25:34     14s] **WARN: (IMPOAX-740):	Viarule 'ND_C_auto' specified in NonDefault UseViaRule section is not defined in Innovus. Check the non Default Rule Section of OpenAccess database.
+[07/15 11:25:34     14s] **WARN: (IMPOAX-740):	Viarule 'PD_C_auto' specified in NonDefault UseViaRule section is not defined in Innovus. Check the non Default Rule Section of OpenAccess database.
+[07/15 11:25:34     14s] Reading OA reference library 'D_CELLS_JI3V' ...
+[07/15 11:25:34     15s] **WARN: (IMPOAX-722):	Layer 'MET5' read from technology data is not defined in Innovus database. Check the layer information in OpenAccess technology database.
+[07/15 11:25:34     15s] **WARN: (IMPOAX-1594):	While reading blockage/OBS  of cell 'MPROBEBUJI3VX8' from library 'D_CELLS_JI3V', shape with bounding box '11.46 -0.56 18.345 5.04' is found on layer 'MET5'. This will be ignored by tool.
+[07/15 11:25:34     15s] **WARN: (IMPOAX-6021):	Blockages for cell can not read for cell 'MPROBEBUJI3VX8'  as layer 'MET5' is not defined in Innovus database.
+[07/15 11:25:34     15s] **WARN: (IMPOAX-722):	Layer 'MET5' read from technology data is not defined in Innovus database. Check the layer information in OpenAccess technology database.
+[07/15 11:25:34     15s] **WARN: (IMPOAX-1594):	While reading blockage/OBS  of cell 'MPROBEJI3V' from library 'D_CELLS_JI3V', shape with bounding box '0.28 -0.56 7.165 5.04' is found on layer 'MET5'. This will be ignored by tool.
+[07/15 11:25:34     15s] **WARN: (IMPOAX-6021):	Blockages for cell can not read for cell 'MPROBEJI3V'  as layer 'MET5' is not defined in Innovus database.
+[07/15 11:25:34     15s] Reading OA reference library 'ASKA_DIG' ...
+[07/15 11:25:34     15s] Reading OA reference library 'FEOADesignlib' ...
+[07/15 11:25:34     15s] Loading view definition file from /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/viewDefinition.tcl
+[07/15 11:25:34     15s] Reading slow_liberty timing library '/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/liberty_LPMOS_MOS3LP/v2_1_2/PVT_3_30V_range/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib' ...
+[07/15 11:25:34     15s] Read 304 cells in library 'D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C' 
+[07/15 11:25:34     15s] Reading fast_liberty timing library '/home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/liberty_LPMOS_MOS3LP/v2_1_2/PVT_3_30V_range/D_CELLS_JI3V_LPMOS_MOS3LP_fast_3_60V_m40C.lib' ...
+[07/15 11:25:34     15s] Read 304 cells in library 'D_CELLS_JI3V_LPMOS_MOS3LP_fast_3_60V_m40C' 
+[07/15 11:25:34     15s] Ending "PreSetAnalysisView" (total cpu=0:00:00.3, real=0:00:00.0, peak res=915.2M, current mem=866.5M)
+[07/15 11:25:34     15s] *** End library_loading (cpu=0.01min, real=0.00min, mem=7.0M, fe_cpu=0.26min, fe_real=1.78min, fe_mem=1058.2M) ***
+[07/15 11:25:34     15s] Reading EMH from OA ...
+[07/15 11:25:34     15s] Created 304 new cells from 2 timing libraries.
+[07/15 11:25:34     15s] 
+[07/15 11:25:34     15s] *** Memory Usage v#1 (Current mem = 1058.238M, initial mem = 486.105M) ***
+[07/15 11:25:34     15s] Set top cell to aska_dig.
+[07/15 11:25:34     15s] Hooked 608 DB cells to tlib cells.
+[07/15 11:25:34     15s] ** Removed 1 unused lib cells.
+[07/15 11:25:34     15s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=878.2M, current mem=878.2M)
+[07/15 11:25:34     15s] Starting recursive module instantiation check.
+[07/15 11:25:34     15s] No recursion found.
+[07/15 11:25:34     15s] Building hierarchical netlist for Cell aska_dig ...
+[07/15 11:25:34     15s] *** Netlist is unique.
+[07/15 11:25:34     15s] Setting Std. cell height to 4480 DBU (smallest netlist inst).
+[07/15 11:25:34     15s] ** info: there are 608 modules.
+[07/15 11:25:34     15s] ** info: there are 1140 stdCell insts.
+[07/15 11:25:34     15s] 
+[07/15 11:25:34     15s] *** Memory Usage v#1 (Current mem = 1105.664M, initial mem = 486.105M) ***
+[07/15 11:25:34     15s] *info: set bottom ioPad orient R0
+[07/15 11:25:34     15s] Start create_tracks
+[07/15 11:25:34     15s] Loading preference file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/inn_data/gui.pref.tcl ...
+[07/15 11:25:34     15s] ##  Process: 180           (User Set)               
+[07/15 11:25:34     15s] ##     Node: (not set)                           
+[07/15 11:25:34     15s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[07/15 11:25:34     15s] Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+[07/15 11:25:34     15s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[07/15 11:25:34     15s] 	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+[07/15 11:25:34     15s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+[07/15 11:25:34     15s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+[07/15 11:25:34     15s] 
+[07/15 11:25:34     15s] viaInitial starts at Mon Jul 15 11:25:34 2024
+viaInitial ends at Mon Jul 15 11:25:34 2024
+Change floorplan default-technical-site to 'core_ji3v'.
+[07/15 11:25:34     15s] Extraction setup Delayed 
+[07/15 11:25:34     15s] *Info: initialize multi-corner CTS.
+[07/15 11:25:34     15s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1155.4M, current mem=903.4M)
+[07/15 11:25:35     15s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[07/15 11:25:35     15s] Summary for sequential cells identification: 
+[07/15 11:25:35     15s]   Identified SBFF number: 33
+[07/15 11:25:35     15s]   Identified MBFF number: 0
+[07/15 11:25:35     15s]   Identified SB Latch number: 0
+[07/15 11:25:35     15s]   Identified MB Latch number: 0
+[07/15 11:25:35     15s]   Not identified SBFF number: 0
+[07/15 11:25:35     15s]   Not identified MBFF number: 0
+[07/15 11:25:35     15s]   Not identified SB Latch number: 0
+[07/15 11:25:35     15s]   Not identified MB Latch number: 0
+[07/15 11:25:35     15s]   Number of sequential cells which are not FFs: 43
+[07/15 11:25:35     15s] Total number of combinational cells: 147
+[07/15 11:25:35     15s] Total number of sequential cells: 76
+[07/15 11:25:35     15s] Total number of tristate cells: 8
+[07/15 11:25:35     15s] Total number of level shifter cells: 0
+[07/15 11:25:35     15s] Total number of power gating cells: 0
+[07/15 11:25:35     15s] Total number of isolation cells: 0
+[07/15 11:25:35     15s] Total number of power switch cells: 0
+[07/15 11:25:35     15s] Total number of pulse generator cells: 0
+[07/15 11:25:35     15s] Total number of always on buffers: 0
+[07/15 11:25:35     15s] Total number of retention cells: 0
+[07/15 11:25:35     15s] Total number of physical cells: 72
+[07/15 11:25:35     15s] List of usable buffers: BUJI3VX1 BUJI3VX0 BUJI3VX12 BUJI3VX16 BUJI3VX2 BUJI3VX3 BUJI3VX4 BUJI3VX6 BUJI3VX8
+[07/15 11:25:35     15s] Total number of usable buffers: 9
+[07/15 11:25:35     15s] List of unusable buffers:
+[07/15 11:25:35     15s] Total number of unusable buffers: 0
+[07/15 11:25:35     15s] List of usable inverters: INJI3VX1 INJI3VX0 INJI3VX12 INJI3VX16 INJI3VX2 INJI3VX3 INJI3VX4 INJI3VX6 INJI3VX8
+[07/15 11:25:35     15s] Total number of usable inverters: 9
+[07/15 11:25:35     15s] List of unusable inverters:
+[07/15 11:25:35     15s] Total number of unusable inverters: 0
+[07/15 11:25:35     15s] List of identified usable delay cells: DLY1JI3VX1 DLY2JI3VX1 DLY4JI3VX1 DLY8JI3VX1 STEJI3VX1 STEJI3VX2 STEJI3VX3 STEJI3VX4
+[07/15 11:25:35     15s] Total number of identified usable delay cells: 8
+[07/15 11:25:35     15s] List of identified unusable delay cells:
+[07/15 11:25:35     15s] Total number of identified unusable delay cells: 0
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] TimeStamp Deleting Cell Server Begin ...
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] TimeStamp Deleting Cell Server End ...
+[07/15 11:25:35     15s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1162.9M, current mem=1162.9M)
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign Begin ...
+[07/15 11:25:35     15s] Summary for sequential cells identification: 
+[07/15 11:25:35     15s]   Identified SBFF number: 33
+[07/15 11:25:35     15s]   Identified MBFF number: 0
+[07/15 11:25:35     15s]   Identified SB Latch number: 0
+[07/15 11:25:35     15s]   Identified MB Latch number: 0
+[07/15 11:25:35     15s]   Not identified SBFF number: 0
+[07/15 11:25:35     15s]   Not identified MBFF number: 0
+[07/15 11:25:35     15s]   Not identified SB Latch number: 0
+[07/15 11:25:35     15s]   Not identified MB Latch number: 0
+[07/15 11:25:35     15s]   Number of sequential cells which are not FFs: 43
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] Trim Metal Layers:
+[07/15 11:25:35     15s]  Visiting view : slow_functional_mode
+[07/15 11:25:35     15s]    : PowerDomain = none : Weighted F : unweighted  = 91.00 (1.000) with rcCorner = 0
+[07/15 11:25:35     15s]    : PowerDomain = none : Weighted F : unweighted  = 84.30 (1.000) with rcCorner = -1
+[07/15 11:25:35     15s]  Visiting view : fast_functional_mode
+[07/15 11:25:35     15s]    : PowerDomain = none : Weighted F : unweighted  = 45.20 (1.000) with rcCorner = 1
+[07/15 11:25:35     15s]    : PowerDomain = none : Weighted F : unweighted  = 41.60 (1.000) with rcCorner = -1
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign End ...
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] TimeStamp Deleting Cell Server Begin ...
+[07/15 11:25:35     15s] 
+[07/15 11:25:35     15s] TimeStamp Deleting Cell Server End ...
+[07/15 11:25:35     15s] ---------- oaIn ----------
+[07/15 11:25:35     15s] Reading physical information from OpenAccess database (FEOADesignlib/aska_dig/aska_dig_loaded).
+[07/15 11:25:35     15s] FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+[07/15 11:25:35     15s] No new Ext DEF rule to be processed.
+[07/15 11:25:35     15s] Extracting standard cell pins and blockage ...... 
+[07/15 11:25:35     15s] Pin and blockage extraction finished
+[07/15 11:25:35     15s] TIMER: Purge OA from memory: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+[07/15 11:25:35     15s] TIMER: oaIn total process: 0h 0m  0.07s cpu {0h 0m 0s elapsed} Memory = 0.0.
+[07/15 11:25:35     16s] eee: readRCCornerMetaData, file read unsuccessful: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/extraction/extractionMetaData.gz
+[07/15 11:25:35     16s] Extraction setup Started 
+[07/15 11:25:35     16s] 
+[07/15 11:25:35     16s] Trim Metal Layers:
+[07/15 11:25:35     16s] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[07/15 11:25:35     16s] Reading Capacitance Table File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/libs/mmmc/xh018_xx43_MET4_METMID_METTHK_max.capTbl ...
+[07/15 11:25:35     16s] Process name: XH018.
+[07/15 11:25:35     16s] Reading Capacitance Table File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/libs/mmmc/xh018_xx43_MET4_METMID_METTHK_min.capTbl ...
+[07/15 11:25:35     16s] Process name: XX018.
+[07/15 11:25:35     16s] Importing multi-corner RC tables ... 
+[07/15 11:25:35     16s] Summary of Active RC-Corners : 
+[07/15 11:25:35     16s]  
+[07/15 11:25:35     16s]  Analysis View: slow_functional_mode
+[07/15 11:25:35     16s]     RC-Corner Name        : max_rc
+[07/15 11:25:35     16s]     RC-Corner Index       : 0
+[07/15 11:25:35     16s]     RC-Corner Temperature : 25 Celsius
+[07/15 11:25:35     16s]     RC-Corner Cap Table   : '/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/libs/mmmc/xh018_xx43_MET4_METMID_METTHK_max.capTbl'
+[07/15 11:25:35     16s]     RC-Corner PreRoute Res Factor         : 1
+[07/15 11:25:35     16s]     RC-Corner PreRoute Cap Factor         : 1
+[07/15 11:25:35     16s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[07/15 11:25:35     16s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[07/15 11:25:35     16s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[07/15 11:25:35     16s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[07/15 11:25:35     16s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[07/15 11:25:35     16s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[07/15 11:25:35     16s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[07/15 11:25:35     16s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[07/15 11:25:35     16s]  
+[07/15 11:25:35     16s]  Analysis View: fast_functional_mode
+[07/15 11:25:35     16s]     RC-Corner Name        : min_rc
+[07/15 11:25:35     16s]     RC-Corner Index       : 1
+[07/15 11:25:35     16s]     RC-Corner Temperature : 25 Celsius
+[07/15 11:25:35     16s]     RC-Corner Cap Table   : '/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/libs/mmmc/xh018_xx43_MET4_METMID_METTHK_min.capTbl'
+[07/15 11:25:35     16s]     RC-Corner PreRoute Res Factor         : 1
+[07/15 11:25:35     16s]     RC-Corner PreRoute Cap Factor         : 1
+[07/15 11:25:35     16s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[07/15 11:25:35     16s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[07/15 11:25:35     16s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[07/15 11:25:35     16s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[07/15 11:25:35     16s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[07/15 11:25:35     16s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[07/15 11:25:35     16s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[07/15 11:25:35     16s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[07/15 11:25:35     16s] 
+[07/15 11:25:35     16s] Trim Metal Layers:
+[07/15 11:25:35     16s] LayerId::1 widthSet size::4
+[07/15 11:25:35     16s] LayerId::2 widthSet size::4
+[07/15 11:25:35     16s] LayerId::3 widthSet size::4
+[07/15 11:25:35     16s] LayerId::4 widthSet size::4
+[07/15 11:25:35     16s] LayerId::5 widthSet size::4
+[07/15 11:25:35     16s] LayerId::6 widthSet size::2
+[07/15 11:25:35     16s] Updating RC grid for preRoute extraction ...
+[07/15 11:25:35     16s] eee: pegSigSF::1.070000
+[07/15 11:25:35     16s] Initializing multi-corner capacitance tables ... 
+[07/15 11:25:35     16s] Initializing multi-corner resistance tables ...
+[07/15 11:25:35     16s] eee: l::1 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/15 11:25:35     16s] eee: l::2 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/15 11:25:35     16s] eee: l::3 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/15 11:25:35     16s] eee: l::4 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/15 11:25:35     16s] eee: l::5 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/15 11:25:35     16s] eee: l::6 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[07/15 11:25:35     16s] {RT max_rc 0 6 6 {5 0} 1}
+[07/15 11:25:35     16s] eee: LAM: n=40 LLS=2-3 HLS=3-5 rDens=0.000000 uaWl=0.000000 uaWlH=0.000000 aWlH=0.000000 lMod=0 pMax=0.850000 pMod=82 wcR=0.444400 newSi=0.000000 wHLS=1.111000 siPrev=0 viaL=0.000000 crit=0.000000 shortMod=0.000000 fMod=0.000000 
+[07/15 11:25:35     16s] Start generating vias ..
+[07/15 11:25:35     16s] #create default rule from bind_ndr_rule rule=0x7fa04eb21870 0x7fa072526ff0
+[07/15 11:25:35     16s] ### import design signature (1): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1 via=1588046920 routing_via=1
+[07/15 11:25:35     16s] #Skip building auto via since it is not turned on.
+[07/15 11:25:35     16s] Extracting standard cell pins and blockage ...... 
+[07/15 11:25:35     16s] Pin and blockage extraction finished
+[07/15 11:25:35     16s] Via generation completed.
+[07/15 11:25:35     16s] % Begin Load power constraints ... (date=07/15 11:25:35, mem=1175.2M)
+[07/15 11:25:35     16s] % End Load power constraints ... (date=07/15 11:25:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=1175.3M, current mem=1175.3M)
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+[07/15 11:25:35     16s] Type 'man IMPCTE-290' for more detail.
+[07/15 11:25:35     16s] **WARN: (EMS-27):	Message (IMPCTE-290) has exceeded the current message display limit of 20.
+[07/15 11:25:35     16s] To increase the message display limit, refer to the product command reference manual.
+[07/15 11:25:35     16s] % Begin load AAE data ... (date=07/15 11:25:35, mem=1219.3M)
+[07/15 11:25:35     16s] % End load AAE data ... (date=07/15 11:25:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=1219.3M, current mem=1219.3M)
+[07/15 11:25:35     16s] Reading property file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus/FEOADesignlib/aska_dig/aska_dig_loaded/inn_data/aska_dig.prop
+[07/15 11:25:35     16s] *** Completed restoreOALibCellAnnotation (cpu=0:00:00.0 real=0:00:00.0 mem=1428.9M) ***
+[07/15 11:25:35     16s] 
+[07/15 11:25:35     16s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[07/15 11:25:35     16s] Summary for sequential cells identification: 
+[07/15 11:25:35     16s]   Identified SBFF number: 33
+[07/15 11:25:35     16s]   Identified MBFF number: 0
+[07/15 11:25:35     16s]   Identified SB Latch number: 0
+[07/15 11:25:35     16s]   Identified MB Latch number: 0
+[07/15 11:25:35     16s]   Not identified SBFF number: 0
+[07/15 11:25:35     16s]   Not identified MBFF number: 0
+[07/15 11:25:35     16s]   Not identified SB Latch number: 0
+[07/15 11:25:35     16s]   Not identified MB Latch number: 0
+[07/15 11:25:35     16s]   Number of sequential cells which are not FFs: 43
+[07/15 11:25:35     16s] Total number of combinational cells: 147
+[07/15 11:25:35     16s] Total number of sequential cells: 76
+[07/15 11:25:35     16s] Total number of tristate cells: 8
+[07/15 11:25:35     16s] Total number of level shifter cells: 0
+[07/15 11:25:35     16s] Total number of power gating cells: 0
+[07/15 11:25:35     16s] Total number of isolation cells: 0
+[07/15 11:25:35     16s] Total number of power switch cells: 0
+[07/15 11:25:35     16s] Total number of pulse generator cells: 0
+[07/15 11:25:35     16s] Total number of always on buffers: 0
+[07/15 11:25:35     16s] Total number of retention cells: 0
+[07/15 11:25:35     16s] Total number of physical cells: 72
+[07/15 11:25:35     16s] List of usable buffers: BUJI3VX1 BUJI3VX0 BUJI3VX12 BUJI3VX16 BUJI3VX2 BUJI3VX3 BUJI3VX4 BUJI3VX6 BUJI3VX8
+[07/15 11:25:35     16s] Total number of usable buffers: 9
+[07/15 11:25:35     16s] List of unusable buffers:
+[07/15 11:25:35     16s] Total number of unusable buffers: 0
+[07/15 11:25:35     16s] List of usable inverters: INJI3VX1 INJI3VX0 INJI3VX12 INJI3VX16 INJI3VX2 INJI3VX3 INJI3VX4 INJI3VX6 INJI3VX8
+[07/15 11:25:35     16s] Total number of usable inverters: 9
+[07/15 11:25:35     16s] List of unusable inverters:
+[07/15 11:25:35     16s] Total number of unusable inverters: 0
+[07/15 11:25:35     16s] List of identified usable delay cells: DLY1JI3VX1 DLY2JI3VX1 DLY4JI3VX1 DLY8JI3VX1
+[07/15 11:25:35     16s] Total number of identified usable delay cells: 4
+[07/15 11:25:35     16s] List of identified unusable delay cells: STEJI3VX1 STEJI3VX2 STEJI3VX3 STEJI3VX4
+[07/15 11:25:35     16s] Total number of identified unusable delay cells: 4
+[07/15 11:25:35     16s] 
+[07/15 11:25:35     16s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[07/15 11:25:35     16s] 
+[07/15 11:25:35     16s] TimeStamp Deleting Cell Server Begin ...
+[07/15 11:25:35     16s] 
+[07/15 11:25:35     16s] TimeStamp Deleting Cell Server End ...
+[07/15 11:25:35     16s] Compressing special routes for OpenAccess db ...
+[07/15 11:25:35     16s] 0 swires and 0 svias were compressed
+[07/15 11:25:35     16s] 0 swires and 0 svias were decompressed from small or sparse groups
+[07/15 11:25:35     16s] #% End load design ... (date=07/15 11:25:35, total cpu=0:00:01.8, real=0:00:02.0, peak res=1250.4M, current mem=1219.7M)
+[07/15 11:25:35     16s] 
+[07/15 11:25:35     16s] *** Summary of all messages that are not suppressed in this session:
+[07/15 11:25:35     16s] Severity  ID               Count  Summary                                  
+[07/15 11:25:35     16s] WARNING   IMPOAX-1594          2  While reading %s of cell '%s' from libra...
+[07/15 11:25:35     16s] WARNING   IMPOAX-1645          2  '%s' constraint is not supported on laye...
+[07/15 11:25:35     16s] WARNING   IMPOAX-718           4  %s '%g' on %s %s is not aligned to manuf...
+[07/15 11:25:35     16s] WARNING   IMPOAX-722           2  Layer '%s' read from technology data is ...
+[07/15 11:25:35     16s] WARNING   IMPOAX-740           2  Viarule '%s' specified in NonDefault Use...
+[07/15 11:25:35     16s] WARNING   IMPOAX-6021          2  Blockages for cell can not read for cell...
+[07/15 11:25:35     16s] WARNING   IMPCTE-290          64  Could not locate cell %s in any library ...
+[07/15 11:25:35     16s] *** Message Summary: 78 warning(s), 0 error(s)
+[07/15 11:25:35     16s] 
+[07/15 11:25:35     16s] <CMD> setDrawView fplan
+[07/15 11:25:35     16s] <CMD> encMessage warning 1
+[07/15 11:25:35     16s] Un-suppress "**WARN ..." messages.
+[07/15 11:25:35     16s] <CMD> encMessage debug 0
+[07/15 11:25:39     16s] <CMD> selectObject Module npg1
+[07/15 11:25:49     16s] <CMD> fit
+[07/15 11:25:50     16s] <CMD> deselectAll
+[07/15 11:25:50     16s] <CMD> fit
+[07/15 11:25:52     16s] <CMD> selectObject Module npg1
+[07/15 11:26:02     16s] <CMD> deselectAll
+[07/15 11:26:02     16s] <CMD> selectObject Module npg1
+[07/15 11:26:05     16s] <CMD> deselectAll
+[07/15 11:26:05     16s] <CMD> selectObject Module npg1
+[07/15 11:26:07     16s] <CMD> uiSetTool moveWire
+[07/15 11:26:11     16s] <CMD> deselectAll
+[07/15 11:26:11     16s] <CMD> selectObject Module npg1
+[07/15 11:26:12     16s] <CMD> deselectAll
+[07/15 11:26:12     16s] <CMD> selectObject Module npg1
+[07/15 11:32:18     29s] <CMD> deselectAll
+[07/15 11:32:18     29s] <CMD> selectObject Module npg1
+[07/15 11:33:23     32s] <CMD> deselectAll
+[07/15 11:33:23     32s] <CMD> selectObject Module npg1
+[07/15 11:33:27     32s] <CMD> deselectAll
+[07/15 11:33:27     32s] <CMD> selectObject Module npg1
+[07/15 11:33:29     32s] <CMD> zoomBox -180.09200 -36.82300 600.32300 358.78100
+[07/15 11:34:03     33s] <CMD> deselectAll
+[07/15 11:34:03     33s] <CMD> selectObject Module npg1
+[07/15 11:34:04     33s] <CMD> zoomBox -75.91200 96.45300 -73.56500 97.86100
+[07/15 11:34:06     33s] <CMD> zoomBox -76.38900 96.23600 -72.54400 98.18500
+[07/15 11:34:08     33s] <CMD> fit
+[07/15 11:34:11     33s] <CMD> uiSetTool moveWire
+[07/15 11:34:11     33s] <CMD> deselectAll
+[07/15 11:34:11     33s] <CMD> selectObject Module npg1
+[07/15 11:34:35     33s] <CMD> deselectAll
+[07/15 11:34:37     33s] <CMD> fit
+[07/15 11:37:19     39s] <CMD> zoomBox -189.07800 -86.44000 591.33800 309.16500
+[07/15 11:41:38     49s] 
+--------------------------------------------------------------------------------
+Exiting Innovus on Mon Jul 15 11:41:38 2024
+  Total CPU time:     0:00:49
+  Total real time:    0:17:52
+  Peak memory (main): 1297.99MB
+
+[07/15 11:41:38     49s] 
+[07/15 11:41:38     49s] *** Memory Usage v#1 (Current mem = 1499.906M, initial mem = 486.105M) ***
+[07/15 11:41:38     49s] 
+[07/15 11:41:38     49s] *** Summary of all messages that are not suppressed in this session:
+[07/15 11:41:38     49s] Severity  ID               Count  Summary                                  
+[07/15 11:41:38     49s] WARNING   IMPOAX-1594          2  While reading %s of cell '%s' from libra...
+[07/15 11:41:38     49s] WARNING   IMPOAX-1645          2  '%s' constraint is not supported on laye...
+[07/15 11:41:38     49s] WARNING   IMPOAX-718           4  %s '%g' on %s %s is not aligned to manuf...
+[07/15 11:41:38     49s] WARNING   IMPOAX-722           2  Layer '%s' read from technology data is ...
+[07/15 11:41:38     49s] WARNING   IMPOAX-740           2  Viarule '%s' specified in NonDefault Use...
+[07/15 11:41:38     49s] WARNING   IMPOAX-6021          2  Blockages for cell can not read for cell...
+[07/15 11:41:38     49s] WARNING   IMPCTE-290          64  Could not locate cell %s in any library ...
+[07/15 11:41:38     49s] *** Message Summary: 78 warning(s), 0 error(s)
+[07/15 11:41:38     49s] 
+[07/15 11:41:38     49s] --- Ending "Innovus" (totcpu=0:00:49.4, real=0:17:51, mem=1499.9M) ---

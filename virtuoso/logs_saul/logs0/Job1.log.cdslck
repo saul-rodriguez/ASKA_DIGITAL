@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      saul
+HostName                       phoenix
+ProcessIdentifier              13042
+ProcessCreationTime_UTC        1717611924
+ProcessCreationTime_Readable   Wed Jun  5 14:25:24 2024 EDT
+AppIdentifier                  /pkg/cadence/installs/IC618/tools.lnx86/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       Set lock by hiiLockFile
+FilePathUsedToEditLock         /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/logs_saul/logs0/Job1.log
+TimeEditLocked                 Wed Jun  5 14:25:25 2024 EDT

@@ -1,0 +1,236 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[12:00:12.088369] Configured Lic search path (21.01-s002): 3000@lic08.ug.kth.se
+
+Version: 21.18-s082_1, built Tue Jul 18 10:08:41 PDT 2023
+Options: -files synt.tcl 
+Date:    Mon Jul 15 12:00:12 2024
+Host:    phoenix (x86_64 w/Linux 3.10.0-1160.105.1.el7.x86_64) (7cores*7cpus*1physical cpu*11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz 16384KB) (17917240KB)
+PID:     11715
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+
+[12:00:13.019465] Periodic Lic check successful
+[12:00:13.019466] Feature usage summary:
+[12:00:13.019466] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (17 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source synt.tcl
+#@ Begin verbose source ./synt.tcl
+@file(synt.tcl) 10: set_db information_level 9
+  Setting attribute of root '/': 'information_level' = 9
+@file(synt.tcl) 12: set_db lib_search_path "../liberty/LIBERTY_STD_CELLS"
+  Setting attribute of root '/': 'lib_search_path' = ../liberty/LIBERTY_STD_CELLS
+@file(synt.tcl) 13: set_db library "D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib"
+
+Threads Configured:3
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'library_features' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 78)
+        : Check to see if this construct is really needed for synthesis. Many liberty constructs are not actually required.
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 91)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 93)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 95)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 97)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'single_bit_degenerate' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 75612)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'single_bit_degenerate' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 76984)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'single_bit_degenerate' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 78356)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'single_bit_degenerate' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 81004)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_filler_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96474)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_filler_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96497)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_filler_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96520)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_filler_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96543)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_filler_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96566)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_filler_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96589)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_filler_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96612)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_filler_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96635)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_decap_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96658)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_decap_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96681)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'is_decap_cell' encountered. Ignoring (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96704)
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-40'.
+Info    : Missing a function attribute in the output pin definition. [LBR-518]
+        : Functionality is missing at pin 'SIG' for the cell 'SIGNALHOLDJI3V'. (File /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib, Line 96283)
+
+  Message Summary for Library D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib:
+  **************************************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 81
+  **************************************************************************
+ 
+            Reading file '/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus/../liberty/LIBERTY_STD_CELLS/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib'
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 3.000000, 125.000000) in library 'D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LGCNJI3VX1'
+        : To make the cell usable, change the value of 'dont_use' attribute to false.
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LGCNJI3VX2'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LGCNJI3VX4'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LGCPJI3VX1'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LGCPJI3VX2'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LGCPJI3VX4'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCNJI3VX1'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCNJI3VX2'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCNJI3VX4'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCPJI3VX1'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCPJI3VX2'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCPJI3VX4'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCNJI3VX1'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCNJI3VX2'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCNJI3VX4'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCPJI3VX1'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCPJI3VX2'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCPJI3VX4'
+Info    : An output library pin lacks a function attribute. [LBR-41]
+        : Output pin 'SIGNALHOLDJI3V/SIG' has no function.
+        : If the remainder of this library cell's semantic checks are successful, it will be considered as a timing-model (because one of its outputs does not have a valid function.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'MPROBEBUJI3VX8' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'MPROBEBUJI3VX8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'MPROBEJI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'MPROBEJI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED10JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED10JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED15JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED15JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED1JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED1JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED25JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED25JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED2JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED2JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED3JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED3JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED5JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED5JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED7JI3V' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED7JI3V' must have an output pin.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-9'.
+  Setting attribute of root '/': 'library' = D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib
+@file(synt.tcl) 14: set_db operating_conditions slow_3_00V_125C
+  Setting attribute of root '/': 'operating_conditions' = operating_condition:default_emulate_libset_max/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C/slow_3_00V_125C
+@file(synt.tcl) 19: read_hdl ../src/aska_dig.v 
+            Reading Verilog file '../src/aska_dig.v'
+            Reading Verilog file '/home/saul/projects/DIGIMP/ASKA_SPI/aska_spi.v'
+            Reading Verilog file '/home/saul/projects/DIGIMP/ASKA_NPG/aska_npg.v'
+@file(synt.tcl) 21: set_db hdl_error_on_blackbox 1
+  Setting attribute of root '/': 'hdl_error_on_blackbox' = true
+@file(synt.tcl) 22: set_db hdl_error_on_latch 1
+  Setting attribute of root '/': 'hdl_error_on_latch' = true
+@file(synt.tcl) 25: set_db syn_generic_effort high
+  Setting attribute of root '/': 'syn_generic_effort' = high
+@file(synt.tcl) 26: set_db syn_map_effort high
+  Setting attribute of root '/': 'syn_map_effort' = high
+@file(synt.tcl) 28: ungroup aska_dig
+Error   : A required object parameter could not be found. [TUI-61] [parse_options]
+        : An object of type 'hinst' named 'aska_dig' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+  ungroup: ungroups one or more instances. 
+
+Usage: ungroup [-all] [-flatten] [-simple] [-prefix <string>]
+           [-only_user_hierarchy] [-threshold <integer>]
+           [-exclude <inst|hinst>+] [-force] [-verbose] [<hinst>+]
+
+    [-all]:
+        ungroups all instances under the current hierarchical instance 
+    [-flatten]:
+        ungroups recursively 
+    [-simple]:
+        no prefix 
+    [-prefix <string>]:
+        prepend this to the instances being moved up 
+    [-only_user_hierarchy]:
+        ungroups only user defined hierarchies 
+    [-threshold <integer>]:
+        recursively ungroups hierarchies with cell-count less then the 
+        threshold under the current hierarchical instance 
+    [-exclude <inst|hinst>+]:
+        the list of instances to exclude from ungrouping 
+    [-force]:
+        include non user hierarchy also 
+    [-verbose]:
+        print out name of each hierarchy ungrouped 
+    [<hinst>+]:
+        the list of instances to ungroup 
+#@ End verbose source ./synt.tcl
+
+Encountered problems processing file: synt.tcl
+WARNING: This version of the tool is 362 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[12:01:03.467674] Cdslmd servers: lic08
+[12:01:03.467681] Feature usage summary:
+[12:01:03.467681] Genus_Synthesis
+
+Normal exit.

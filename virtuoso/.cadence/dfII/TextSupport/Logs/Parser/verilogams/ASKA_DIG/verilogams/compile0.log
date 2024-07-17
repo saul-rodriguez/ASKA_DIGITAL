@@ -1,0 +1,21 @@
+xmvlog(64): 23.09-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xmvlog(64)	23.09-s002: Started on Jun 05, 2024 at 18:58:41 EDT
+xmvlog
+    -use5x
+    -SPECIFICUNIT DIG_stimulus
+    -zparse /tmp/vamsZparuse967
+    -NOWARN DLNOHV
+    -work ASKA_DIG
+    -view verilogams
+    -nostdout
+    -logfile /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/.cadence/dfII/TextSupport/Logs/Parser/verilogams/ASKA_DIG/verilogams/compile0.log
+    -messages
+    -ams
+    -cdslib /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/cds.lib
+    /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus/verilogams/verilog.vams
+
+file: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus/verilogams/verilog.vams
+	module ASKA_DIG.DIG_stimulus:verilogams
+		errors: 0, warnings: 0
+	 writing out DPL output:
+TOOL:	xmvlog(64)	23.09-s002: Exiting on Jun 05, 2024 at 18:58:41 EDT  (total: 00:00:00)

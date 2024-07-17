@@ -1,0 +1,12 @@
+--pcdbVlog file, Rev:1.0
+
+--TIMESTAMP: 1717627233
+
+#CELL
+* aska_npg *
+npg1
+
+#CELL
+* aska_spi *
+spi1
+

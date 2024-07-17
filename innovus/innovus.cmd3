@@ -1,0 +1,58 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Jul 15 17:52:19 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+#@(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+#@(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+#@(#)CDS: CPE v21.18-s053
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+restoreDesign -cellview {FEOADesignlib aska_dig aska_dig_ld_fp_pw_pn_placed_cts_routed}
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+setDrawView place
+verifyProcessAntenna -report aska_dig.antenna.rpt -error 1000
+zoomBox 72.13600 75.34600 99.37800 96.88600
+zoomBox 73.93300 75.65500 97.08900 96.38500
+zoomBox 76.75900 78.36100 93.48900 93.33800
+zoomBox 78.80000 80.30700 90.88800 91.12800
+zoomBox 80.27100 81.70800 89.00500 89.52700
+zoomBox 81.33300 82.71400 87.64400 88.36400
+zoomBox 81.74800 83.10700 87.11300 87.91000
+selectWire 83.5300 85.2600 84.4700 85.5400 3 SPI_Clk
+getNanoRouteMode -quiet -routeWithTimingDriven
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+setDelayCalMode -engine default -siAware true
+optDesign -postRoute
+verifyProcessAntenna -report aska_dig.antenna.rpt -error 1000
+zoomBox 81.37000 82.72200 87.68200 88.37300
+zoomBox 79.79400 81.12400 90.07400 90.32700
+zoomBox 78.38600 80.44600 90.48000 91.27300
+selectWire 83.5300 85.2600 84.4700 85.5400 3 SPI_Clk
+zoomBox 80.20000 81.23700 102.31600 92.44800
+zoomBox 81.70900 81.89300 100.50900 91.42300
+zoomBox 85.17300 83.34900 96.72000 89.20200
+zoomBox 86.11300 83.70900 95.92800 88.68400
+zoomBox 86.91200 84.01500 95.25500 88.24400
+zoomBox 84.06700 82.92200 97.65100 89.80800
+zoomBox 82.76500 82.42100 98.74700 90.52300
+zoomBox 81.23400 81.83400 100.03800 91.36600
+zoomBox 79.43400 81.14400 101.55700 92.35800
+encMessage warning 0
+encMessage debug 0
+restoreDesign -cellview {FEOADesignlib aska_dig aska_dig_ld_fp_pw_pn_placed}
+encMessage warning 1
+encMessage debug 0

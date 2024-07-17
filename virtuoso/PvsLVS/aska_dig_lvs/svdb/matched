@@ -1,0 +1,35 @@
+##############################################################################################################
+#####  
+#####                                         PVS LVS COMPARISON
+#####  
+#####  Version                       :   23.10-p043
+#####  NVN Run Start                 :   Mon Jul 15 19:51:27 2024
+#####  ERC Summary File              :   aska_dig_lvs.sum
+#####  Extraction Report File        :   aska_dig_lvs_lvs.sum
+#####  Comparison Report File        :   aska_dig_lvs_lvs.sum.cls
+#####  Top Cell                      :   aska_dig_lvs  <vs>  aska_dig_lvs
+#####  
+#####  Run Result                    :   MATCH
+#####  
+#####  Run Summary                   :   [INFO]  ERC Results: Empty
+#####                                :   [INFO]  Extraction Clean
+#####  
+#####  Layout Design                 :   ASKA_DIG aska_dig_lvs layout
+#####  Schematic File                :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/aska_dig_lvs.cdl (cdl)
+#####  Rules File                    :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/.config.rul
+#####                                :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/.technology.rul
+#####  Pin Swap File                 :   aska_dig_lvs_lvs.sum.cps
+#####  
+#####  Extraction CPU Time           :   0h 0m 2s - (2s)
+#####  Extraction Exec Time          :   0h 0m 2s - (2s)
+#####  Extraction Peak Memory Usage  :   59.00MB
+#####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
+#####  NVN Exec Time                 :   0h 0m 2s - (2s)                 
+#####  NVN Peak Memory Usage         :   402.03MB
+#####  LVS Total CPU Time            :   0h 0m 2s - (2s)                 
+#####  LVS Total Exec Time           :   0h 0m 4s - (4s)                 
+#####  LVS Total Peak Memory Usage   :   402.03MB
+#####  
+##############################################################################################################
+
+
