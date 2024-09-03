@@ -14,7 +14,7 @@
 		<currentmode>Single Run, Sweeps and Corners</currentmode>
 		<overwritehistory>0</overwritehistory>
 		<tests>
-			<test>ASKA_DIG:DIG_stimulus_tb:1
+			<test enabled="1">Long
 				<tool>ADE</tool>
 				<tooloptions>
 					<option>cell
@@ -33,7 +33,7 @@
 						<value>$AXL_SETUPDB_DIR/test_states</value>
 					</option>
 					<option>state
-						<value>ASKA_DIG:DIG_stimulus_tb:1_active</value>
+						<value>Long_active</value>
 					</option>
 				</tooloptions>
 				<origoptions>
@@ -45,6 +45,50 @@
 					</option>
 					<option>sim
 						<value>ams</value>
+					</option>
+					<option>view
+						<value>config</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">short
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>DIG_stimulus_tb</value>
+					</option>
+					<option>lib
+						<value>ASKA_DIG</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>sim
+						<value>ams</value>
+					</option>
+					<option>state
+						<value>short_active</value>
+					</option>
+					<option>view
+						<value>config</value>
+					</option>
+				</tooloptions>
+				<prerunscript>0</prerunscript>
+				<origoptions>
+					<option>cell
+						<value>DIG_stimulus_tb</value>
+					</option>
+					<option>lib
+						<value>ASKA_DIG</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>sim
+						<value>ams</value>
+					</option>
+					<option>state
+						<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
 					</option>
 					<option>view
 						<value>config</value>
@@ -83,19 +127,26 @@
 			<var>ADDR_0
 				<value>0</value>
 				<dependentTests>
-					<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+					<dependentTest enabled="1">Long</dependentTest>
+					<dependentTest enabled="1">short</dependentTest>
 				</dependentTests>
 			</var>
 			<var>ADDR_1
 				<value>0</value>
 				<dependentTests>
-					<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+					<dependentTest enabled="1">Long</dependentTest>
+					<dependentTest enabled="1">short</dependentTest>
 				</dependentTests>
 			</var>
 		</vars>
+		<disabledtests>
+			<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+			<test>Fast</test>
+			<test>short</test>
+		</disabledtests>
 	</active>
 	<history>History
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.31
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.52
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -110,7 +161,7 @@
 				<currentmode>Single Run, Sweeps and Corners</currentmode>
 				<overwritehistory>0</overwritehistory>
 				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
+					<test enabled="1">ASKA_DIG:DIG_stimulus_tb:1
 						<tool>ADE</tool>
 						<tooloptions>
 							<option>cell
@@ -129,7 +180,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.31</value>
+								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.52</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -147,85 +198,7 @@
 							</option>
 						</origoptions>
 					</test>
-				</tests>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<vars>
-					<var>ADDR_0
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>ADDR_1
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Jul 14 06:14:06 2024</timestamp>
-			<uuid>{38e370de-bb1e-4f5c-ad80-a6df57c5274f}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.31.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.31.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_061406748</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.31</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.31</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.31.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.31.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.32
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
+					<test enabled="1">Fast
 						<tool>ADE</tool>
 						<tooloptions>
 							<option>cell
@@ -234,19 +207,20 @@
 							<option>lib
 								<value>ASKA_DIG</value>
 							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
 							<option>sim
 								<value>ams</value>
+							</option>
+							<option>state
+								<value>Fast_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.52</value>
 							</option>
 							<option>view
 								<value>config</value>
 							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.32</value>
-							</option>
 						</tooloptions>
+						<prerunscript>0</prerunscript>
 						<origoptions>
 							<option>cell
 								<value>DIG_stimulus_tb</value>
@@ -254,583 +228,14 @@
 							<option>lib
 								<value>ASKA_DIG</value>
 							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<vars>
-					<var>ADDR_0
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>ADDR_1
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Jul 14 06:15:39 2024</timestamp>
-			<uuid>{d9261c79-7afb-405d-8850-d820dd8d7fea}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.32.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.32.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_061539691</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.32</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.32</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.32.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.32.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.33
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
 							<option>path
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
-							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.33</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
 							<option>sim
 								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<vars>
-					<var>ADDR_0
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>ADDR_1
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Jul 14 06:16:39 2024</timestamp>
-			<uuid>{dc781fec-ab4a-4c93-91b5-37db34aa8e63}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.33.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.33.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_061639606</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.33</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.33</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.33.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.33.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.34
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.34</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<vars>
-					<var>ADDR_0
-						<value>3.3</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>ADDR_1
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Jul 14 06:17:47 2024</timestamp>
-			<uuid>{f4c6503f-8f04-4807-bbc0-0473d7cf1df9}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.34.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.34.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_061747086</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.34</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.34</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.34.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.34.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.35
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.35</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<vars>
-					<var>ADDR_0
-						<value>3.3</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>ADDR_1
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Jul 14 06:18:22 2024</timestamp>
-			<uuid>{befc35e2-9f3b-410c-b7d1-b3f3ac92499f}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.35.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.35.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_061823037</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.35</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.35</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.35.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.35.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.36
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.36</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottingmode
-						<value>Replace</value>
-					</plottingoption>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>useMaestroPlottingTemplate
-						<value>yes</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>allplottingtemplates
-						<value></value>
-					</plottingoption>
-					<plottingoption>defaultplottingtemplate
-						<value></value>
-					</plottingoption>
-					<plottingoption>distributedplot_enabled
-						<value>no</value>
-					</plottingoption>
-				</plottingoptions>
-				<vars>
-					<var>ADDR_0
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>ADDR_1
-						<value>0</value>
-						<dependentTests>
-							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Jul 15 10:07:00 2024</timestamp>
-			<uuid>{29c53b6e-933c-4b34-a934-96108877ad3c}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.36.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.36.rdb</simresults>
-			<rawdatadelstrategy>SaveAll
-				<simdatasavemode>All</simdatasavemode>
-			</rawdatadelstrategy>
-			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_100700045</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.36</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.36</simdir>
-			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.36.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.36.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.37
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
-							</option>
-							<option>view
-								<value>config</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.37</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>DIG_stimulus_tb</value>
-							</option>
-							<option>lib
-								<value>ASKA_DIG</value>
-							</option>
-							<option>sim
-								<value>ams</value>
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
 							</option>
 							<option>view
 								<value>config</value>
@@ -870,37 +275,42 @@
 						<value>0</value>
 						<dependentTests>
 							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
 						</dependentTests>
 					</var>
 					<var>ADDR_1
 						<value>0</value>
 						<dependentTests>
 							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
 						</dependentTests>
 					</var>
 				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+				</disabledtests>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Jul 15 10:09:21 2024</timestamp>
-			<uuid>{8c48e2db-d07f-4958-ab0e-51bb1bd66dbe}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.37.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.37.rdb</simresults>
+			<timestamp>Aug 28 09:20:45 2024</timestamp>
+			<uuid>{4c8c86b3-25ff-4409-b781-aa68e4c35dde}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.52.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.52.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
 				<simdatasavemode>All</simdatasavemode>
 			</rawdatadelstrategy>
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_100921906</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.37</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.37</simdir>
+			<localpsfdir>/tmp/s2424_saul_092045698</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.52</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.52</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.37.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.37.log</runlogfile>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.52.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.52.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.38
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.53
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -915,7 +325,7 @@
 				<currentmode>Single Run, Sweeps and Corners</currentmode>
 				<overwritehistory>0</overwritehistory>
 				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
+					<test enabled="1">ASKA_DIG:DIG_stimulus_tb:1
 						<tool>ADE</tool>
 						<tooloptions>
 							<option>cell
@@ -934,7 +344,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.38</value>
+								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.53</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -946,6 +356,50 @@
 							</option>
 							<option>sim
 								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Fast
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>Fast_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.53</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
 							</option>
 							<option>view
 								<value>config</value>
@@ -985,37 +439,42 @@
 						<value>0</value>
 						<dependentTests>
 							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
 						</dependentTests>
 					</var>
 					<var>ADDR_1
 						<value>0</value>
 						<dependentTests>
 							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
 						</dependentTests>
 					</var>
 				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+				</disabledtests>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Jul 15 10:18:12 2024</timestamp>
-			<uuid>{d427b21e-7f88-40c4-9e58-d7691610d8fd}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.38.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.38.rdb</simresults>
+			<timestamp>Aug 28 09:40:17 2024</timestamp>
+			<uuid>{4b98ce53-6bf1-4e4e-8b4f-aa49219b9557}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.53.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.53.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
 				<simdatasavemode>All</simdatasavemode>
 			</rawdatadelstrategy>
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_101812165</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.38</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.38</simdir>
+			<localpsfdir>/tmp/s2424_saul_094017208</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.53</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.53</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.38.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.38.log</runlogfile>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.53.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.53.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.39
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.54
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -1030,7 +489,7 @@
 				<currentmode>Single Run, Sweeps and Corners</currentmode>
 				<overwritehistory>0</overwritehistory>
 				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
+					<test enabled="1">ASKA_DIG:DIG_stimulus_tb:1
 						<tool>ADE</tool>
 						<tooloptions>
 							<option>cell
@@ -1049,7 +508,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.39</value>
+								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.54</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -1061,6 +520,50 @@
 							</option>
 							<option>sim
 								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Fast
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>Fast_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.54</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
 							</option>
 							<option>view
 								<value>config</value>
@@ -1100,37 +603,42 @@
 						<value>0</value>
 						<dependentTests>
 							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
 						</dependentTests>
 					</var>
 					<var>ADDR_1
 						<value>0</value>
 						<dependentTests>
 							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
 						</dependentTests>
 					</var>
 				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+				</disabledtests>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Jul 15 12:22:05 2024</timestamp>
-			<uuid>{10348472-9ab2-4caf-a201-ef666d01080b}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.39.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.39.rdb</simresults>
+			<timestamp>Aug 28 09:59:02 2024</timestamp>
+			<uuid>{30b59692-cceb-4497-94e1-d72d99712624}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.54.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.54.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
 				<simdatasavemode>All</simdatasavemode>
 			</rawdatadelstrategy>
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_122205659</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.39</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.39</simdir>
+			<localpsfdir>/tmp/s2424_saul_095902190</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.54</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.54</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.39.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.39.log</runlogfile>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.54.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.54.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.40
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.55
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -1145,7 +653,7 @@
 				<currentmode>Single Run, Sweeps and Corners</currentmode>
 				<overwritehistory>0</overwritehistory>
 				<tests>
-					<test>ASKA_DIG:DIG_stimulus_tb:1
+					<test enabled="1">ASKA_DIG:DIG_stimulus_tb:1
 						<tool>ADE</tool>
 						<tooloptions>
 							<option>cell
@@ -1164,7 +672,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.40</value>
+								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.55</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -1176,6 +684,50 @@
 							</option>
 							<option>sim
 								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Fast
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>Fast_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.55</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
 							</option>
 							<option>view
 								<value>config</value>
@@ -1215,33 +767,1030 @@
 						<value>0</value>
 						<dependentTests>
 							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
 						</dependentTests>
 					</var>
 					<var>ADDR_1
 						<value>0</value>
 						<dependentTests>
 							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
 						</dependentTests>
 					</var>
 				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+				</disabledtests>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Jul 15 19:57:57 2024</timestamp>
-			<uuid>{aed7ed5d-0d31-4312-aa8f-c54210340037}</uuid>
-			<resultsname>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.40.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.40.rdb</simresults>
+			<timestamp>Aug 28 10:08:28 2024</timestamp>
+			<uuid>{1044c551-795e-46fd-8599-18b4b3b25da3}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.55.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.55.rdb</simresults>
 			<rawdatadelstrategy>SaveAll
 				<simdatasavemode>All</simdatasavemode>
 			</rawdatadelstrategy>
 			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/phoenix_saul_195757766</localpsfdir>
-			<psfdir>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.40</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.40</simdir>
+			<localpsfdir>/tmp/s2424_saul_100828577</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.55</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.55</simdir>
 			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
-			<runlog>/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.40.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.40.log</runlogfile>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.55.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.55.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.56
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">ASKA_DIG:DIG_stimulus_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.56</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Fast
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>Fast_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.56</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>ADDR_0
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ADDR_1
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Aug 28 10:10:15 2024</timestamp>
+			<uuid>{417aafe7-ae39-434c-8c0c-3a74fa9e018e}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.56.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.56.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/s2424_saul_101015585</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.56</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.56</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.56.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.56.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.57
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">ASKA_DIG:DIG_stimulus_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.57</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Fast
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>Fast_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.57</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>ADDR_0
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ADDR_1
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">ASKA_DIG:DIG_stimulus_tb:1</dependentTest>
+							<dependentTest enabled="1">Fast</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Aug 29 08:54:03 2024</timestamp>
+			<uuid>{aeae8b43-4d7c-4a68-86dd-21cd812ea918}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.57.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.57.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/s2424_saul_085403848</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.57</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.57</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.57.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.57.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.58
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">Long
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Long_none_Interactive.58</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">short
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>short_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.58</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>ADDR_0
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">Long</dependentTest>
+							<dependentTest enabled="1">short</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ADDR_1
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">Long</dependentTest>
+							<dependentTest enabled="1">short</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+					<test>Fast</test>
+					<test>short</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Aug 29 08:55:52 2024</timestamp>
+			<uuid>{f572c4af-47e6-4b23-b798-c090224636f3}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.58.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.58.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/s2424_saul_085552327</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.58</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.58</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.58.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.58.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.59
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">Long
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Long_none_Interactive.59</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">short
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>short_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.59</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>ADDR_0
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">Long</dependentTest>
+							<dependentTest enabled="1">short</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ADDR_1
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">Long</dependentTest>
+							<dependentTest enabled="1">short</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+					<test>Fast</test>
+					<test>short</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Aug 29 08:58:11 2024</timestamp>
+			<uuid>{159df780-6230-4a7a-9688-8a88f201842d}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.59.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.59.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/s2424_saul_085811355</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.59</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.59</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.59.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.59.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.60
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">Long
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Long_none_Interactive.60</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">short
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>short_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.60</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>ADDR_0
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">Long</dependentTest>
+							<dependentTest enabled="1">short</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ADDR_1
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">Long</dependentTest>
+							<dependentTest enabled="1">short</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+					<test>Fast</test>
+					<test>short</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Aug 29 08:59:40 2024</timestamp>
+			<uuid>{6ba00e38-ea67-4341-8eee-a9b8f5d737a2}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.60.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.60.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/s2424_saul_085940370</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.60</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.60</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.60.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.60.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.61
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">Long
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Long_none_Interactive.61</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">short
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>short_ASKA_DIG:DIG_stimulus_tb:1:1_state_Interactive.61</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</tooloptions>
+						<prerunscript>0</prerunscript>
+						<origoptions>
+							<option>cell
+								<value>DIG_stimulus_tb</value>
+							</option>
+							<option>lib
+								<value>ASKA_DIG</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>sim
+								<value>ams</value>
+							</option>
+							<option>state
+								<value>ASKA_DIG:DIG_stimulus_tb:1:1_state</value>
+							</option>
+							<option>view
+								<value>config</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>New Win</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates
+						<value></value>
+					</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>distributedplot_enabled
+						<value>no</value>
+					</plottingoption>
+				</plottingoptions>
+				<vars>
+					<var>ADDR_0
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">Long</dependentTest>
+							<dependentTest enabled="1">short</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ADDR_1
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">Long</dependentTest>
+							<dependentTest enabled="1">short</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>ASKA_DIG:DIG_stimulus_tb:1</test>
+					<test>Fast</test>
+					<test>short</test>
+				</disabledtests>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Aug 29 09:08:25 2024</timestamp>
+			<uuid>{2b13838b-d435-4d0a-ab8d-7906da090986}</uuid>
+			<resultsname>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.61.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.61.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<saveevalerrorstrategy>SaveNone</saveevalerrorstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/s2424_saul_090825979</localpsfdir>
+			<psfdir>/home/saul/projects/ASKA/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.61</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.61</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/saul/projects/ASKA_DIGITAL/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.61.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.61.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>

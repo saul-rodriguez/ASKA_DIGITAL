@@ -29,10 +29,10 @@
 `define ELE2  32'b0000_0000_0000_0000_0000_0000_0000_0010
 
 // Select one physical address of the IC 
-//`define  IC_ADDRESS 8'h00
+`define  IC_ADDRESS 8'h00
 //`define  IC_ADDRESS 8'h40
 //`define  IC_ADDRESS 8'h80
-`define  IC_ADDRESS 8'hC0
+//`define  IC_ADDRESS 8'hC0
 
 
 module DIG_stimulus(	
@@ -55,11 +55,11 @@ module DIG_stimulus(
     // Stimulation parameters
     reg [5:0] amplitude; //0 - 50 mA
     reg [11:0] freq; // 4.88 Hz (4095) - 50 Hz (400)
-    reg [2:0] phaseDuration;
-    reg [5:0] ramp;
-    reg [9:0] ramp_factor;
-    reg [7:0] ON_time; // up to 4s (200 for 50 Hz)ramp = `RAMP;    
-    reg [9:0] OFF_time; // up to 12s (600 for 50 Hz)
+    reg [2:0] phaseDuration; //multiple of 50 us (1-7) -> (50us - 350us)
+    reg [5:0] ramp; // Number of ramp pulses 
+    reg [9:0] ramp_factor; //calculated automatically in software!
+    reg [7:0] ON_time; // TIME/(1/freq) up to 4s (200 for 50 Hz)ramp = `RAMP;    
+    reg [9:0] OFF_time; // TIME/(1/freq) up to 12s (600 for 50 Hz)
     reg [31:0] electrode1;
     reg [31:0] electrode2;
     reg enable;
@@ -87,8 +87,10 @@ initial begin
 		$dumpvars;
 		$display("************************************");
 		$display("Test ASKA SPI Slave");
+		/************************/
+		/* 	Initial State       */
+		/************************/
 
-		//Initial State
 		Clk20kHz = 0;
 		TX_data = 8'h00;
 		reset_l = 1'b1;
@@ -104,20 +106,43 @@ initial begin
 		ON_time = 50;
   	  	OFF_time = 50;
 
+		/****************************/
+		/*     Reset                */
+		/* Comment for POR/BOR test */ 
+		/****************************/
+
 		//Reset
 		#(10*MAIN_CLK_DELAY) reset_l = 1'b0;
 		#(10*MAIN_CLK_DELAY) reset_l = 1'b1;
 		#(10*MAIN_CLK_DELAY);
 
+
+		/*****************************/
+		/*  Test Program             */
+		/*****************************/
+
 		enable = 1'b1;
- 		//conf_freq_amp_pha_ramp(400,50,4,50); // 50Hz ramp 1s 
+ 		//conf_freq_amp_pha_ramp(400,50,4,50); // 50Hz ramp 1s (Long sim required)
 		//conf_freq_amp_pha_ramp(400,50,4,0); // 50 Hz no ramp
 		//conf_freq_amp_pha_ramp(40,50,1,10); // 500 Hz, 20ms ramp
-		//conf_freq_amp_pha_ramp(10,50,1,4); // 0.5ms, short ramp
-		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp
+		//conf_freq_amp_pha_ramp(10,50,1,4); // 0.5ms, short ramp (Short simulation)
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
 		write_SPI;
 
-		#(7500000*SPI_CLK_DELAY); 
+		/******************************/
+		/* First delay for program 1  */
+		/******************************/
+
+
+		#(7500000*SPI_CLK_DELAY); // 7.5 s delay
+//		#(750000*SPI_CLK_DELAY); // 750 ms delay
+//		#(75000*SPI_CLK_DELAY); // 75 ms delay
+
+		$display("First delay finished");
+
+		/**************************/
+		/* Stop Program           */
+		/**************************/
 
 		// Disable NPG
 		enable = 0;
@@ -126,14 +151,23 @@ initial begin
 		send_ASKA((8'h01 | send_address),conf1);
 
 		#(5000000*SPI_CLK_DELAY); 
-			// amp 25 mA, rampup/dwn 0.5s freq 50Hz
+
+		/*****************************/
+		/*  Test New Program             */
+		/*****************************/
+
 		enable = 1;
-		conf_freq_amp_pha_ramp(400,25,4,25); // 50Hz		
+		conf_freq_amp_pha_ramp(400,25,4,25); // amp 25 mA, rampup/dwn 0.5s freq 50Hz
 		write_SPI;
 
 		#(10000000*SPI_CLK_DELAY);
 
-		// POR
+		/**********************/
+		/*   Test POR/BOR     */
+		/**********************/
+		
+		// porborn stimulus is not connected in the core! this is useful only to test aska_dig.
+
 		porborn = 0;
 		#(1000000*SPI_CLK_DELAY);
 		porborn = 1;
@@ -146,6 +180,7 @@ initial begin
 
 	initial begin
 		//    $sdf_annotate ("/home/saul/projects/TEST_LIB2/innovus/output/typ_functional_1_8V_25C.sdf",I3,, "sdf.log", "MAXIMUM");
+		    $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus/output/design_slow.sdf",I2,, "sdf.log", "MAXIMUM");
 	end
 
 	reg[8*6:1] str1;
@@ -191,16 +226,17 @@ initial begin
 
 	task update_config;
  		begin
-			conf0[11:0] = freq;
-			conf0[17:12] = amplitude;   
- 			conf0[23:18] = ramp;
-    			conf0[31:24] = ON_time;
+			#1; conf0[11:0] = freq;
+			#1; conf0[17:12] = amplitude;   
+ 			#1; conf0[23:18] = ramp;
+    			#1; conf0[31:24] = ON_time;
 		
-    			conf1[9:0] = ramp_factor;
-    			conf1[19:10] = OFF_time;
-    			conf1[20] = enable;
-    			conf1[23:21] = phaseDuration;
-			conf1[31:24] = 8'b0000_0000;	
+    			#1; conf1[9:0] = ramp_factor;
+    			#1; conf1[19:10] = OFF_time;
+    			#1; conf1[20] = enable;
+    			#1; conf1[23:21] = phaseDuration;
+			#1; conf1[31:24] = 8'b0000_0000;	
+			#1;
 		end
 	endtask
 
