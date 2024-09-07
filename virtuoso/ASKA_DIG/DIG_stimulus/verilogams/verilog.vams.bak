@@ -103,8 +103,14 @@ initial begin
 
 		electrode1 = `ELE1;
     		electrode2 = `ELE2;
-		ON_time = 50;
-  	  	OFF_time = 50;
+
+		/* ON/OFF TIME for 50 Hz*/
+		//ON_time = 50;
+  	  	//OFF_time = 50;
+
+		/* ON/OFF TIME for 10 Hz*/
+		ON_time = 10;
+  	  	OFF_time = 10;
 
 		/****************************/
 		/*     Reset                */
@@ -122,19 +128,20 @@ initial begin
 		/*****************************/
 
 		enable = 1'b1;
- 		//conf_freq_amp_pha_ramp(400,50,4,50); // 50Hz ramp 1s (Long sim required)
+ 	    //conf_freq_amp_pha_ramp(400,50,4,50); // 50Hz ramp 1s (Long sim required)
+ 	    conf_freq_amp_pha_ramp(2000,50,4,5); // 10Hz ramp 0.5s (Long sim required, change ON_time = 10)
 		//conf_freq_amp_pha_ramp(400,50,4,0); // 50 Hz no ramp
 		//conf_freq_amp_pha_ramp(40,50,1,10); // 500 Hz, 20ms ramp
 		//conf_freq_amp_pha_ramp(10,50,1,4); // 0.5ms, short ramp (Short simulation)
-		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		//conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
 		write_SPI;
 
 		/******************************/
 		/* First delay for program 1  */
 		/******************************/
 
-
-		#(7500000*SPI_CLK_DELAY); // 7.5 s delay
+		#(75000000*SPI_CLK_DELAY); // 75 s delay
+//		#(7500000*SPI_CLK_DELAY); // 7.5 s delay
 //		#(750000*SPI_CLK_DELAY); // 750 ms delay
 //		#(75000*SPI_CLK_DELAY); // 75 ms delay
 
@@ -180,7 +187,7 @@ initial begin
 
 	initial begin
 		//    $sdf_annotate ("/home/saul/projects/TEST_LIB2/innovus/output/typ_functional_1_8V_25C.sdf",I3,, "sdf.log", "MAXIMUM");
-		    $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus/output/design_slow.sdf",I2,, "sdf.log", "MAXIMUM");
+		//    $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus/output/design_slow.sdf",I2,, "sdf.log", "MAXIMUM");
 	end
 
 	reg[8*6:1] str1;
