@@ -1,0 +1,68 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Sep  9 09:55:17 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+#@(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+#@(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+#@(#)CDS: CPE v21.18-s053
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+restoreDesign -cellview {FEOADesignlib aska_dig aska_dig_ld_fp_pw_pin_placed_cts}
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+setDrawView place
+setNanoRouteMode -quiet -timingEngine {}
+setNanoRouteMode -quiet -routeWithSiPostRouteFix 0
+setNanoRouteMode -quiet -drouteStartIteration default
+setNanoRouteMode -quiet -routeTopRoutingLayer 4
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+setAnalysisMode -analysisType onChipVariation
+setDelayCalMode -engine default -siAware true
+timeDesign -postRoute
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+setDelayCalMode -engine default -siAware true
+setRouteMode -earlyGlobalMaxRouteLayer 3
+optDesign -postRout
+timeDesign -postRoute
+timeDesign -postRoute -hold
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+setNanoRouteMode -droutePostRouteSwapVia multiCut
+routeDesign -viaOpt
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_preCTS -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_preCTS -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+zoomBox 54.48600 -3.69600 362.04500 271.63500
+zoomBox 72.92700 20.59400 334.35300 254.62600
+zoomBox 88.60200 41.24000 310.81500 240.16800
+zoomBox 72.92600 20.59200 334.35400 254.62600
+zoomBox 32.78700 -32.27600 394.62500 291.64600
+zoomBox 7.26200 -65.89700 432.95400 315.18800

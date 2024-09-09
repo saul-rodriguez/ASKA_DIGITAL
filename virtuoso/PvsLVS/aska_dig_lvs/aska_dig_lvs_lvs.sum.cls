@@ -3,7 +3,7 @@
 #####                                         PVS LVS COMPARISON
 #####  
 #####  Version                       :   23.10-p043
-#####  NVN Run Start                 :   Mon Jul 15 19:51:27 2024
+#####  NVN Run Start                 :   Mon Sep  9 14:37:03 2024
 #####  ERC Summary File              :   aska_dig_lvs.sum
 #####  Extraction Report File        :   aska_dig_lvs_lvs.sum
 #####  Comparison Report File        :   aska_dig_lvs_lvs.sum.cls
@@ -14,21 +14,21 @@
 #####  Run Summary                   :   [INFO]  ERC Results: Empty
 #####                                :   [INFO]  Extraction Clean
 #####  
-#####  Layout Design                 :   ASKA_DIG aska_dig_lvs layout
+#####  Layout Design                 :   ASKA_DIG2 aska_dig_lvs layout
 #####  Schematic File                :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/aska_dig_lvs.cdl (cdl)
 #####  Rules File                    :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/.config.rul
 #####                                :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/.technology.rul
 #####  Pin Swap File                 :   aska_dig_lvs_lvs.sum.cps
 #####  
-#####  Extraction CPU Time           :   0h 0m 2s - (2s)
+#####  Extraction CPU Time           :   0h 0m 1s - (1s)
 #####  Extraction Exec Time          :   0h 0m 2s - (2s)
 #####  Extraction Peak Memory Usage  :   59.00MB
 #####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
-#####  NVN Exec Time                 :   0h 0m 2s - (2s)                 
-#####  NVN Peak Memory Usage         :   402.03MB
-#####  LVS Total CPU Time            :   0h 0m 2s - (2s)                 
-#####  LVS Total Exec Time           :   0h 0m 4s - (4s)                 
-#####  LVS Total Peak Memory Usage   :   402.03MB
+#####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
+#####  NVN Peak Memory Usage         :   387.09MB
+#####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
+#####  LVS Total Exec Time           :   0h 0m 3s - (3s)                 
+#####  LVS Total Peak Memory Usage   :   387.09MB
 #####  
 ##############################################################################################################
 
@@ -477,17 +477,17 @@ Effective LVS Rule Values
 Cell                    |     lay     :    sch     |     lay     :    sch     |    lay     :    sch
 ------------------------+-------------+------------+-------------+------------+------------+-----------
 MP [4 pins]             |             :            |             :            |            :           
- MP(PE3I)               |     *13,383 :     12,315 |     *13,383 :     12,315 |     12,211 :     12,211
+ MP(PE3I)               |     *13,433 :     12,388 |     *13,433 :     12,388 |     12,280 :     12,280
 MN [4 pins]             |             :            |             :            |            :           
- MN(NE3I)               |     *13,452 :     12,477 |     *13,452 :     12,477 |     12,377 :     12,377
+ MN(NE3I)               |     *13,496 :     12,552 |     *13,496 :     12,552 |     12,452 :     12,452
 (D [2 pins], -)         |             :            |             :            |            :           
  (D(P_DDNWMV), -)       |          *1 :          0 |           0 :          0 |          - :          -
- (D(P_DIPDNWMV), -)     |         *23 :          0 |           0 :          0 |          - :          -
+ (D(P_DIPDNWMV), -)     |         *22 :          0 |           0 :          0 |          - :          -
 ------------------------+-------------+------------+-------------+------------+------------+-----------
-Total                   |      26,859 :     24,792 |      26,835 :     24,792 |     24,588 :     24,588
+Total                   |      26,952 :     24,940 |      26,929 :     24,940 |     24,732 :     24,732
 ========================+=============+============+=============+============+============+===========
 Pins                    |             :            |             :            |          2 :          2
-Nets                    |             :            |             :            |     13,648 :     13,648
+Nets                    |             :            |             :            |     13,745 :     13,745
 ========================+=============+============+=============+============+============+===========
 
 +===[aska_dig_lvs]============================================================================================
@@ -499,9 +499,9 @@ Nets                    |             :            |             :            | 
 Cell            |    lay    :   sch   |   lay   :   sch   |    lay    :   sch
 ----------------+-----------+---------+---------+---------+-----------+----------
 MP [4 pins]     |           :         |         :         |           :          
- MP(PE3I)       |     1,172 :     104 |       - :       - |         0 :         0
+ MP(PE3I)       |     1,153 :     108 |       - :       - |         0 :         0
 MN [4 pins]     |           :         |         :         |           :          
- MN(NE3I)       |     1,075 :     100 |       - :       - |         0 :         0
+ MN(NE3I)       |     1,044 :     100 |       - :       - |         0 :         0
 ----------------+-----------+---------+---------+---------+-----------+----------
 
 +===[aska_dig_lvs]============================================================================================

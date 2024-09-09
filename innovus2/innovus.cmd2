@@ -1,0 +1,790 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Sep  9 09:12:14 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+#@(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+#@(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+#@(#)CDS: CPE v21.18-s053
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+restoreDesign -cellview {FEOADesignlib aska_dig aska_dig_ld_fp}
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {gnd3i vdd3i} -type core_rings -follow core -layer {top MET1 bottom MET1 left MET2 right MET2} -width {top 9 bottom 9 left 9 right 9} -spacing {top 0.23 bottom 0.23 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.28 -number_of_sets 3 -start_from left -start_offset 75 -stop_offset 75 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { stripe }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { MET1(1) METTPL(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { MET1(1) METTPL(6) } -nets { gnd3i vdd3i } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { MET1(1) METTPL(6) }
+zoomBox -18.00200 -86.98100 407.68500 294.10000
+zoomBox -10.51400 -57.94500 297.04500 217.38600
+zoomBox -8.12700 -46.30700 253.29800 187.72400
+zoomBox -6.09900 -36.41500 216.11300 162.51200
+zoomBox -4.37400 -28.00700 184.50600 141.08100
+zoomBox -2.90800 -20.86000 157.64000 122.86500
+zoomBox -1.66200 -14.78500 134.80400 107.38100
+zoomBox -0.60300 -9.62100 115.39300 94.22000
+zoomBox 0.29700 -5.23200 98.89400 83.03300
+zoomBox 1.71200 1.66900 72.94900 65.44100
+zoomBox 2.73400 4.37800 63.28600 58.58500
+zoomBox 1.71100 1.66900 72.94900 65.44200
+zoomBox 0.50700 -1.52000 84.31700 73.50800
+zoomBox -0.90900 -5.27000 97.69100 82.99800
+zoomBox -2.57500 -9.68200 113.42500 94.16300
+zoomBox 13.49700 -4.88700 112.09700 83.38100
+zoomBox 27.15800 -0.83100 110.96800 74.19700
+zoomBox 48.59900 5.49000 109.15100 59.69700
+zoomBox 69.66700 11.38400 106.85400 44.67400
+zoomBox 74.69700 12.78300 106.30600 41.08000
+zoomBox 69.66600 11.38300 106.85400 44.67400
+zoomBox 63.74900 9.73600 107.49900 48.90200
+zoomBox 56.78600 7.79800 108.25800 53.87600
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+saveDesign aska_dig_ld_fp_pw
+zoomBox 53.23700 2.29800 113.79300 56.50900
+zoomBox 49.06100 -4.17200 120.30400 59.60600
+zoomBox 44.14800 -11.37700 127.96400 63.65600
+fit
+set ptngSprNoRefreshPins 1
+setPtnPinStatus -cell aska_dig -pin clk -status unplaced -silent
+setPtnPinStatus -cell aska_dig -pin reset_l -status unplaced -silent
+setPtnPinStatus -cell aska_dig -pin porborn -status unplaced -silent
+setPtnPinStatus -cell aska_dig -pin SPI_CS -status unplaced -silent
+setPtnPinStatus -cell aska_dig -pin SPI_Clk -status unplaced -silent
+setPtnPinStatus -cell aska_dig -pin SPI_MOSI -status unplaced -silent
+setPtnPinStatus -cell aska_dig -pin {IC_addr[0]} -status unplaced -silent
+setPtnPinStatus -cell aska_dig -pin {IC_addr[1]} -status unplaced -silent
+set ptngSprNoRefreshPins 0
+ptnSprRefreshPinsAndBlockages
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 1 -spreadType center -spacing 1.0 -pin {clk reset_l porborn SPI_CS SPI_Clk SPI_MOSI {IC_addr[0]} {IC_addr[1]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 1.0 -pin {clk reset_l porborn SPI_CS SPI_Clk SPI_MOSI {IC_addr[0]} {IC_addr[1]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 8 -pin {clk reset_l porborn SPI_CS SPI_Clk SPI_MOSI {IC_addr[0]} {IC_addr[1]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType center -spacing 4.5 -pin {enable pulse_active {DAC[0]} {DAC[1]} {DAC[2]} {DAC[3]} {DAC[4]} {DAC[5]} {down_switches[0]} {down_switches[1]} {down_switches[2]} {down_switches[3]} {down_switches[4]} {down_switches[5]} {down_switches[6]} {down_switches[7]} {down_switches[8]} {down_switches[9]} {down_switches[10]} {down_switches[11]} {down_switches[12]} {down_switches[13]} {down_switches[14]} {down_switches[15]} {down_switches[16]} {down_switches[17]} {down_switches[18]} {down_switches[19]} {down_switches[20]} {down_switches[21]} {down_switches[22]} {down_switches[23]} {down_switches[24]} {down_switches[25]} {down_switches[26]} {down_switches[27]} {down_switches[28]} {down_switches[29]} {down_switches[30]} {down_switches[31]} {up_switches[0]} {up_switches[1]} {up_switches[2]} {up_switches[3]} {up_switches[4]} {up_switches[5]} {up_switches[6]} {up_switches[7]} {up_switches[8]} {up_switches[9]} {up_switches[10]} {up_switches[11]} {up_switches[12]} {up_switches[13]} {up_switches[14]} {up_switches[15]} {up_switches[16]} {up_switches[17]} {up_switches[18]} {up_switches[19]} {up_switches[20]} {up_switches[21]} {up_switches[22]} {up_switches[23]} {up_switches[24]} {up_switches[25]} {up_switches[26]} {up_switches[27]} {up_switches[28]} {up_switches[29]} {up_switches[30]} {up_switches[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox -10.61600 -90.47900 415.07000 290.60100
+zoomBox 6.77200 -64.64100 314.33100 210.69000
+zoomBox 12.85900 -55.39100 274.28500 178.64100
+zoomBox 31.61200 -30.78800 168.07800 91.37800
+zoomBox 38.35600 -18.45900 122.16400 56.56700
+zoomBox 39.95000 -15.80800 111.18700 47.96400
+zoomBox 43.57600 -9.94100 87.32500 29.22400
+zoomBox 46.49500 -5.45300 69.33500 14.99400
+zoomBox 47.72700 -3.53900 61.75400 9.01800
+zoomBox 48.02100 -3.07900 59.94400 7.59500
+zoomBox 48.48200 -2.34100 57.09700 5.37100
+zoomBox 48.65400 -2.04600 55.97700 4.51000
+zoomBox 48.92400 -1.58100 54.21600 3.15600
+zoomBox 49.03000 -1.40000 53.52800 2.62700
+zoomBox 49.19500 -1.11500 52.44600 1.79500
+zoomBox 48.79800 -1.80400 55.02600 3.77100
+zoomBox 47.38400 -2.65100 57.52600 6.42800
+zoomBox 44.01600 -4.63100 63.44700 12.76400
+zoomBox 40.59600 -6.21900 67.49100 17.85800
+zoomBox 32.81200 -9.78300 76.60700 29.42300
+zoomBox 14.34300 -18.24100 98.24100 56.86600
+zoomBox -22.68200 -33.52400 138.04300 110.35900
+zoomBox -71.93500 -53.51300 189.77800 180.77600
+zoomBox -95.05800 -62.65400 212.84000 212.98000
+zoomBox -122.26100 -73.40900 239.97200 250.86700
+zoomBox -154.26400 -86.06100 271.89200 295.44000
+zoomBox -191.91600 -100.94600 309.44500 347.87900
+zoomBox -236.21200 -118.45800 353.62500 409.57200
+zoomBox -166.16400 -60.77100 335.19700 388.05400
+zoomBox -106.04000 -13.68300 320.11700 367.81800
+zoomBox -54.76900 25.10000 307.46500 349.37700
+zoomBox -11.18900 58.06700 296.71000 333.70200
+zoomBox 105.68200 147.63100 266.40800 291.51500
+zoomBox 145.84300 182.73200 244.54900 271.09500
+zoomBox 155.40000 191.08300 239.30100 266.19200
+zoomBox 174.91900 209.58300 226.44600 255.71100
+zoomBox 185.41300 220.33000 217.05700 248.65800
+zoomBox 190.04800 227.34500 209.48200 244.74300
+zoomBox 191.13000 228.94800 207.64900 243.73600
+zoomBox 193.49000 232.27600 203.63500 241.35800
+zoomBox 195.01400 234.35700 201.24500 239.93500
+zoomBox 195.37800 234.85400 200.67400 239.59500
+zoomBox 191.98200 230.39400 206.02700 242.96700
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Bottom -layer 3 -spreadType center -spacing -5.04 -pin {enable pulse_active {DAC[0]} {DAC[1]} {DAC[2]} {DAC[3]} {DAC[4]} {DAC[5]} {down_switches[0]} {down_switches[1]} {down_switches[2]} {down_switches[3]} {down_switches[4]} {down_switches[5]} {down_switches[6]} {down_switches[7]} {down_switches[8]} {down_switches[9]} {down_switches[10]} {down_switches[11]} {down_switches[12]} {down_switches[13]} {down_switches[14]} {down_switches[15]} {down_switches[16]} {down_switches[17]} {down_switches[18]} {down_switches[19]} {down_switches[20]} {down_switches[21]} {down_switches[22]} {down_switches[23]} {down_switches[24]} {down_switches[25]} {down_switches[26]} {down_switches[27]} {down_switches[28]} {down_switches[29]} {down_switches[30]} {down_switches[31]} {up_switches[0]} {up_switches[1]} {up_switches[2]} {up_switches[3]} {up_switches[4]} {up_switches[5]} {up_switches[6]} {up_switches[7]} {up_switches[8]} {up_switches[9]} {up_switches[10]} {up_switches[11]} {up_switches[12]} {up_switches[13]} {up_switches[14]} {up_switches[15]} {up_switches[16]} {up_switches[17]} {up_switches[18]} {up_switches[19]} {up_switches[20]} {up_switches[21]} {up_switches[22]} {up_switches[23]} {up_switches[24]} {up_switches[25]} {up_switches[26]} {up_switches[27]} {up_switches[28]} {up_switches[29]} {up_switches[30]} {up_switches[31]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.28 -pinDepth 0.725 -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Bottom -layer 3 -spreadType center -spacing 5.0 -pin {enable pulse_active {DAC[0]} {DAC[1]} {DAC[2]} {DAC[3]} {DAC[4]} {DAC[5]} {down_switches[0]} {down_switches[1]} {down_switches[2]} {down_switches[3]} {down_switches[4]} {down_switches[5]} {down_switches[6]} {down_switches[7]} {down_switches[8]} {down_switches[9]} {down_switches[10]} {down_switches[11]} {down_switches[12]} {down_switches[13]} {down_switches[14]} {down_switches[15]} {down_switches[16]} {down_switches[17]} {down_switches[18]} {down_switches[19]} {down_switches[20]} {down_switches[21]} {down_switches[22]} {down_switches[23]} {down_switches[24]} {down_switches[25]} {down_switches[26]} {down_switches[27]} {down_switches[28]} {down_switches[29]} {down_switches[30]} {down_switches[31]} {up_switches[0]} {up_switches[1]} {up_switches[2]} {up_switches[3]} {up_switches[4]} {up_switches[5]} {up_switches[6]} {up_switches[7]} {up_switches[8]} {up_switches[9]} {up_switches[10]} {up_switches[11]} {up_switches[12]} {up_switches[13]} {up_switches[14]} {up_switches[15]} {up_switches[16]} {up_switches[17]} {up_switches[18]} {up_switches[19]} {up_switches[20]} {up_switches[21]} {up_switches[22]} {up_switches[23]} {up_switches[24]} {up_switches[25]} {up_switches[26]} {up_switches[27]} {up_switches[28]} {up_switches[29]} {up_switches[30]} {up_switches[31]}}
+setPinAssignMode -pinEditInBatch false
+zoomBox 186.99100 229.31800 206.43200 246.72200
+zoomBox 183.95000 228.67400 206.82300 249.15000
+fit
+zoomBox -12.65700 -91.35400 413.03000 289.72700
+zoomBox -3.73600 -79.21100 358.09800 244.70800
+zoomBox 3.84700 -68.81900 311.40600 206.51200
+zoomBox 15.77200 -50.82200 237.98300 148.10400
+zoomBox 24.38700 -37.82000 184.93500 105.90500
+zoomBox 33.82000 -23.48000 132.41700 64.78500
+zoomBox 40.64600 -12.69000 92.11600 33.38700
+zoomBox 42.49300 -8.93900 79.68100 24.35200
+zoomBox 43.21400 -7.48900 74.82400 20.80900
+zoomBox 44.99900 -4.65200 64.41300 12.72800
+zoomBox 46.40200 -2.45600 56.53700 6.61700
+zoomBox 46.62600 -2.08200 55.24100 5.63000
+zoomBox 46.81700 -1.77600 54.13900 4.77900
+zoomBox 46.97900 -1.51600 53.20300 4.05600
+zoomBox 47.11700 -1.29500 52.40700 3.44100
+zoomBox 47.23400 -1.10800 51.73100 2.91800
+zoomBox 47.33200 -0.92500 51.15500 2.49700
+zoomBox 47.41600 -0.77000 50.66500 2.13900
+zoomBox 47.48600 -0.63800 50.24900 1.83500
+zoomBox 47.33100 -0.92600 51.15500 2.49700
+zoomBox 46.97800 -1.58000 53.20700 3.99600
+zoomBox 46.81000 -1.87600 54.13800 4.68400
+zoomBox 47.75300 -1.56000 53.98200 4.01600
+zoomBox 48.55400 -1.29200 53.84900 3.44800
+zoomBox 49.23500 -1.06400 53.73600 2.96500
+zoomBox 49.81400 -0.87100 53.64000 2.55400
+zoomBox 50.30600 -0.70600 53.55800 2.20500
+zoomBox 50.72400 -0.56700 53.48900 1.90800
+zoomBox 51.07700 -0.44800 53.42700 1.65600
+zoomBox 51.37700 -0.34700 53.37500 1.44200
+zoomBox 51.07700 -0.44800 53.42700 1.65600
+zoomBox 50.30900 -0.70700 53.56200 2.20500
+zoomBox 49.24400 -1.06600 53.74700 2.96500
+zoomBox 45.73500 -2.20800 54.36100 5.51400
+panPage 1 0
+panPage 1 0
+panPage 1 0
+zoomBox 54.15000 -1.83300 61.48200 4.73100
+zoomBox 55.22300 -1.26300 60.52200 3.48100
+zoomBox 55.99900 -0.85000 59.82800 2.57800
+zoomBox 56.77800 -0.43600 59.13000 1.67000
+zoomBox 56.96300 -0.32300 58.96300 1.46700
+zoomBox 57.12100 -0.22700 58.82100 1.29500
+zoomBox 57.25600 -0.14600 58.70100 1.14800
+zoomBox 57.37000 -0.07600 58.59900 1.02400
+zoomBox 57.46700 -0.01700 58.51200 0.91800
+zoomBox 57.55000 0.03300 58.43800 0.82800
+zoomBox 57.62000 0.07600 58.37500 0.75200
+zoomBox 57.11900 -0.22800 58.82300 1.29700
+zoomBox 56.96000 -0.32500 58.96500 1.47000
+zoomBox 56.29400 -0.73100 59.56000 2.19300
+zoomBox 55.98900 -0.91600 59.83200 2.52400
+zoomBox 54.71400 -1.69200 60.97200 3.91000
+zoomBox 54.13100 -2.04700 61.49300 4.54400
+zoomBox 51.68300 -3.48000 63.67300 7.25400
+zoomBox 53.33900 -2.91500 63.53100 6.20900
+zoomBox 54.75300 -2.43400 63.41600 5.32100
+zoomBox 55.96000 -2.02700 63.32400 4.56500
+zoomBox 54.75200 -2.43400 63.41600 5.32200
+zoomBox 53.33200 -2.91300 63.52500 6.21200
+zoomBox 51.66100 -3.47600 63.65300 7.25900
+zoomBox 49.69500 -4.13900 63.80400 8.49200
+fit
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+saveDesign aska_dig_ld_fp_pw_pin
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -prePlace -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_prePlace -outDir timingReports
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -droutePostRouteWidenWireRule virtuosoDefaultSetup
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setTieHiLoMode -reset
+setTieHiLoMode -cell {  LOGIC1JI3V LOGIC0JI3V } -maxFanOut 10 -honorDontTouch false -createHierPort false
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setTieHiLoMode -reset
+setTieHiLoMode -cell {  LOGIC1JI3V LOGIC0JI3V } -maxFanOut 10 -honorDontTouch false -createHierPort false
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setTieHiLoMode -reset
+setTieHiLoMode -cell {  LOGIC1JI3V LOGIC0JI3V } -maxFanOut 10 -honorDontTouch false -createHierPort false
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setUsefulSkewMode -noBoundary false -maxAllowedDelay 1
+setTieHiLoMode -reset
+setTieHiLoMode -cell {{LOGIC1JI3V LOGIC0JI3V}} -maxFanOut 10 -honorDontTouch false -createHierPort false
+setRouteMode -earlyGlobalMaxRouteLayer 3
+getPlaceMode -place_hierarchical_flow -quiet
+report_message -start_cmd
+getRouteMode -maxRouteLayer -quiet
+getRouteMode -user -maxRouteLayer
+getPlaceMode -place_global_place_io_pins -quiet
+getPlaceMode -user -maxRouteLayer
+getPlaceMode -quiet -adaptiveFlowMode
+getPlaceMode -timingDriven -quiet
+getPlaceMode -adaptive -quiet
+getPlaceMode -relaxSoftBlockageMode -quiet
+getPlaceMode -user -relaxSoftBlockageMode
+getPlaceMode -ignoreScan -quiet
+getPlaceMode -user -ignoreScan
+getPlaceMode -repairPlace -quiet
+getPlaceMode -user -repairPlace
+getPlaceMode -inPlaceOptMode -quiet
+getPlaceMode -quiet -bypassFlowEffortHighChecking
+getPlaceMode -quiet -place_global_exp_enable_3d
+getPlaceMode -exp_slack_driven -quiet
+um::push_snapshot_stack
+getDesignMode -quiet -flowEffort
+getDesignMode -highSpeedCore -quiet
+getPlaceMode -quiet -adaptive
+set spgFlowInInitialPlace 1
+getPlaceMode -sdpAlignment -quiet
+getPlaceMode -softGuide -quiet
+getPlaceMode -useSdpGroup -quiet
+getPlaceMode -sdpAlignment -quiet
+getPlaceMode -enableDbSaveAreaPadding -quiet
+getPlaceMode -quiet -wireLenOptEffort
+getPlaceMode -sdpPlace -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -sdpPlace -quiet
+getPlaceMode -groupHighLevelClkGate -quiet
+setvar spgRptErrorForScanConnection 0
+getPlaceMode -place_global_exp_allow_missing_scan_chain -quiet
+getPlaceMode -ignoreScan -quiet
+setvar spgRptErrorForScanConnection 1
+getPlaceMode -place_design_floorplan_mode -quiet
+getPlaceMode -place_global_timing_effort -quiet
+getPlaceMode -place_check_library -quiet
+getPlaceMode -trimView -quiet
+getPlaceMode -expTrimOptBeforeTDGP -quiet
+getPlaceMode -quiet -useNonTimingDeleteBufferTree
+getPlaceMode -congEffort -quiet
+getPlaceMode -relaxSoftBlockageMode -quiet
+getPlaceMode -user -relaxSoftBlockageMode
+getPlaceMode -ignoreScan -quiet
+getPlaceMode -user -ignoreScan
+getPlaceMode -repairPlace -quiet
+getPlaceMode -user -repairPlace
+getPlaceMode -congEffort -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -timingDriven -quiet
+getPlaceMode -user -timingDriven
+getPlaceMode -fastFp -quiet
+getPlaceMode -clusterMode -quiet
+get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+getPlaceMode -inPlaceOptMode -quiet
+getPlaceMode -quiet -bypassFlowEffortHighChecking
+getPlaceMode -ultraCongEffortFlow -quiet
+getPlaceMode -forceTiming -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -fastfp -quiet
+getPlaceMode -timingDriven -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -fastfp -quiet
+getPlaceMode -powerDriven -quiet
+getExtractRCMode -quiet -engine
+getAnalysisMode -quiet -clkSrcPath
+getAnalysisMode -quiet -clockPropagation
+getAnalysisMode -quiet -cppr
+setExtractRCMode -engine preRoute
+setAnalysisMode -clkSrcPath false -clockPropagation forcedIdeal
+getPlaceMode -exp_slack_driven -quiet
+isAnalysisModeSetup
+getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+getPlaceMode -quiet -NMPsuppressInfo
+getPlaceMode -quiet -place_global_exp_wns_focus_v2
+getPlaceMode -quiet -place_incr_exp_isolation_flow
+getPlaceMode -enableDistPlace -quiet
+getPlaceMode -quiet -clusterMode
+getPlaceMode -wl_budget_mode -quiet
+setPlaceMode -reset -place_global_exp_balance_buffer_chain
+getPlaceMode -wl_budget_mode -quiet
+setPlaceMode -reset -place_global_exp_balance_pipeline
+getPlaceMode -place_global_exp_balance_buffer_chain -quiet
+getPlaceMode -place_global_exp_balance_pipeline -quiet
+getPlaceMode -tdgpMemFlow -quiet
+getPlaceMode -user -resetCombineRFLevel
+getPlaceMode -quiet -resetCombineRFLevel
+setPlaceMode -resetCombineRFLevel 1000
+setvar spgSpeedupBuildVSM 1
+getPlaceMode -tdgpResetCteTG -quiet
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -place_global_replace_QP -quiet
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -enableDistPlace -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -place_global_ignore_spare -quiet
+getPlaceMode -enableDistPlace -quiet
+getPlaceMode -quiet -expNewFastMode
+setPlaceMode -expHiddenFastMode 1
+setPlaceMode -reset -ignoreScan
+getPlaceMode -quiet -place_global_exp_auto_finish_floorplan
+colorizeGeometry
+getPlaceMode -quiet -IOSlackAdjust
+getPlaceMode -tdgpCteZeroDelayModeDelBuf -quiet
+set_global timing_enable_zero_delay_analysis_mode true
+getPlaceMode -quiet -useNonTimingDeleteBufferTree
+getPlaceMode -quiet -prePlaceOptSimplifyNetlist
+getPlaceMode -quiet -enablePrePlaceOptimizations
+getPlaceMode -quiet -prePlaceOptDecloneInv
+deleteBufferTree -decloneInv
+getPlaceMode -tdgpCteZeroDelayModeDelBuf -quiet
+set_global timing_enable_zero_delay_analysis_mode false
+getAnalysisMode -quiet -honorClockDomains
+getPlaceMode -honorUserPathGroup -quiet
+getAnalysisMode -quiet -honorClockDomains
+set delaycal_use_default_delay_limit 101
+set delaycal_default_net_delay 0
+set delaycal_default_net_load 0
+set delaycal_default_net_load_ignore_for_ilm 0
+getAnalysisMode -clkSrcPath -quiet
+getAnalysisMode -clockPropagation -quiet
+getAnalysisMode -checkType -quiet
+buildTimingGraph
+getDelayCalMode -ignoreNetLoad -quiet
+getDelayCalMode -ignoreNetLoad -quiet
+setDelayCalMode -ignoreNetLoad true -quiet
+get_global timing_enable_path_group_priority
+get_global timing_constraint_enable_group_path_resetting
+set_global timing_enable_path_group_priority false
+set_global timing_constraint_enable_group_path_resetting false
+getOptMode -allowPreCTSClkSrcPaths -quiet
+set_global _is_ipo_interactive_path_groups 1
+group_path -name in2reg_tmp.12534 -from {0x8 0xb} -to 0xc -ignore_source_of_trigger_arc
+getOptMode -allowPreCTSClkSrcPaths -quiet
+set_global _is_ipo_interactive_path_groups 1
+group_path -name in2out_tmp.12534 -from {0xf 0x12} -to 0x13 -ignore_source_of_trigger_arc
+set_global _is_ipo_interactive_path_groups 1
+group_path -name reg2reg_tmp.12534 -from 0x15 -to 0x16
+set_global _is_ipo_interactive_path_groups 1
+group_path -name reg2out_tmp.12534 -from 0x19 -to 0x1a
+setPathGroupOptions reg2reg_tmp.12534 -effortLevel high
+reset_path_group -name in2reg_tmp.12534
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name in2out_tmp.12534
+set_global _is_ipo_interactive_path_groups 0
+setDelayCalMode -ignoreNetLoad false
+set delaycal_use_default_delay_limit 1000
+set delaycal_default_net_delay 1000ps
+set delaycal_default_net_load 0.5pf
+set delaycal_default_net_load_ignore_for_ilm 0
+all_setup_analysis_views
+getPlaceMode -place_global_exp_ignore_low_effort_path_groups -quiet
+getPlaceMode -exp_slack_driven -quiet
+getAnalysisMode -quiet -honorClockDomains
+getPlaceMode -quiet -place_global_exp_inverter_rewiring
+getPlaceMode -ignoreUnproperPowerInit -quiet
+getPlaceMode -quiet -expSkipGP
+setDelayCalMode -engine feDc
+psp::embedded_egr_init_
+psp::embedded_egr_term_
+scanReorder
+setDelayCalMode -engine aae
+all_setup_analysis_views
+getPlaceMode -exp_slack_driven -quiet
+reset_path_group -name reg2reg_tmp.12534
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name reg2out_tmp.12534
+set_global _is_ipo_interactive_path_groups 0
+set_global timing_enable_path_group_priority $gpsPrivate::optSave_ctePGPriority
+set_global timing_constraint_enable_group_path_resetting $gpsPrivate::optSave_ctePGResetting
+getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+get_ccopt_clock_trees *
+getPlaceMode -exp_insert_guidance_clock_tree -quiet
+getPlaceMode -exp_cluster_based_high_fanout_buffering -quiet
+getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -timingEffort
+getAnalysisMode -quiet -honorClockDomains
+getPlaceMode -honorUserPathGroup -quiet
+getAnalysisMode -quiet -honorClockDomains
+set delaycal_use_default_delay_limit 101
+set delaycal_default_net_delay 0
+set delaycal_default_net_load 0
+set delaycal_default_net_load_ignore_for_ilm 0
+getAnalysisMode -clkSrcPath -quiet
+getAnalysisMode -clockPropagation -quiet
+getAnalysisMode -checkType -quiet
+buildTimingGraph
+getDelayCalMode -ignoreNetLoad -quiet
+getDelayCalMode -ignoreNetLoad -quiet
+setDelayCalMode -ignoreNetLoad true -quiet
+get_global timing_enable_path_group_priority
+get_global timing_constraint_enable_group_path_resetting
+set_global timing_enable_path_group_priority false
+set_global timing_constraint_enable_group_path_resetting false
+getOptMode -allowPreCTSClkSrcPaths -quiet
+set_global _is_ipo_interactive_path_groups 1
+group_path -name in2reg_tmp.12534 -from {0x1e 0x21} -to 0x22 -ignore_source_of_trigger_arc
+getOptMode -allowPreCTSClkSrcPaths -quiet
+set_global _is_ipo_interactive_path_groups 1
+group_path -name in2out_tmp.12534 -from {0x25 0x28} -to 0x29 -ignore_source_of_trigger_arc
+set_global _is_ipo_interactive_path_groups 1
+group_path -name reg2reg_tmp.12534 -from 0x2b -to 0x2c
+set_global _is_ipo_interactive_path_groups 1
+group_path -name reg2out_tmp.12534 -from 0x2f -to 0x30
+setPathGroupOptions reg2reg_tmp.12534 -effortLevel high
+reset_path_group -name in2reg_tmp.12534
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name in2out_tmp.12534
+set_global _is_ipo_interactive_path_groups 0
+setDelayCalMode -ignoreNetLoad false
+set delaycal_use_default_delay_limit 1000
+set delaycal_default_net_delay 1000ps
+set delaycal_default_net_load 0.5pf
+set delaycal_default_net_load_ignore_for_ilm 0
+all_setup_analysis_views
+getPlaceMode -place_global_exp_ignore_low_effort_path_groups -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -quiet -cong_repair_commit_clock_net_route_attr
+getPlaceMode -enableDbSaveAreaPadding -quiet
+getPlaceMode -quiet -wireLenOptEffort
+setPlaceMode -reset -improveWithPsp
+getPlaceMode -quiet -debugGlobalPlace
+getPlaceMode -congRepair -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -user -rplaceIncrNPClkGateAwareMode
+getPlaceMode -user -congRepairMaxIter
+getPlaceMode -quiet -congRepairPDClkGateMode4
+setPlaceMode -rplaceIncrNPClkGateAwareMode 4
+getPlaceMode -quiet -expCongRepairPDOneLoop
+setPlaceMode -congRepairMaxIter 1
+getPlaceMode -quickCTS -quiet
+get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+getPlaceMode -congRepairForceTrialRoute -quiet
+getPlaceMode -user -congRepairForceTrialRoute
+setPlaceMode -congRepairForceTrialRoute true
+::goMC::is_advanced_metrics_collection_running
+congRepair
+::goMC::is_advanced_metrics_collection_running
+::goMC::is_advanced_metrics_collection_running
+::goMC::is_advanced_metrics_collection_running
+setPlaceMode -reset -congRepairForceTrialRoute
+getPlaceMode -quiet -congRepairPDClkGateMode4
+setPlaceMode -reset -rplaceIncrNPClkGateAwareMode
+setPlaceMode -reset -congRepairMaxIter
+getPlaceMode -congRepairCleanupPadding -quiet
+getPlaceMode -quiet -wireLenOptEffort
+all_setup_analysis_views
+getPlaceMode -exp_slack_driven -quiet
+reset_path_group -name reg2reg_tmp.12534
+set_global _is_ipo_interactive_path_groups 0
+reset_path_group -name reg2out_tmp.12534
+set_global _is_ipo_interactive_path_groups 0
+set_global timing_enable_path_group_priority $gpsPrivate::optSave_ctePGPriority
+set_global timing_constraint_enable_group_path_resetting $gpsPrivate::optSave_ctePGResetting
+getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -timingEffort
+getPlaceMode -tdgpDumpStageTiming -quiet
+getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+setvar spgRptErrorForScanConnection 0
+getPlaceMode -trimView -quiet
+getOptMode -quiet -viewOptPolishing
+getOptMode -quiet -fastViewOpt
+spInternalUse deleteViewOptManager
+spInternalUse tdgp clearSkpData
+setAnalysisMode -clkSrcPath false -clockPropagation forcedIdeal
+getPlaceMode -exp_slack_driven -quiet
+setExtractRCMode -engine preRoute
+setPlaceMode -reset -relaxSoftBlockageMode
+setPlaceMode -reset -ignoreScan
+setPlaceMode -reset -repairPlace
+getPlaceMode -quiet -NMPsuppressInfo
+setvar spgSpeedupBuildVSM 0
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -place_global_replace_QP -quiet
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -enableDistPlace -quiet
+getPlaceMode -place_global_ignore_spare -quiet
+getPlaceMode -tdgpMemFlow -quiet
+setPlaceMode -reset -resetCombineRFLevel
+getPlaceMode -enableDistPlace -quiet
+getPlaceMode -quiet -clusterMode
+getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+getPlaceMode -enableDistPlace -quiet
+setPlaceMode -reset -expHiddenFastMode
+getPlaceMode -tcg2Pass -quiet
+getPlaceMode -quiet -wireLenOptEffort
+getPlaceMode -fp -quiet
+getPlaceMode -fastfp -quiet
+getPlaceMode -doRPlace -quiet
+getPlaceMode -RTCPlaceDesignFlow -quiet
+getPlaceMode -quickCTS -quiet
+set spgFlowInInitialPlace 0
+getPlaceMode -user -maxRouteLayer
+spInternalUse TDGP resetIgnoreNetLoad
+getPlaceMode -place_global_exp_balance_pipeline -quiet
+getDesignMode -quiet -flowEffort
+report_message -end_cmd
+um::create_snapshot -name final -auto min
+um::pop_snapshot_stack
+um::create_snapshot -name place_design
+getPlaceMode -exp_slack_driven -quiet
+checkPlace output/TM_select_3.checkPlace
+setDrawView place
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix TM_select_3_preCTS -outDir timingReports
+addTieHiLo -cell {LOGIC1JI3V LOGIC0JI3V} -prefix LTIE
+redraw
+setRouteMode -earlyGlobalMinRouteLayer 2 -earlyGlobalMaxRouteLayer 4 -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+redraw
+setLayerPreference node_overlay -isVisible 1
+setLayerPreference congestH -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
+setLayerPreference congestV -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
+fit
+setLayerPreference node_overlay -isSelectable 0
+setLayerPreference node_overlay -isSelectable 1
+setLayerPreference node_overlay -isVisible 0
+setLayerPreference node_overlay -isVisible 1
+fit
+setLayerPreference node_overlay -isVisible 0
+setLayerPreference node_overlay -isVisible 1
+fit
+setLayerPreference node_overlay -isVisible 0
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_preCTS -outDir timingReports
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+setRouteMode -earlyGlobalMaxRouteLayer 4
+optDesign -preCTS
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_preCTS -outDir timingReports
+saveDesign aska_dig_ld_fp_pw_pin_placed
+create_route_type -name LeafUnshield -bottom_preferred_layer 2 -top_preferred_layer 3
+set_ccopt_property -route_type LeafUnshield -net_type leaf
+create_route_type -name TrunkUnshield -bottom_preferred_layer 2 -top_preferred_layer 3
+set_ccopt_property -route_type TrunkUnshield -net_type trunk
+timeDesign -preCTS
+timeDesign -preCTS -hold
+delete_ccopt_clock_tree_spec
+create_ccopt_clock_tree_spec -file output/ccopt.spec
+get_ccopt_clock_trees
+ccopt_check_and_flatten_ilms_no_restore
+set_ccopt_property cts_is_sdc_clock_root -pin SPI_Clk true
+set_ccopt_property cts_is_sdc_clock_root -pin clk true
+create_ccopt_clock_tree -name SPI_CLK -source SPI_Clk -no_skew_group
+set_ccopt_property source_driver -clock_tree SPI_CLK {BUJI3VX16/A BUJI3VX16/Q}
+set_ccopt_property clock_period -pin SPI_Clk 20
+create_ccopt_clock_tree -name CLK -source clk -no_skew_group
+set_ccopt_property source_driver -clock_tree CLK {BUJI3VX16/A BUJI3VX16/Q}
+set_ccopt_property clock_period -pin clk 20
+set_ccopt_property timing_connectivity_info {}
+create_ccopt_skew_group -name CLK/functional_mode -sources clk -auto_sinks
+set_ccopt_property include_source_latency -skew_group CLK/functional_mode true
+set_ccopt_property target_insertion_delay -skew_group CLK/functional_mode 2.000
+set_ccopt_property extracted_from_clock_name -skew_group CLK/functional_mode CLK
+set_ccopt_property extracted_from_constraint_mode_name -skew_group CLK/functional_mode functional_mode
+set_ccopt_property extracted_from_delay_corners -skew_group CLK/functional_mode {slow_corner fast_corner}
+create_ccopt_skew_group -name SPI_CLK/functional_mode -sources SPI_Clk -auto_sinks
+set_ccopt_property include_source_latency -skew_group SPI_CLK/functional_mode true
+set_ccopt_property target_insertion_delay -skew_group SPI_CLK/functional_mode 2.000
+set_ccopt_property extracted_from_clock_name -skew_group SPI_CLK/functional_mode SPI_CLK
+set_ccopt_property extracted_from_constraint_mode_name -skew_group SPI_CLK/functional_mode functional_mode
+set_ccopt_property extracted_from_delay_corners -skew_group SPI_CLK/functional_mode {slow_corner fast_corner}
+check_ccopt_clock_tree_convergence
+get_ccopt_property auto_design_state_for_ilms
+set_ccopt_property allow_resize_of_dont_touch_cells false
+ccopt_design -cts
+setRouteMode -earlyGlobalMaxRouteLayer 4
+optDesign -postCTS
+optDesign -postCTS -hold
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_postCTS -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postCTS -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postCTS -outDir timingReports
+optDesign -postCTS -hold
+optDesign -postCTS -hold
+optDesign -postCTS -hold
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+optDesign -postCTS
+optDesign -postCTS -hold
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_preCTS -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postCTS -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postCTS -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postCTS -pathReports -slackReports -numPaths 50 -prefix aska_dig_postCTS -outDir timingReports
+getCTSMode -engine -quiet
+ctd_win -side none -id ctd_window
+saveDesign aska_dig_ld_fp_pw_pin_placed_cts
+setNanoRouteMode -quiet -timingEngine {}
+setNanoRouteMode -quiet -routeWithSiPostRouteFix 0
+setNanoRouteMode -quiet -drouteStartIteration default
+setNanoRouteMode -quiet -routeTopRoutingLayer 4
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+setAnalysisMode -analysisType onChipVariation
+setDelayCalMode -engine default -siAware true
+timeDesign -postRoute
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+setDelayCalMode -engine default -siAware true
+setRouteMode -earlyGlobalMaxRouteLayer 3
+optDesign -postRout
+timeDesign -postRoute
+timeDesign -postRoute -hold
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+verifyConnectivity -type all -error 1000 -warning 50
+verifyConnectivity -type all -error 1000 -warning 50
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+setNanoRouteMode -droutePostRouteSwapVia multiCut
+routeDesign -viaOpt
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+verifyConnectivity -type all -error 1000 -warning 50
+saveDesign aska_dig_ld_fp_pw_pin_placed_cts_routed
+getFillerMode -quiet
+setFillerMode -add_fillers_with_drc false
+addFiller -prefix FILLCAP -cell DECAP25JI3V DECAP15JI3V DECAP10JI3V DECAP7JI3V DECAP5JI3V
+addFiller -prefix FILL -cell FEED25JI3V FEED15JI3V FEED10JI3V FEED7JI3V FEED5JI3V FEED3JI3V FEED2JI3V FEED1JI3V
+saveDesign aska_dig_ld_fp_pw_pin_placed_cts_routed_final
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports

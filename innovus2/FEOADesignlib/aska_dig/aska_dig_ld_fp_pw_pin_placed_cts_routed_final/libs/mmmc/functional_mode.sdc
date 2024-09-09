@@ -1,0 +1,1 @@
+/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2/FEOADesignlib/aska_dig/aska_dig_ld_fp_pw_pin_placed_cts/mmmc/modes/functional_mode/functional_mode.sdc

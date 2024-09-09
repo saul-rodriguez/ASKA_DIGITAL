@@ -1,0 +1,92 @@
+//Revision 4
+//NOTE
+// Default austriamicrosystems template for AMS Designer
+// Note:
+//      Please remember to replace the Library, Cell, and View fields
+//      for the Top Cell with the actual names used by your design.
+//END_NOTE
+
+config DIG_stimulus_tb;
+design ASKA_DIG2.DIG_stimulus_tb:schematic;
+
+const digital behavioral, functional, schematic, symbol;
+const analog veriloga, functional, schematic, symbol;
+liblist basic, analogLib, ASKA_DIG2;
+
+viewlist verilogams, veriloga, behavioral, functional, \module , schematic, spectre, symbol;
+stoplist symbol, spectre;
+
+
+cell ASKA_DIG2.aska_dig binding :schematic;
+
+cell D_CELLS_JI3V.AN211JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.AN21JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.AN22JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.AN31JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.AND2JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.AND2JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.AO21JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.AO22JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.BUJI3VX0 binding :symbol;
+cell D_CELLS_JI3V.BUJI3VX1 binding :symbol;
+cell D_CELLS_JI3V.BUJI3VX12 binding :symbol;
+cell D_CELLS_JI3V.BUJI3VX16 binding :symbol;
+cell D_CELLS_JI3V.BUJI3VX2 binding :symbol;
+cell D_CELLS_JI3V.BUJI3VX3 binding :symbol;
+cell D_CELLS_JI3V.BUJI3VX6 binding :symbol;
+cell D_CELLS_JI3V.BUJI3VX8 binding :symbol;
+cell D_CELLS_JI3V.DECAP10JI3V binding :symbol;
+cell D_CELLS_JI3V.DECAP15JI3V binding :symbol;
+cell D_CELLS_JI3V.DECAP25JI3V binding :symbol;
+cell D_CELLS_JI3V.DECAP5JI3V binding :symbol;
+cell D_CELLS_JI3V.DECAP7JI3V binding :symbol;
+cell D_CELLS_JI3V.DFRRQJI3VX1 binding :symbol;
+cell D_CELLS_JI3V.DFRRQJI3VX2 binding :symbol;
+cell D_CELLS_JI3V.DFRRQJI3VX4 binding :symbol;
+cell D_CELLS_JI3V.DLY1JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.DLY2JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.DLY4JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.EN2JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.EN3JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.EO2JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.EO3JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.FAJI3VX1 binding :symbol;
+cell D_CELLS_JI3V.HAJI3VX1 binding :symbol;
+cell D_CELLS_JI3V.INJI3VX0 binding :symbol;
+cell D_CELLS_JI3V.INJI3VX1 binding :symbol;
+cell D_CELLS_JI3V.INJI3VX2 binding :symbol;
+cell D_CELLS_JI3V.INJI3VX3 binding :symbol;
+cell D_CELLS_JI3V.MU2JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.NA22JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.NA2I1JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.NA2I1JI3VX2 binding :symbol;
+cell D_CELLS_JI3V.NA2JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.NA2JI3VX2 binding :symbol;
+cell D_CELLS_JI3V.NA3I1JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.NA3I2JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.NA3JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.NA4JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.NA4JI3VX2 binding :symbol;
+cell D_CELLS_JI3V.NO22JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.NO2I1JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.NO2I1JI3VX2 binding :symbol;
+cell D_CELLS_JI3V.NO2JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.NO2JI3VX2 binding :symbol;
+cell D_CELLS_JI3V.NO3I1JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.NO3I2JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.NO3JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.NO3JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.OA21JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.ON211JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.ON21JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.ON21JI3VX4 binding :symbol;
+cell D_CELLS_JI3V.ON22JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.ON31JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.OR2JI3VX0 binding :symbol;
+cell D_CELLS_JI3V.OR3JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.OR4JI3VX1 binding :symbol;
+cell D_CELLS_JI3V.OR4JI3VX2 binding :symbol;
+cell D_CELLS_JI3V.SDFRRQJI3VX1 binding :symbol;
+
+
+endconfig

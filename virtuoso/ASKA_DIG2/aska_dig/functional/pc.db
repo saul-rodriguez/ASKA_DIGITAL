@@ -1,0 +1,10 @@
+--pcdbVlog file, Rev:1.0
+
+#CELL
+* aska_npg *
+npg1
+
+#CELL
+* aska_spi *
+spi1
+

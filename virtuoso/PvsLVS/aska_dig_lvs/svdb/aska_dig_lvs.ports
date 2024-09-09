@@ -1,4 +1,4 @@
 # SVDB: Port Table (ports)
 # SVDB: Layout Primary aska_dig_lvs
-vdd3 1 vdd3 21425 247140 m1trm
-gndd 2 gndd 32890 238000 m1trm
+vdd3 1 vdd3 109475 239575 m1trm
+gndd 2 gndd 99655 230425 m1trm

@@ -1,0 +1,350 @@
+//Verilog-AMS HDL for "ASKA_DIG", "DIG_stimulus" "verilogams"
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+`timescale 1us/ 1ps
+//module DIG_stimulus ( );
+
+//endmodule
+
+//Verilog HDL for "SPI_SLAVE_STIMULUS", "SPI_stimulus" "functional"
+
+//`include "constants.vams"
+//`include "disciplines.vams"
+
+//`include "aska_dig.v"
+
+`timescale 1us/ 1ps
+
+//`define AMPLITUDE 50
+//`define FREQ 400
+//`define PHASE 4
+//`define RAMP  50
+//`define RAMP_FACTOR (`AMPLITUDE*16)/`RAMP
+//`define RAMP_FACTOR 0
+//`define ON_TIME  50
+//`define OFF_TIME  50
+`define ELE1  32'b0000_0000_0000_0000_0000_0000_0000_0001
+`define ELE2  32'b0000_0000_0000_0000_0000_0000_0000_0010
+
+// Select one physical address of the IC 
+`define  IC_ADDRESS 8'h00
+//`define  IC_ADDRESS 8'h40
+//`define  IC_ADDRESS 8'h80
+//`define  IC_ADDRESS 8'hC0
+
+
+module DIG_stimulus(	
+	output reg SPI_Clk,
+	output reg SPI_MOSI,
+	output reg SPI_CS,
+	output reg reset_l,
+	output reg Clk20kHz,
+	output reg porborn);
+		
+
+
+	parameter MAIN_CLK_DELAY = 25;  // 20 kHz -> 50 us
+	parameter SPI_CLK_DELAY = 1; // 500 kHz
+
+	// IC address
+	//reg [1:0] IC_addr;
+	reg [7:0] send_address;
+
+    // Stimulation parameters
+    reg [5:0] amplitude; //0 - 50 mA
+    reg [11:0] freq; // 4.88 Hz (4095) - 50 Hz (400)
+    reg [2:0] phaseDuration; //multiple of 50 us (1-7) -> (50us - 350us)
+    reg [5:0] ramp; // Number of ramp pulses 
+    reg [9:0] ramp_factor; //calculated automatically in software!
+    reg [7:0] ON_time; // TIME/(1/freq) up to 4s (200 for 50 Hz)ramp = `RAMP;    
+    reg [9:0] OFF_time; // TIME/(1/freq) up to 12s (600 for 50 Hz)
+    reg [31:0] electrode1;
+    reg [31:0] electrode2;
+    reg enable;
+	    
+	//Outputs
+	wire [31:0] up_switches;
+    wire [31:0] down_switches;
+    wire [5:0] DAC;
+    wire pulse_active;
+
+    reg [31:0] conf0;
+	reg [31:0] conf1;
+	
+
+	// Clock Generators:
+	always #(MAIN_CLK_DELAY) Clk20kHz = ~Clk20kHz;
+	
+	reg [7:0] TX_data; // Data to send through MOSI	
+	reg [7:0] SPI_Master_RX; // Data received through MISO  
+
+initial begin
+
+		// Required for EDA Playground
+		$dumpfile("dump.vcd"); 
+		$dumpvars;
+		$display("************************************");
+		$display("Test ASKA SPI Slave");
+		/************************/
+		/* 	Initial State       */
+		/************************/
+
+		Clk20kHz = 0;
+		TX_data = 8'h00;
+		reset_l = 1'b1;
+		porborn = 1'b1;
+		SPI_CS = 1'b1;
+		SPI_Clk = 1'b0;
+		SPI_MOSI = 1'b0;
+		//IC_addr = 2'b00;
+		send_address = `IC_ADDRESS;
+
+		electrode1 = `ELE1;
+    		electrode2 = `ELE2;
+
+		/* ON/OFF TIME 1s for 50 Hz*/
+//		ON_time = 50;
+//  		OFF_time = 50;
+
+		/* ON/OFF TIME 1s/3s for 50 Hz*/
+		//ON_time = 50;
+   		//OFF_time = 150;
+
+		/* ON/OFF TIME 1s for 10 Hz*/
+	   	//ON_time = 10;
+		//OFF_time = 10;
+
+		/* ON/OFF TIME 1s for 10 Hz*/
+		ON_time = 10;
+   		OFF_time = 30;
+
+		/****************************/
+		/*     Reset                */
+		/* Comment for POR/BOR test */ 
+		/****************************/
+
+		//Reset
+		#(10*MAIN_CLK_DELAY) reset_l = 1'b0;
+		#(10*MAIN_CLK_DELAY) reset_l = 1'b1;
+		#(10*MAIN_CLK_DELAY);
+
+
+		/*****************************/
+		/*  Test Program             */
+		/*****************************/
+
+		enable = 1'b1;
+	    //conf_freq_amp_pha_ramp(400,50,4,50); // 50Hz, 50mA, ramp 1s  (Long sim required)
+ 	    //conf_freq_amp_pha_ramp(400,25,4,50); // 50Hz, 25mA, ramp 1s  (Long sim required)
+ 	    //conf_freq_amp_pha_ramp(2000,50,4,5); // 10Hz, 50mA ramp 0.5s (Long sim required, change ON_time = 10)
+ 	    conf_freq_amp_pha_ramp(2000,20,4,1); // 10Hz, 20mA ramp 0s (Long sim required, change ON_time = 10)
+		//conf_freq_amp_pha_ramp(400,50,4,0); // 50 Hz no ramp
+		//conf_freq_amp_pha_ramp(400,50,4,1); // 50 Hz no ramp
+		//conf_freq_amp_pha_ramp(40,50,1,10); // 500 Hz, 20ms ramp
+		//conf_freq_amp_pha_ramp(10,50,1,4); // 0.5ms, short ramp (Short simulation)
+		//conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+		/******************************/
+		/* First delay for program 1  */
+		/******************************/
+
+		#(75000000*SPI_CLK_DELAY); // 75 s delay
+//		#(7500000*SPI_CLK_DELAY); // 7.5 s delay
+//		#(750000*SPI_CLK_DELAY); // 750 ms delay
+//		#(75000*SPI_CLK_DELAY); // 75 ms delay
+
+		$display("First delay finished");
+
+		/**************************/
+		/* Stop Program           */
+		/**************************/
+
+		// Disable NPG
+		enable = 0;
+	    update_config;	
+		//#1;	send_ASKA(8'h01,conf1);
+		send_ASKA((8'h01 | send_address),conf1);
+
+		#(5000000*SPI_CLK_DELAY); 
+
+		/*****************************/
+		/*  Test New Program             */
+		/*****************************/
+
+		enable = 1;
+		conf_freq_amp_pha_ramp(400,25,4,25); // amp 25 mA, rampup/dwn 0.5s freq 50Hz
+		write_SPI;
+
+		#(10000000*SPI_CLK_DELAY);
+
+		/**********************/
+		/*   Test POR/BOR     */
+		/**********************/
+		
+		// porborn stimulus is not connected in the core! this is useful only to test aska_dig.
+
+		porborn = 0;
+		#(1000000*SPI_CLK_DELAY);
+		porborn = 1;
+
+		#(20000000*SPI_CLK_DELAY); 
+		$display("************************************");
+		$finish;
+ 
+	end
+
+	initial begin
+		//    $sdf_annotate ("/home/saul/projects/TEST_LIB2/innovus/output/typ_functional_1_8V_25C.sdf",I3,, "sdf.log", "MAXIMUM");
+		//    $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus/output/design_slow.sdf",I2,, "sdf.log", "MAXIMUM");
+		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2/output/design_slow.sdf",I2,, "sdf.log", "MAXIMUM");
+	end
+
+	reg[8*6:1] str1;
+
+	task send_ASKA(input [7:0] add, input [31:0] data);
+		begin
+			SPI_CS = 1'b0;
+			#(4*MAIN_CLK_DELAY); // models delay between CS and SPI master data
+			
+			send_byte(add);
+			send_byte(data[31:24]);
+			send_byte(data[23:16]);
+			send_byte(data[15:8]);
+			send_byte(data[7:0]);
+			
+			#(4*MAIN_CLK_DELAY); // models delay between CS and SPI master 
+			SPI_CS = 1'b1;	
+			
+			//Check values
+			#(4*MAIN_CLK_DELAY);
+
+			$display("sent SPI add 0x%X, data 0x%X at time:",add, data,  $time);
+			
+		end
+	endtask
+
+	task send_ASKA_error(input [7:0] add, input [31:0] data);
+		begin
+			SPI_CS = 1'b0;
+			#(4*MAIN_CLK_DELAY); // models delay between CS and SPI master 
+			
+			send_byte(add);
+			send_byte(data[31:24]);
+			send_byte(data[23:16]);
+			send_byte(data[15:8]);
+			//send_byte(data[7:0]);
+			
+			#(4*MAIN_CLK_DELAY); // models delay between CS and SPI master 
+			SPI_CS = 1'b1;	
+			
+		end
+	endtask
+
+	task update_config;
+ 		begin
+			#1; conf0[11:0] = freq;
+			#1; conf0[17:12] = amplitude;   
+ 			#1; conf0[23:18] = ramp;
+    			#1; conf0[31:24] = ON_time;
+		
+    			#1; conf1[9:0] = ramp_factor;
+    			#1; conf1[19:10] = OFF_time;
+    			#1; conf1[20] = enable;
+    			#1; conf1[23:21] = phaseDuration;
+			#1; conf1[31:24] = 8'b0000_0000;	
+			#1;
+		end
+	endtask
+
+	task conf_freq_amp_pha_ramp( input [11:0] Freq, input [5:0] Amp, input [2:0] PD, input [5:0] Ramp);
+		begin
+			amplitude = Amp;
+			freq = Freq;
+			phaseDuration = PD;
+			ramp = Ramp;
+			if (Ramp > 0 ) begin
+				ramp_factor = (amplitude*16)/ramp;	
+			end else begin
+				ramp_factor = 0;
+			end
+			
+			update_config;
+		end
+	endtask
+
+	task write_SPI;		
+		begin
+			send_ASKA((8'h02 | send_address),electrode1);
+			#(20*SPI_CLK_DELAY);
+			send_ASKA((8'h03 | send_address),electrode2);
+	        	#(20*SPI_CLK_DELAY);	
+			send_ASKA((8'h00 | send_address),conf0);
+			#(20*SPI_CLK_DELAY);
+			send_ASKA((8'h01 | send_address),conf1);
+		end
+	endtask
+
+	task send_byte(input [7:0] data);
+		begin
+			TX_data = data;			
+			//#(4*MAIN_CLK_DELAY); // models delay between CS and SPI master 
+			SPI_Clk = 1'b0;
+			SPI_MOSI = TX_data[7];
+						
+			#SPI_CLK_DELAY;		
+			SPI_Clk = 1'b1;
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b0;
+			SPI_MOSI = TX_data[6];
+		
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b1;			
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b0;
+			SPI_MOSI = TX_data[5];
+				
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b1;
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b0;
+			SPI_MOSI = TX_data[4];
+
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b1;
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b0;
+			SPI_MOSI = TX_data[3];
+		
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b1;			
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b0;
+			SPI_MOSI = TX_data[2];
+
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b1;			
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b0;
+			SPI_MOSI = TX_data[1];
+
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b1;			
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b0;
+			SPI_MOSI = TX_data[0];
+		
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b1;
+			
+			#SPI_CLK_DELAY;
+			SPI_Clk = 1'b0;
+						
+		end
+	endtask
+
+
+
+endmodule 

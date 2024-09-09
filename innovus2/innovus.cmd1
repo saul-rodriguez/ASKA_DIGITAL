@@ -1,0 +1,162 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Sep  9 08:49:20 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+#@(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+#@(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+#@(#)CDS: CPE v21.18-s053
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+setOaxMode -compressLevel 0
+setOaxMode -allowBitConnection true
+setOaxMode -allowTechUpdate false
+setOaxMode -updateMode true
+setDesignMode -process 180
+setViaGenMode -symmetrical_via_only true
+set_table_style -no_frame_fix_width
+set_global timing_report_enable_auto_column_width true
+setMultiCpuUsage -localCpu 4
+set init_gnd_net gnd3i
+set init_verilog ../genus2/genus_output/dig_aska_synth.v
+set init_mmmc_file xh018_ji3v.view
+set init_top_cell aska_dig
+set init_oa_ref_lib {D_CELLS_JI3V ASKA_DIG2}
+set init_pwr_net vdd3i
+init_design
+clearGlobalNets
+globalNetConnect gnd3i -type pgpin -pin gnd3i -instanceBasename * -hierarchicalInstance {}
+globalNetConnect vdd3i -type pgpin -pin vdd3i -instanceBasename * -hierarchicalInstance {}
+saveDesign aska_dig_ld
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site core_ji3v -r 0.5 0.5 0.0 0.0 0.0 0.0
+uiSetTool select
+getIoFlowFlag
+fit
+uiSetTool ruler
+setIoFlowFlag 0
+floorPlan -site core_ji3v -r 0.492462311558 0.6 0.0 0.0 0.0 0.0
+uiSetTool select
+getIoFlowFlag
+fit
+uiSetTool ruler
+uiSetTool ruler
+setIoFlowFlag 0
+floorPlan -site core_ji3v -r 0.476319350474 0.599305 20 20 20 20
+uiSetTool select
+getIoFlowFlag
+fit
+zoomBox -15.38400 -59.77600 418.68100 328.80500
+zoomBox -8.73100 -15.05000 360.22500 315.24400
+zoomBox -15.63800 -61.71400 418.42800 326.86800
+uiSetTool ruler
+zoomBox -11.17500 -52.53300 357.78200 277.76200
+zoomBox -7.38000 -44.72900 306.23300 236.02200
+zoomBox -4.15500 -38.09600 262.41700 200.54300
+zoomBox -1.41400 -32.45800 225.17300 170.38600
+zoomBox 0.91600 -27.66500 193.51500 144.75200
+zoomBox 2.89700 -23.59100 166.60600 122.96300
+zoomBox 0.91600 -27.66500 193.51500 144.75200
+zoomBox -3.67800 -38.28800 262.89500 200.35200
+zoomBox -9.90400 -62.98500 359.05600 267.31300
+uiSetTool ruler
+uiSetTool ruler
+panPage 1 0
+panPage 1 0
+setIoFlowFlag 0
+floorPlan -site core_ji3v -r 0.5 0.598661 20.16 20.16 20.16 20.16
+uiSetTool select
+getIoFlowFlag
+fit
+setIoFlowFlag 0
+floorPlan -site core_ji3v -r 0.497237569061 0.598128 20.16 20.16 20.16 20.16
+uiSetTool select
+getIoFlowFlag
+fit
+uiSetTool ruler
+uiSetTool ruler
+saveDesign aska_dig_ld_fp
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {gnd3i vdd3i} -type core_rings -follow core -layer {top MET1 bottom MET1 left MET2 right MET2} -width {top 9 bottom 9 left 9 right 9} -spacing {top 0.23 bottom 0.23 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {gnd3i vdd3i} -layer MET1 -direction horizontal -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+undo
+fit
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 100 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+undo
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+undo
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 50 -stop_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+undo
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 75 -stop_offset 75 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+undo
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 70 -stop_offset 70 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+undo
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 75 -stop_offset 75 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { stripe }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { MET1(1) METTPL(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { MET1(1) METTPL(6) } -nets { gnd3i vdd3i } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { MET1(1) METTPL(6) }
+zoomBox -0.89800 -65.40700 424.78900 315.67400
+zoomBox 17.68800 -31.37400 379.52200 292.54500
+zoomBox 31.59000 -2.72700 339.14900 272.60400
+zoomBox 43.28800 21.62300 304.71300 255.65400
+zoomBox 59.61700 60.00700 248.49700 229.09500
+zoomBox 65.99400 74.99800 226.54200 218.72300
+zoomBox 76.02300 98.57100 192.01900 202.41200
+zoomBox 79.93900 107.77700 178.53600 196.04200
+zoomBox 59.61500 60.00500 248.49800 229.09600
+zoomBox 50.34400 51.03600 272.55900 249.96600
+zoomBox 39.43700 40.48400 300.86600 274.51900
+zoomBox 26.60500 28.07000 334.16900 303.40500
+zoomBox 11.50900 13.53500 373.34900 337.45900

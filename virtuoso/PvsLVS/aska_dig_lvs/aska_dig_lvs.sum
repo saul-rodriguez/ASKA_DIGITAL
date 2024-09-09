@@ -1,7 +1,7 @@
 ********************************************************************************
 *** PVS HERC SUMMARY
 ***
-Execute on Date/Time    : Mon Jul 15 19:51:21 2024
+Execute on Date/Time    : Mon Sep  9 14:36:58 2024
 PVS HERC VERSION        : 23.10-p043 Mon Oct 2 18:09:08 PDT 2023
 Rule Deck Path          : /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig_lvs/.config.rul
 Rule Deck Title         : " XH018 PVS DRC/LVS File v9.0.1 : MET4 / METMID / METTHK "
@@ -28,41 +28,41 @@ ERC Results Database    :
 --------------------------------------------------------------------------------
 --- ORIGINAL LAYER STATISTICS
 ---
-LAYER met1_dg .................... Total Original Geometry:     3156 (   26674)
-LAYER met2_dg .................... Total Original Geometry:     7879 (   16000)
-LAYER met3_dg .................... Total Original Geometry:     4066 (    7188)
-LAYER met4_dg .................... Total Original Geometry:      144 (     307)
+LAYER met1_dg .................... Total Original Geometry:     2948 (   26461)
+LAYER met2_dg .................... Total Original Geometry:     8054 (   16192)
+LAYER met3_dg .................... Total Original Geometry:     3965 (    7102)
+LAYER met4_dg .................... Total Original Geometry:      119 (     266)
 LAYER mettp_dg ................... Total Original Geometry:        0 (       0)
 LAYER mettpl_dg .................. Total Original Geometry:        0 (       0)
-LAYER nwell ...................... Total Original Geometry:       78 (    3263)
+LAYER nwell ...................... Total Original Geometry:       76 (    3229)
 LAYER nwrdef ..................... Total Original Geometry:        0 (       0)
-LAYER diff_dg .................... Total Original Geometry:      203 (    8940)
+LAYER diff_dg .................... Total Original Geometry:      199 (    8836)
 LAYER diff_dyi ................... Total Original Geometry:        0 (       0)
-LAYER mvdg ....................... Total Original Geometry:       78 (    3263)
-LAYER pimp ....................... Total Original Geometry:      156 (    6526)
-LAYER nimp ....................... Total Original Geometry:      156 (    6526)
+LAYER mvdg ....................... Total Original Geometry:       76 (    3229)
+LAYER pimp ....................... Total Original Geometry:      152 (    6458)
+LAYER nimp ....................... Total Original Geometry:      152 (    6458)
 LAYER pwblk ...................... Total Original Geometry:        0 (       0)
-LAYER poly_dg .................... Total Original Geometry:      285 (   12495)
+LAYER poly_dg .................... Total Original Geometry:      287 (   12505)
 LAYER poly_dyi ................... Total Original Geometry:        0 (       0)
 LAYER POLY1_TEXT ................. Total Original Geometry:        0 (       0)
 LAYER id_txt ..................... Total Original Geometry:        0 (       0)
-LAYER cont ....................... Total Original Geometry:     2753 (  106676)
+LAYER cont ....................... Total Original Geometry:     2715 (  107069)
 LAYER met1_dyi ................... Total Original Geometry:        0 (       0)
 LAYER m1hole ..................... Total Original Geometry:        0 (       0)
 LAYER MET1_TEXT .................. Total Original Geometry:        0 (       0)
 LAYER m1rdef ..................... Total Original Geometry:        0 (       0)
-LAYER via1 ....................... Total Original Geometry:      518 (   18232)
+LAYER via1 ....................... Total Original Geometry:      516 (   18090)
 LAYER met2_dyi ................... Total Original Geometry:        0 (       0)
 LAYER m2hole ..................... Total Original Geometry:        0 (       0)
 LAYER MET2_TEXT .................. Total Original Geometry:        0 (       0)
 LAYER m2rdef ..................... Total Original Geometry:        0 (       0)
 LAYER pad ........................ Total Original Geometry:        0 (       0)
-LAYER via2 ....................... Total Original Geometry:       24 (    5931)
+LAYER via2 ....................... Total Original Geometry:       29 (    6000)
 LAYER met3_dyi ................... Total Original Geometry:        0 (       0)
 LAYER m3hole ..................... Total Original Geometry:        0 (       0)
 LAYER MET3_TEXT .................. Total Original Geometry:        0 (       0)
 LAYER m3rdef ..................... Total Original Geometry:        0 (       0)
-LAYER via3 ....................... Total Original Geometry:        8 (     334)
+LAYER via3 ....................... Total Original Geometry:        8 (     302)
 LAYER met4_dyi ................... Total Original Geometry:        0 (       0)
 LAYER m4hole ..................... Total Original Geometry:        0 (       0)
 LAYER MET4_TEXT .................. Total Original Geometry:        0 (       0)
@@ -94,8 +94,8 @@ LAYER hvnwell .................... Total Original Geometry:        0 (       0)
 LAYER pdd ........................ Total Original Geometry:        0 (       0)
 LAYER sci ........................ Total Original Geometry:        0 (       0)
 LAYER depl ....................... Total Original Geometry:        0 (       0)
-LAYER pwiso ...................... Total Original Geometry:       78 (    3263)
-LAYER dnw_mv ..................... Total Original Geometry:       78 (    3263)
+LAYER pwiso ...................... Total Original Geometry:       76 (    3229)
+LAYER dnw_mv ..................... Total Original Geometry:       76 (    3229)
 LAYER dnmrdef .................... Total Original Geometry:        0 (       0)
 LAYER idftxt ..................... Total Original Geometry:        0 (       0)
 LAYER devmark .................... Total Original Geometry:        0 (       0)
@@ -143,9 +143,9 @@ RULECHECK N_MT ....................... Not Executed!
 --------------------------------------------------------------------------------
 --- SUMMARY
 ---
-Total CPU Time                    : 2(s)
+Total CPU Time                    : 1(s)
 Total Real Time                   : 2(s)
 Peak Memory Used                  : 59(M)
-Total Original Geometry           : 19660 (228881)
+Total Original Geometry           : 19448 (228655)
 Total ERC RuleChecks              : 0
 Total ERC Results                 : 0 (0)

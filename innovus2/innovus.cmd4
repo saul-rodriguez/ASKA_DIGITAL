@@ -1,0 +1,158 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Sep  9 10:03:08 2024                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v21.18-s099_1 (64bit) 07/18/2023 13:03 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 21.18-s099_1 NR230707-1955/21_18-UB (database version 18.20.605) {superthreading v2.17}
+#@(#)CDS: AAE 21.18-s017 (64bit) 07/18/2023 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 21.18-s022_1 () Jul 11 2023 23:10:24 ( )
+#@(#)CDS: SYNTECH 21.18-s010_1 () Jul  5 2023 06:32:03 ( )
+#@(#)CDS: CPE v21.18-s053
+#@(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+restoreDesign -cellview {FEOADesignlib aska_dig aska_dig_ld_fp_pw_pin_placed_cts}
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+setDrawView place
+setNanoRouteMode -quiet -timingEngine {}
+setNanoRouteMode -quiet -routeWithSiPostRouteFix 0
+setNanoRouteMode -quiet -drouteStartIteration default
+setNanoRouteMode -quiet -routeTopRoutingLayer 4
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+setAnalysisMode -analysisType onChipVariation
+setDelayCalMode -engine default -siAware true
+timeDesign -postRoute
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+setNanoRouteMode -droutePostRouteSwapVia multiCut
+routeDesign -viaOpt
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+setDelayCalMode -engine default -siAware true
+setRouteMode -earlyGlobalMaxRouteLayer 3
+optDesign -postRout
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+zoomBox 9.40300 -65.99000 435.09000 315.09100
+zoomBox 79.85800 19.94200 341.28500 253.97500
+zoomBox 102.83800 38.81300 325.05200 237.74200
+zoomBox 122.37200 54.98300 311.25400 224.07300
+zoomBox 137.65600 69.13000 298.20600 212.85700
+zoomBox 150.36600 81.27900 286.83500 203.44800
+zoomBox 178.16000 107.84700 261.96900 182.87400
+zoomBox 184.79500 114.19000 256.03300 177.96300
+zoomBox 202.50200 132.73400 239.69000 166.02500
+zoomBox 205.42500 135.72900 237.03400 164.02600
+zoomBox 207.90900 138.27400 234.77700 162.32700
+zoomBox 210.02000 140.43800 232.85800 160.88300
+zoomBox 211.81500 142.27700 231.22700 159.65500
+zoomBox 212.21400 143.27800 228.71500 158.05000
+zoomBox 212.55300 144.13000 226.57900 156.68600
+zoomBox 212.84100 144.85300 224.76400 155.52700
+zoomBox 213.08600 145.46800 223.22100 154.54100
+zoomBox 212.84000 144.85200 224.76500 155.52700
+zoomBox 212.55100 144.12700 226.58100 156.68700
+zoomBox 212.21100 143.27500 228.71700 158.05100
+zoomBox 211.81200 142.27300 231.23000 159.65600
+zoomBox 211.34200 141.09300 234.18700 161.54400
+zoomBox 210.78900 139.70500 237.66600 163.76600
+zoomBox 219.59400 148.51900 233.62500 161.08000
+zoomBox 221.00900 149.94300 232.93600 160.62000
+zoomBox 222.15700 151.10900 232.29500 160.18500
+zoomBox 223.13200 152.10000 231.75000 159.81500
+zoomBox 223.96100 152.94300 231.28700 159.50100
+zoomBox 218.06500 146.95100 234.57800 161.73400
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report aska_dig.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+verifyConnectivity -type all -error 1000 -warning 50
+zoomBox 216.27000 145.90700 235.69800 163.29900
+zoomBox 214.20800 144.65200 237.06400 165.11300
+zoomBox 211.80700 143.16000 238.69700 167.23200
+zoomBox 205.88900 139.28600 243.10600 172.60300
+zoomBox 202.12500 136.82200 245.91000 176.01900
+zoomBox 197.78700 133.72300 249.29900 179.83700
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix aska_dig_postRoute -outDir timingReports
+saveDesign aska_dig_ld_fp_pw_pin_placed_cts_routed
+saveDesign aska_dig_ld_fp_pw_pin_placed_cts_routed
+fit
+getFillerMode -quiet
+setFillerMode -add_fillers_with_drc false
+addFiller -prefix FILLCAP -cell DECAP25JI3V DECAP15JI3V DECAP10JI3V DECAP7JI3V DECAP5JI3V
+addFiller -prefix FILL -cell FEED25JI3V FEED15JI3V FEED10JI3V FEED7JI3V FEED5JI3V FEED3JI3V FEED2JI3V FEED1JI3V
+saveDesign aska_dig_ld_fp_pw_pin_placed_cts_routed_final
+saveNetlist output/pnr.v
+saveNetlist output/pnr_lvs.v -phys -excludeLeafCell
+saveNetlist output/pnr_cap.v -includePhysicalCell { DECAP25JI3V DECAP15JI3V DECAP10JI3V DECAP7JI3V DECAP5JI3V }
+saveDesign -cellview {ASKA_DIG2 aska_dig layout}
+extractRC
+rcOut -spef output/TOP_TM_select.spf -rc_corner max_rc
+all_hold_analysis_views 
+all_setup_analysis_views 
+write_sdf -view fast_functional_mode "output/design_fast.sdf"
+write_sdf -view slow_functional_mode "output/design_slow.sdf"
+saveDesign aska_dig_ld_fp_pw_pin_placed_cts_routed_final

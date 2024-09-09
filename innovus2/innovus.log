@@ -1,0 +1,56 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+Options:	
+Date:		Mon Sep  9 08:40:50 2024
+Host:		phoenix (x86_64 w/Linux 3.10.0-1160.105.1.el7.x86_64) (7cores*7cpus*11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz 16384KB)
+OS:		CentOS Linux 7 (Core)
+
+License:
+		[08:40:50.088457] Configured Lic search path (21.01-s002): 3000@lic08.ug.kth.se
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (34 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 23.10 fill procedures
+<CMD> win
+<CMD> setOaxMode -compressLevel 0
+<CMD> setOaxMode -allowBitConnection true
+<CMD> setOaxMode -allowTechUpdate false
+<CMD> setOaxMode -updateMode true
+<CMD> setDesignMode -process 180
+##  Process: 180           (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+<CMD> setViaGenMode -symmetrical_via_only true
+<CMD> set_table_style -no_frame_fix_width
+<CMD> set_global timing_report_enable_auto_column_width true
+<CMD> setMultiCpuUsage -localCpu 4
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Mon Sep  9 08:48:46 2024
+  Total CPU time:     0:00:19
+  Total real time:    0:07:58
+  Peak memory (main): 833.16MB
+
+
+*** Memory Usage v#1 (Current mem = 1023.980M, initial mem = 478.105M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:18.8, real=0:07:56, mem=1024.0M) ---

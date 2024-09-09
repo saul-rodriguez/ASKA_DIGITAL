@@ -1,154 +1,160 @@
-@(#)$CDS: ihdl version 6.1.8-64b 10/11/2023 09:46 (cpgbld01) $  Mon Jul 15 19:28:45 2024
+@(#)$CDS: ihdl version 6.1.8-64b 10/11/2023 09:46 (cpgbld01) $  Mon Sep  9 14:02:58 2024
 
 INFO (VERILOGIN-589): Using xmvlog binary for compilation.
-WARNING (VERILOGIN-550): Cell view properties on symbol aska_dig in library ASKA_DIG do not match the properties in
+INFO (VERILOGIN-575): Symbol 'aska_spi' was not imported because it already exists in library 'ASKA_DIG2'.
+To overwrite the symbol, select an appropriate option from the Overwrite Symbol
+Views drop-down list and try again.
+INFO (VERILOGIN-347): Functional view for aska_spi exists in library ASKA_DIG2. Not imported since the overwrite
+option is set to off.
+INFO (VERILOGIN-575): Symbol 'aska_npg' was not imported because it already exists in library 'ASKA_DIG2'.
+To overwrite the symbol, select an appropriate option from the Overwrite Symbol
+Views drop-down list and try again.
+INFO (VERILOGIN-347): Functional view for aska_npg exists in library ASKA_DIG2. Not imported since the overwrite
+option is set to off.
+WARNING (VERILOGIN-550): Cell view properties on symbol aska_dig in library ASKA_DIG2 do not match the properties in
 the HDL module description.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DLY1JI3VX1. Therefore using library
-D_CELLS_JI3V, cell DLY1JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX16. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX16, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX3. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX3, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX6. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX6, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX12. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX12, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX2. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX2, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX0. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DLY2JI3VX1. Therefore using library
-D_CELLS_JI3V, cell DLY2JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DLY4JI3VX1. Therefore using library
-D_CELLS_JI3V, cell DLY4JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX4. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX4, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX1. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX8. Therefore using library
-D_CELLS_JI3V, cell BUJI3VX8, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX6. Therefore using library
-D_CELLS_JI3V, cell INJI3VX6, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX2. Therefore using library
-D_CELLS_JI3V, cell INJI3VX2, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX1. Therefore using library
-D_CELLS_JI3V, cell INJI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX3. Therefore using library
-D_CELLS_JI3V, cell INJI3VX3, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module DFRRQJI3VX1. Therefore using library
 D_CELLS_JI3V, cell DFRRQJI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module AND2JI3VX1. Therefore using library
-D_CELLS_JI3V, cell AND2JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module OR4JI3VX2. Therefore using library
-D_CELLS_JI3V, cell OR4JI3VX2, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA4JI3VX0. Therefore using library
-D_CELLS_JI3V, cell NA4JI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO3JI3VX1. Therefore using library
-D_CELLS_JI3V, cell NO3JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module OR3JI3VX1. Therefore using library
-D_CELLS_JI3V, cell OR3JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module OR4JI3VX1. Therefore using library
-D_CELLS_JI3V, cell OR4JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO2JI3VX0. Therefore using library
-D_CELLS_JI3V, cell NO2JI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON21JI3VX4. Therefore using library
-D_CELLS_JI3V, cell ON21JI3VX4, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON21JI3VX1. Therefore using library
-D_CELLS_JI3V, cell ON21JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module AO22JI3VX1. Therefore using library
-D_CELLS_JI3V, cell AO22JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module AN22JI3VX1. Therefore using library
-D_CELLS_JI3V, cell AN22JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA2JI3VX0. Therefore using library
-D_CELLS_JI3V, cell NA2JI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA2JI3VX1. Therefore using library
-D_CELLS_JI3V, cell NA2JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO2I1JI3VX2. Therefore using library
-D_CELLS_JI3V, cell NO2I1JI3VX2, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX0. Therefore using library
-D_CELLS_JI3V, cell INJI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DFRRQJI3VX4. Therefore using library
-D_CELLS_JI3V, cell DFRRQJI3VX4, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module SDFRRQJI3VX1. Therefore using library
-D_CELLS_JI3V, cell SDFRRQJI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DFRRQJI3VX2. Therefore using library
-D_CELLS_JI3V, cell DFRRQJI3VX2, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module EO3JI3VX1. Therefore using library
-D_CELLS_JI3V, cell EO3JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module FAJI3VX1. Therefore using library
-D_CELLS_JI3V, cell FAJI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON31JI3VX1. Therefore using library
-D_CELLS_JI3V, cell ON31JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON22JI3VX1. Therefore using library
-D_CELLS_JI3V, cell ON22JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON211JI3VX1. Therefore using library
-D_CELLS_JI3V, cell ON211JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module AN21JI3VX1. Therefore using library
-D_CELLS_JI3V, cell AN21JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA3I1JI3VX1. Therefore using library
-D_CELLS_JI3V, cell NA3I1JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA22JI3VX1. Therefore using library
-D_CELLS_JI3V, cell NA22JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module EN3JI3VX1. Therefore using library
-D_CELLS_JI3V, cell EN3JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA3I2JI3VX1. Therefore using library
-D_CELLS_JI3V, cell NA3I2JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO3I2JI3VX1. Therefore using library
-D_CELLS_JI3V, cell NO3I2JI3VX1, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA2I1JI3VX1. Therefore using library
 D_CELLS_JI3V, cell NA2I1JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module EN2JI3VX0. Therefore using library
-D_CELLS_JI3V, cell EN2JI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module AO21JI3VX1. Therefore using library
-D_CELLS_JI3V, cell AO21JI3VX1, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO2I1JI3VX1. Therefore using library
 D_CELLS_JI3V, cell NO2I1JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA3JI3VX0. Therefore using library
-D_CELLS_JI3V, cell NA3JI3VX0, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA3I1JI3VX1. Therefore using library
+D_CELLS_JI3V, cell NA3I1JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module AO21JI3VX1. Therefore using library
+D_CELLS_JI3V, cell AO21JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO3I1JI3VX1. Therefore using library
+D_CELLS_JI3V, cell NO3I1JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX0. Therefore using library
+D_CELLS_JI3V, cell INJI3VX0, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA2JI3VX0. Therefore using library
+D_CELLS_JI3V, cell NA2JI3VX0, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO2JI3VX0. Therefore using library
+D_CELLS_JI3V, cell NO2JI3VX0, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module OR2JI3VX0. Therefore using library
 D_CELLS_JI3V, cell OR2JI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module AO211JI3VX1. Therefore using library
-D_CELLS_JI3V, cell AO211JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module AND2JI3VX0. Therefore using library
+D_CELLS_JI3V, cell AND2JI3VX0, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO3I2JI3VX1. Therefore using library
+D_CELLS_JI3V, cell NO3I2JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA3JI3VX0. Therefore using library
+D_CELLS_JI3V, cell NA3JI3VX0, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module AN22JI3VX1. Therefore using library
+D_CELLS_JI3V, cell AN22JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON22JI3VX1. Therefore using library
+D_CELLS_JI3V, cell ON22JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module AN21JI3VX1. Therefore using library
+D_CELLS_JI3V, cell AN21JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON211JI3VX1. Therefore using library
+D_CELLS_JI3V, cell ON211JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA22JI3VX1. Therefore using library
+D_CELLS_JI3V, cell NA22JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO22JI3VX1. Therefore using library
+D_CELLS_JI3V, cell NO22JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON21JI3VX1. Therefore using library
+D_CELLS_JI3V, cell ON21JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module AN211JI3VX1. Therefore using library
+D_CELLS_JI3V, cell AN211JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module OR3JI3VX1. Therefore using library
+D_CELLS_JI3V, cell OR3JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA3I2JI3VX1. Therefore using library
+D_CELLS_JI3V, cell NA3I2JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO3JI3VX0. Therefore using library
+D_CELLS_JI3V, cell NO3JI3VX0, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module HAJI3VX1. Therefore using library
 D_CELLS_JI3V, cell HAJI3VX1, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module OA21JI3VX1. Therefore using library
 D_CELLS_JI3V, cell OA21JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module AO22JI3VX1. Therefore using library
+D_CELLS_JI3V, cell AO22JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA4JI3VX0. Therefore using library
+D_CELLS_JI3V, cell NA4JI3VX0, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module EO2JI3VX0. Therefore using library
 D_CELLS_JI3V, cell EO2JI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO3JI3VX0. Therefore using library
-D_CELLS_JI3V, cell NO3JI3VX0, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module AN31JI3VX1. Therefore using library
 D_CELLS_JI3V, cell AN31JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module AND2JI3VX0. Therefore using library
-D_CELLS_JI3V, cell AND2JI3VX0, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO3I1JI3VX1. Therefore using library
-D_CELLS_JI3V, cell NO3I1JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module AN211JI3VX1. Therefore using library
-D_CELLS_JI3V, cell AN211JI3VX1, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO22JI3VX1. Therefore using library
-D_CELLS_JI3V, cell NO22JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module EN2JI3VX0. Therefore using library
+D_CELLS_JI3V, cell EN2JI3VX0, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module FAJI3VX1. Therefore using library
+D_CELLS_JI3V, cell FAJI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON31JI3VX1. Therefore using library
+D_CELLS_JI3V, cell ON31JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module EN3JI3VX1. Therefore using library
+D_CELLS_JI3V, cell EN3JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module EO3JI3VX1. Therefore using library
+D_CELLS_JI3V, cell EO3JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DFRRQJI3VX4. Therefore using library
+D_CELLS_JI3V, cell DFRRQJI3VX4, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module SDFRRQJI3VX1. Therefore using library
+D_CELLS_JI3V, cell SDFRRQJI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO2I1JI3VX2. Therefore using library
+D_CELLS_JI3V, cell NO2I1JI3VX2, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module ON21JI3VX4. Therefore using library
+D_CELLS_JI3V, cell ON21JI3VX4, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX3. Therefore using library
+D_CELLS_JI3V, cell INJI3VX3, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module OR4JI3VX1. Therefore using library
+D_CELLS_JI3V, cell OR4JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO3JI3VX1. Therefore using library
+D_CELLS_JI3V, cell NO3JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA4JI3VX2. Therefore using library
+D_CELLS_JI3V, cell NA4JI3VX2, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module OR4JI3VX2. Therefore using library
+D_CELLS_JI3V, cell OR4JI3VX2, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module AND2JI3VX1. Therefore using library
+D_CELLS_JI3V, cell AND2JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX2. Therefore using library
+D_CELLS_JI3V, cell BUJI3VX2, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX3. Therefore using library
+D_CELLS_JI3V, cell BUJI3VX3, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX12. Therefore using library
+D_CELLS_JI3V, cell BUJI3VX12, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX1. Therefore using library
+D_CELLS_JI3V, cell BUJI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX8. Therefore using library
+D_CELLS_JI3V, cell BUJI3VX8, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX6. Therefore using library
+D_CELLS_JI3V, cell BUJI3VX6, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX1. Therefore using library
+D_CELLS_JI3V, cell INJI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module INJI3VX2. Therefore using library
+D_CELLS_JI3V, cell INJI3VX2, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DLY4JI3VX1. Therefore using library
+D_CELLS_JI3V, cell DLY4JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DLY1JI3VX1. Therefore using library
+D_CELLS_JI3V, cell DLY1JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX0. Therefore using library
+D_CELLS_JI3V, cell BUJI3VX0, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module BUJI3VX16. Therefore using library
+D_CELLS_JI3V, cell BUJI3VX16, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DLY2JI3VX1. Therefore using library
+D_CELLS_JI3V, cell DLY2JI3VX1, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DFRRQJI3VX2. Therefore using library
+D_CELLS_JI3V, cell DFRRQJI3VX2, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA2JI3VX2. Therefore using library
 D_CELLS_JI3V, cell NA2JI3VX2, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module NO2JI3VX2. Therefore using library
 D_CELLS_JI3V, cell NO2JI3VX2, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module NA2I1JI3VX2. Therefore using library
 D_CELLS_JI3V, cell NA2I1JI3VX2, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP25JI3V. Therefore using library
-D_CELLS_JI3V, cell DECAP25JI3V, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP15JI3V. Therefore using library
-D_CELLS_JI3V, cell DECAP15JI3V, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP7JI3V. Therefore using library
-D_CELLS_JI3V, cell DECAP7JI3V, and view symbol as the symbol.
-INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP10JI3V. Therefore using library
-D_CELLS_JI3V, cell DECAP10JI3V, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module MU2JI3VX0. Therefore using library
+D_CELLS_JI3V, cell MU2JI3VX0, and view symbol as the symbol.
 INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP5JI3V. Therefore using library
 D_CELLS_JI3V, cell DECAP5JI3V, and view symbol as the symbol.
-INFO (VERILOGIN-575): Symbol 'aska_dig' was not imported because it already exists in library 'ASKA_DIG'.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP7JI3V. Therefore using library
+D_CELLS_JI3V, cell DECAP7JI3V, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP15JI3V. Therefore using library
+D_CELLS_JI3V, cell DECAP15JI3V, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP25JI3V. Therefore using library
+D_CELLS_JI3V, cell DECAP25JI3V, and view symbol as the symbol.
+INFO (VERILOGIN-126): Unable to find the Verilog definition for module DECAP10JI3V. Therefore using library
+D_CELLS_JI3V, cell DECAP10JI3V, and view symbol as the symbol.
+INFO (VERILOGIN-575): Symbol 'aska_dig' was not imported because it already exists in library 'ASKA_DIG2'.
 To overwrite the symbol, select an appropriate option from the Overwrite Symbol
 Views drop-down list and try again.
-Warning: Port order mismatch between views "schematic" and "symbol" of "ASKA_DIG aska_dig".
+Warning: Port order mismatch between views "schematic" and "symbol" of "ASKA_DIG2 aska_dig".
 Expecting to find "clk" in place of name "enable" in the "portOrder" property for view "schematic". Update the "portOrder" property using the Edit Property Pin Order command in the schematic or symbol editor.
-Warning: Port order mismatch between views "schematic" and "functional" of "ASKA_DIG aska_dig".
+Warning: Port order mismatch between views "schematic" and "functional" of "ASKA_DIG2 aska_dig".
 Expecting to find "clk" in place of name "enable" in the "portOrder" property for view "schematic". Update the "portOrder" property using the Edit Property Pin Order command in the schematic or symbol editor.
 INFO (VERILOGIN-372): Checked-in schematic aska_dig.
 INFO (VERILOGIN-206): End of Logfile.

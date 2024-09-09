@@ -3,7 +3,7 @@
 ========================================================================
 
 Delete EDB      : N
-EDB Library dir : aska_dig_20686.db
+EDB Library dir : aska_dig_29985.db
 ECDB dir        : ./
 Top Cell        : aska_dig
 CDL netlist     : svdb/aska_dig.net
@@ -14,4 +14,4 @@ Lvs file        : svdb/aska_dig.lvsfile
 Float net file  : .aska_dig.info.softchk
 threads         : 32
 debug           : 0
-Source Library  : aska_dig_20686
+Source Library  : aska_dig_29985

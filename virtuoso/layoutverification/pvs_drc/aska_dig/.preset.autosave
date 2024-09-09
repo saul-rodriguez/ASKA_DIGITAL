@@ -50,7 +50,7 @@ LayerMapList                                 "./.xkit/setup/xh018/cadence/PDK/TE
 LayoutDFIIcell                               "aska_dig"
 LayoutDFIIintermFile                         "layoutverification/pvs_drc/aska_dig/aska_dig.gds"
 LayoutDFIIintermFileStage                    "Create GDSII"
-LayoutDFIIlibrary                            "ASKA_DIG"
+LayoutDFIIlibrary                            "ASKA_DIG2"
 LayoutDFIIview                               "layout"
 LicenseDPContinue                            "FALSE"
 LicenseScheme                                "Default"

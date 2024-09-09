@@ -23,3 +23,4 @@ INCLUDE ./xh018_combine.lib
 # ------------------------------------------------------------------------------
 # Add user specific libraries below this line 
 DEFINE ASKA_DIG /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG
+DEFINE ASKA_DIG2 /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG2

@@ -5,7 +5,7 @@
 "Run Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs
 "Current Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso
 "Cadence Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/.cadence/
-"Job Signature" internal none IPVS_1721087633_18306
+"Job Signature" internal none IPVS_1725907077_27224
 "PVS Job Mode" internal none drc
 "GUI Flow" internal none virtuoso6
 "GUI Preset" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/.preset.autosave
@@ -16,7 +16,7 @@
 "PVS Version" internal none 23.10-p043
 "Binary Name" internal none pvsgui
 "PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
-"PVS Job Time" internal none 1721087635
+"PVS Job Time" internal none 1725907079
 "DFII version" internal none 6.1.8.0
 "Run Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs
 "PVS Job Mode" internal none drc
@@ -25,7 +25,7 @@
 "Cell Tree" output text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/cell_tree.txt
 "Layout Scale" internal none 0.001
 "Layout TechLib" internal none TECH_XH018
-"Layout Library Name" internal none ASKA_DIG
+"Layout Library Name" internal none ASKA_DIG2
 "Layout Cell Name" internal none aska_dig_lvs
 "Layout View Name" internal none layout
 "Layout Layermap" internal text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
@@ -40,7 +40,7 @@
 "Intermediate OASIS File creation Errors" output none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/PIPO1.LOG
 "Layout ReplaceBusBitChar" input none nil
 "Layout NoConvertHalfWidthPath" input none nil
-"Job Signature" internal none IPVS_1721087633_18306
+"Job Signature" internal none IPVS_1725907077_27224
 "Do not check rules files before run" internal none ENABLED
 "Control File" input text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/pvsdrcctl
 "TTE mode" internal none ENABLED
@@ -48,12 +48,12 @@
 "PIPO Setup File I" internal text  /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/pipo1.setup
 "PIPO Log I" log text  /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/PIPO1.LOG
 "PIPO Output I" internal text  /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/PIPO1.OUT
-"Input Layout" input none OA: ASKA_DIG aska_dig_lvs layout
+"Input Layout" input none OA: ASKA_DIG2 aska_dig_lvs layout
 "Output Layout Cellmap I" internal text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/lay_cellMap.txt
 "PVS Version" internal none 23.10-p043
 "Binary Name" internal none pvsvirt
 "PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
-"PVS Job Time" internal none 1721087636
+"PVS Job Time" internal none 1725907080
 "TTE mode" internal none ENABLED
 "Cell Tree" output text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/cell_tree.txt
 "PVS Job Mode" internal none drc
@@ -83,39 +83,26 @@
 "Density RDB " output rdb VIATPLdensity.rdb
 "Density RDB " output rdb VIATPL_VIATP_density.rdb
 "Antenna RDB R2P1" output rdb antenna.ratio
-"Antenna RDB ADD_R2P1" output rdb antenna.ratio
 "Antenna RDB R1CT" output rdb antenna.ratio
-"Antenna RDB ADD_R1CT" output rdb antenna.ratio
 "Antenna RDB R1M1P1" output rdb antenna.ratio
-"Antenna RDB ADD_R1M1P1" output rdb antenna.ratio
 "Antenna RDB R1V1" output rdb antenna.ratio
-"Antenna RDB ADD_R1V1" output rdb antenna.ratio
 "Antenna RDB R1M2P1" output rdb antenna.ratio
-"Antenna RDB ADD_R1M2P1" output rdb antenna.ratio
 "Antenna RDB R1V2" output rdb antenna.ratio
-"Antenna RDB ADD_R1V2" output rdb antenna.ratio
 "Antenna RDB R1M3P1" output rdb antenna.ratio
-"Antenna RDB ADD_R1M3P1" output rdb antenna.ratio
 "Antenna RDB R1V3" output rdb antenna.ratio
-"Antenna RDB ADD_R1V3" output rdb antenna.ratio
 "Antenna RDB R1M4P1" output rdb antenna.ratio
-"Antenna RDB ADD_R1M4P1" output rdb antenna.ratio
 "Antenna RDB R1VT" output rdb antenna.ratio
-"Antenna RDB ADD_R1VT" output rdb antenna.ratio
 "Antenna RDB R1MTP1" output rdb antenna.ratio
-"Antenna RDB ADD_R1MTP1" output rdb antenna.ratio
 "Antenna RDB R1VL" output rdb antenna.ratio
-"Antenna RDB ADD_R1VL" output rdb antenna.ratio
 "Antenna RDB R1MLP1" output rdb antenna.ratio
-"Antenna RDB ADD_R1MLP1" output rdb antenna.ratio
 "Layout GDSII" input none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs.gds
 "DRC Summary" output text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs_drc.sum
 "ASCII DRC Report Database" output rdb /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/aska_dig_lvs_drc.err
 "Run Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/layoutverification/pvs_drc/aska_dig_lvs/
 "UI Data" internal none ENABLED
-"PVS Mode Info" internal none JMCFLAHFIECMHPFPAKBHPMPNJGKLEBHE
+"PVS Mode Info" internal none HBDFOAHEJDPMOKFLILEGOLCIHABOOFKP
 "Report MaxResults" internal none 1000
 "PVS Version" internal none 23.10-p043
 "Binary Name" internal none pvs
 "PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
-"PVS Job Time" internal none 1721087636
+"PVS Job Time" internal none 1725907080

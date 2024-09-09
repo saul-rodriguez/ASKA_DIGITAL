@@ -6,17 +6,17 @@
 
 *Info*    Configuring the session ...
 
-	Library      = ASKA_DIG
+	Library      = ASKA_DIG2
 	Cell         = DIG_stimulus_tb
 	View         = config
 	Simulator    = ams
 	State Path   = $AXL_SETUPDB_DIR/test_states
-	State Name   = ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.13
-	Results DB   = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.13.rdb
-	Results Dir  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.13/1/ASKA_DIG:DIG_stimulus_tb:1
-	Results Loc  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data
+	State Name   = ASKA_DIG2:DIG_stimulus_tb:1_none_Interactive.9
+	Results DB   = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.9.rdb
+	Results Dir  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG2:DIG_stimulus_tb:1
+	Results Loc  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data
 	Project Dir  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim
-	Setup DB loc = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl
+	Setup DB loc = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG2/DIG_stimulus_tb/adexl
 	File Encoding = 0
 
 
@@ -29,21 +29,23 @@
 
 
 *Info*    Run start for Point ID (9 1) on testbench [
-          ASKA_DIG:DIG_stimulus_tb:1 ].
+          ASKA_DIG2:DIG_stimulus_tb:1 ].
 
 Resetting statistical vars
 
 *Info*    Setting parameter values ...
 
+Setting var ADDR_0 = "0"
+Setting var ADDR_1 = "0"
 Setting var temperature = "27"
 Setting temp(T) = 27
 
 *Info*    Netlist Directory =
-          /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.13/1/ASKA_DIG:DIG_stimulus_tb:1/netlist
+          /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG2:DIG_stimulus_tb:1/netlist
 
 
 *Info*    Data Directory    =
-          /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.13/1/ASKA_DIG:DIG_stimulus_tb:1
+          /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG2:DIG_stimulus_tb:1
 
 
 *Info*    Creating Netlist for Point ID (9 1)
@@ -55,9 +57,9 @@ INFO (AMS-2031): The instances bound to the views specified in the 'Netlist usin
  analog primitives using the Spectre CDF simulation information.
 function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
-Begin Netlisting Jun  5 18:08:30 2024
+Begin Netlisting Sep  9 16:29:35 2024
 INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the 
-"/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.13/1/ASKA_DIG:DIG_stimulus_tb:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
+"/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG2:DIG_stimulus_tb:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
 simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file 
 before invoking Verilog netlister.
  
@@ -80,7 +82,62 @@ INFO (VLOGNET-117): Re-netlisting the entire design.
 INFO (VLOGNET-118): Using connection by name (explicit connections) for all stopping and 
 non-stopping cells.
  
-WARNING (VLOGNET-110): The cell 'ASKA_DIG/DIG_stimulus_tb/schematic' has no ports. Make sure that this was the intended 
+INFO (AMS-2050): The following cells will be netlisted without using the spectre CDF
+ simulation information, because they are bound to view symbol:
+ ' *** Library - D_CELLS_JI3V  Cell - DECAP10JI3V ***
+              *** Library - D_CELLS_JI3V  Cell - DECAP25JI3V ***
+              *** Library - D_CELLS_JI3V  Cell - DECAP15JI3V ***
+              *** Library - D_CELLS_JI3V  Cell - DECAP7JI3V ***
+              *** Library - D_CELLS_JI3V  Cell - DECAP5JI3V ***
+              *** Library - D_CELLS_JI3V  Cell - NO2JI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - NA2JI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - NA2I1JI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - DLY2JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - DFRRQJI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - DLY4JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - BUJI3VX16 ***
+              *** Library - D_CELLS_JI3V  Cell - EO3JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - OR4JI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - NO3JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - BUJI3VX6 ***
+              *** Library - D_CELLS_JI3V  Cell - MU2JI3VX0 ***
+              *** Library - D_CELLS_JI3V  Cell - INJI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - INJI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - BUJI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - ON21JI3VX4 ***
+              *** Library - D_CELLS_JI3V  Cell - BUJI3VX3 ***
+              *** Library - D_CELLS_JI3V  Cell - BUJI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - OR4JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - NO2I1JI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - NA4JI3VX2 ***
+              *** Library - D_CELLS_JI3V  Cell - INJI3VX3 ***
+              *** Library - D_CELLS_JI3V  Cell - SDFRRQJI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - EN2JI3VX0 ***
+              *** Library - D_CELLS_JI3V  Cell - NO22JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - NA3I2JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - DLY1JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - HAJI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - OA21JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - NO3I2JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - EN3JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - BUJI3VX0 ***
+              *** Library - D_CELLS_JI3V  Cell - FAJI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - EO2JI3VX0 ***
+              *** Library - D_CELLS_JI3V  Cell - AN31JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - AO22JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - NO3I1JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - NO3JI3VX0 ***
+              *** Library - D_CELLS_JI3V  Cell - OR3JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - AO21JI3VX1 ***
+              *** Library - D_CELLS_JI3V  Cell - DFRRQJI3VX4 ***
+              *** Librar...
+INFO (VLOGNET-169): Module port ordering for lib 'ASKA_DIG2', cell 'aska_dig', view 'schematic' will be
+ done using the user specified port order as follows:
+
+ => "clk" "reset_l" "porborn" "SPI_CS" "SPI_Clk" "SPI_MOSI" "IC_addr<1:0>" "up_switches<31:0>" 
+     "down_switches<31:0>" "DAC<5:0>" "pulse_active" "enable" 
+
+WARNING (VLOGNET-110): The cell 'ASKA_DIG2/DIG_stimulus_tb/schematic' has no ports. Make sure that this was the intended 
 design.
  
 INFO (VLOGNET-126): ---------- Beginning netlist configuration information ----------
@@ -90,28 +147,95 @@ INFO (VLOGNET-126): ---------- Beginning netlist configuration information -----
 LIB NAME                    CELL NAME                   VIEW NAME            NOTE             
 ---------                   ---------                   ---------            ----             
 
-ASKA_DIG                    DIG_stimulus                verilogams           *Stopping View*  
 analogLib                   res                         spectre              *Stopping View*  
-ASKA_DIG                    aska_npg                    functional           *Stopping View*  
-ASKA_DIG                    aska_spi                    functional           *Stopping View*  
-ASKA_DIG                    DIG_stimulus_tb             schematic                             
-ASKA_DIG                    aska_dig                    functional                            
+ASKA_DIG2                   DIG_stimulus                verilogams           *Stopping View*  
+analogLib                   vdc                         spectre              *Stopping View*  
+D_CELLS_JI3V                AND2JI3VX0                  symbol               *Stopping View*  
+D_CELLS_JI3V                DFRRQJI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                NO2JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                NA2JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                ON22JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                AN211JI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                INJI3VX0                    symbol               *Stopping View*  
+D_CELLS_JI3V                ON211JI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                AN21JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                NA3I1JI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                NA3JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                NO2I1JI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                NA4JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                NA22JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                NA2I1JI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                OR2JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                BUJI3VX12                   symbol               *Stopping View*  
+D_CELLS_JI3V                AND2JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                BUJI3VX8                    symbol               *Stopping View*  
+D_CELLS_JI3V                ON31JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                AN22JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                ON21JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                DFRRQJI3VX4                 symbol               *Stopping View*  
+D_CELLS_JI3V                AO21JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                OR3JI3VX1                   symbol               *Stopping View*  
+D_CELLS_JI3V                NO3JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                NO3I1JI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                AO22JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                AN31JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                EO2JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                FAJI3VX1                    symbol               *Stopping View*  
+D_CELLS_JI3V                BUJI3VX0                    symbol               *Stopping View*  
+D_CELLS_JI3V                EN3JI3VX1                   symbol               *Stopping View*  
+D_CELLS_JI3V                NO3I2JI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                OA21JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                HAJI3VX1                    symbol               *Stopping View*  
+D_CELLS_JI3V                DLY1JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                NA3I2JI3VX1                 symbol               *Stopping View*  
+D_CELLS_JI3V                NO22JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                EN2JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                SDFRRQJI3VX1                symbol               *Stopping View*  
+D_CELLS_JI3V                INJI3VX3                    symbol               *Stopping View*  
+D_CELLS_JI3V                NA4JI3VX2                   symbol               *Stopping View*  
+D_CELLS_JI3V                NO2I1JI3VX2                 symbol               *Stopping View*  
+D_CELLS_JI3V                OR4JI3VX1                   symbol               *Stopping View*  
+D_CELLS_JI3V                BUJI3VX2                    symbol               *Stopping View*  
+D_CELLS_JI3V                BUJI3VX3                    symbol               *Stopping View*  
+D_CELLS_JI3V                ON21JI3VX4                  symbol               *Stopping View*  
+D_CELLS_JI3V                BUJI3VX1                    symbol               *Stopping View*  
+D_CELLS_JI3V                INJI3VX1                    symbol               *Stopping View*  
+D_CELLS_JI3V                INJI3VX2                    symbol               *Stopping View*  
+D_CELLS_JI3V                MU2JI3VX0                   symbol               *Stopping View*  
+D_CELLS_JI3V                BUJI3VX6                    symbol               *Stopping View*  
+D_CELLS_JI3V                NO3JI3VX1                   symbol               *Stopping View*  
+D_CELLS_JI3V                OR4JI3VX2                   symbol               *Stopping View*  
+D_CELLS_JI3V                EO3JI3VX1                   symbol               *Stopping View*  
+D_CELLS_JI3V                BUJI3VX16                   symbol               *Stopping View*  
+D_CELLS_JI3V                DLY4JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                DFRRQJI3VX2                 symbol               *Stopping View*  
+D_CELLS_JI3V                DLY2JI3VX1                  symbol               *Stopping View*  
+D_CELLS_JI3V                NA2I1JI3VX2                 symbol               *Stopping View*  
+D_CELLS_JI3V                NA2JI3VX2                   symbol               *Stopping View*  
+D_CELLS_JI3V                NO2JI3VX2                   symbol               *Stopping View*  
+D_CELLS_JI3V                DECAP5JI3V                  symbol               *Stopping View*  
+D_CELLS_JI3V                DECAP7JI3V                  symbol               *Stopping View*  
+D_CELLS_JI3V                DECAP15JI3V                 symbol               *Stopping View*  
+D_CELLS_JI3V                DECAP25JI3V                 symbol               *Stopping View*  
+D_CELLS_JI3V                DECAP10JI3V                 symbol               *Stopping View*  
+ASKA_DIG2                   DIG_stimulus_tb             schematic                             
+ASKA_DIG2                   aska_dig                    schematic                             
 
 ---------- End of netlist configuration information   ----------
 function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
 Initializing the control file using cp:
-    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.13/1/ASKA_DIG:DIG_stimulus_tb:1/netlist/analog/control
+    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG2:DIG_stimulus_tb:1/netlist/analog/control
 Copying Spectre source file 'spectre.inp'
 Copying Spectre command file 'spectre.sim'
-WARNING (OSSHNL-159): The primitive, 'ASKA_DIG/DIG_stimulus/verilogams', has been updated since the last netlisting session
+WARNING (OSSHNL-159): The primitive, 'ASKA_DIG2/DIG_stimulus/verilogams', has been updated since the last netlisting session
 in this current run directory. Therefore, re-netlisting all cell views where
 this primitive is instantiated.
 
 Running netlist assembly..
-.........
-End netlisting Jun  5 18:08:36 2024
+........
+End netlisting Sep  9 16:29:42 2024
 INFO (AMS-1241): AMS UNL netlisting has completed successfully.
 To view the modules, right-click the test name on the Tests and Analyses 
 assistant pane and choose Netlist->Display menu option.
@@ -122,9 +246,9 @@ compose simulator input file...
       ...successful.
 
 *Info*    Running simulation on testbench [
-          ASKA_DIG:DIG_stimulus_tb:1 ] for Point ID (9 1).
+          ASKA_DIG2:DIG_stimulus_tb:1 ] for Point ID (9 1).
 
-Delete simulation data in /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.13/1/ASKA_DIG:DIG_stimulus_tb:1/psf.
+Delete simulation data in /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG2:DIG_stimulus_tb:1/psf.
 create cds_globals...
       ...successful.
 compose simulator input file...
@@ -142,7 +266,7 @@ reading simulation data...
 
 
 *Info*    Run complete for Point ID (9 1) on testbench [
-          ASKA_DIG:DIG_stimulus_tb:1 ].
+          ASKA_DIG2:DIG_stimulus_tb:1 ].
 
 
 

@@ -1,0 +1,1242 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.18-s099_1, built Tue Jul 18 13:03:50 PDT 2023
+Options:	
+Date:		Mon Sep  9 08:49:09 2024
+Host:		phoenix (x86_64 w/Linux 3.10.0-1160.105.1.el7.x86_64) (7cores*7cpus*11th Gen Intel(R) Core(TM) i7-11700K @ 3.60GHz 16384KB)
+OS:		CentOS Linux 7 (Core)
+
+License:
+		[08:49:09.088561] Configured Lic search path (21.01-s002): 3000@lic08.ug.kth.se
+
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (34 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading PVS 23.10 fill procedures
+<CMD> win
+<CMD> setOaxMode -compressLevel 0
+<CMD> setOaxMode -allowBitConnection true
+<CMD> setOaxMode -allowTechUpdate false
+<CMD> setOaxMode -updateMode true
+<CMD> setDesignMode -process 180
+##  Process: 180           (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+<CMD> setViaGenMode -symmetrical_via_only true
+<CMD> set_table_style -no_frame_fix_width
+<CMD> set_global timing_report_enable_auto_column_width true
+<CMD> setMultiCpuUsage -localCpu 4
+<CMD> set init_gnd_net gnd3i
+<CMD> set init_verilog ../genus2/genus_output/dig_aska_synth.v
+<CMD> set init_mmmc_file xh018_ji3v.view
+<CMD> set init_top_cell aska_dig
+<CMD> set init_oa_ref_lib {D_CELLS_JI3V ASKA_DIG2}
+<CMD> set init_pwr_net vdd3i
+<CMD> init_design
+#% Begin Load MMMC data ... (date=09/09 08:54:55, mem=823.3M)
+#% End Load MMMC data ... (date=09/09 08:54:55, total cpu=0:00:00.0, real=0:00:00.0, peak res=823.5M, current mem=823.5M)
+min_rc max_rc typ_rc
+Reading tech data from OA library 'D_CELLS_JI3V' ...
+FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+**WARN: (IMPOAX-1645):	'minWidth' constraint is not supported on layer 'POLY1'. This constraint will be ignored by tool.
+**WARN: (IMPOAX-1645):	'minSpacing' constraint is not supported on layer 'POLY1'. This constraint will be ignored by tool.
+Set DBUPerIGU to M2 pitch 560.
+**WARN: (IMPOAX-718):	ENCLOSURE OVERHANG2 '0.232' on Layer M2 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+**WARN: (IMPOAX-718):	ENCLOSURE OVERHANG2 '0.232' on Layer M2 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+**WARN: (IMPOAX-718):	ENCLOSURE OVERHANG1 '0.232' on Layer M3 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+**WARN: (IMPOAX-718):	ENCLOSURE OVERHANG1 '0.232' on Layer M3 is not aligned to manufacturing grid '0.005'. It could result in placement/routing that can not be manufactured.
+LEFDefaultRouteSpec(LDRS) is read from rule 'LEFDefaultRouteSpec_HD' and library 'TECH_XH018_HD'. Only default vias, routing layers, pitch, routing width, routing direction, layer offset, wire extension constraints are read from it and rest of rules are read from foundry constraint group.
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+**WARN: (IMPOAX-740):	Viarule 'ND_C_auto' specified in NonDefault UseViaRule section is not defined in Innovus. Check the non Default Rule Section of OpenAccess database.
+**WARN: (IMPOAX-740):	Viarule 'PD_C_auto' specified in NonDefault UseViaRule section is not defined in Innovus. Check the non Default Rule Section of OpenAccess database.
+**WARN: (IMPOAX-722):	Layer 'MET5' read from technology data is not defined in Innovus database. Check the layer information in OpenAccess technology database.
+**WARN: (IMPOAX-1594):	While reading blockage/OBS  of cell 'MPROBEBUJI3VX8' from library 'D_CELLS_JI3V', shape with bounding box '11.46 -0.56 18.345 5.04' is found on layer 'MET5'. This will be ignored by tool.
+**WARN: (IMPOAX-6021):	Blockages for cell can not read for cell 'MPROBEBUJI3VX8'  as layer 'MET5' is not defined in Innovus database.
+**WARN: (IMPOAX-722):	Layer 'MET5' read from technology data is not defined in Innovus database. Check the layer information in OpenAccess technology database.
+**WARN: (IMPOAX-1594):	While reading blockage/OBS  of cell 'MPROBEJI3V' from library 'D_CELLS_JI3V', shape with bounding box '0.28 -0.56 7.165 5.04' is found on layer 'MET5'. This will be ignored by tool.
+**WARN: (IMPOAX-6021):	Blockages for cell can not read for cell 'MPROBEJI3V'  as layer 'MET5' is not defined in Innovus database.
+Reading OA reference library 'ASKA_DIG2' ...
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'MPROBEJI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLP2JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLP5JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLNP2JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLN2JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+**WARN: (IMPOAX-773):	Pin 'A' in macro 'ANTENNACELLN5JI3V' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly. 
+Type 'man IMPOAX-773' for more detail.
+Loading view definition file from xh018_ji3v.view
+Starting library reading in 'Multi-threaded flow' (with '4' threads)
+Reading slow_liberty timing library /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/liberty_LPMOS_MOS3LP/v2_1_2/PVT_3_30V_range/D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.lib.
+Read 304 cells in library D_CELLS_JI3V_LPMOS_MOS3LP_slow_3_00V_125C.
+Library reading multithread flow ended.
+Starting library reading in 'Multi-threaded flow' (with '4' threads)
+Reading fast_liberty timing library /home/saul/pkg/xfab/XKIT/xh018/diglibs/D_CELLS_JI3V/v2_1/liberty_LPMOS_MOS3LP/v2_1_2/PVT_3_30V_range/D_CELLS_JI3V_LPMOS_MOS3LP_fast_3_60V_m40C.lib.
+Read 304 cells in library D_CELLS_JI3V_LPMOS_MOS3LP_fast_3_60V_m40C.
+Library reading multithread flow ended.
+*** End library_loading (cpu=0.01min, real=0.02min, mem=46.0M, fe_cpu=0.28min, fe_real=5.78min, fe_mem=1083.6M) ***
+#% Begin Load netlist data ... (date=09/09 08:54:56, mem=865.4M)
+*** Begin netlist parsing (mem=1083.6M) ***
+Searching cell 'CLKVBUFJI3V' in refLibs ...
+Created 304 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../genus2/genus_output/dig_aska_synth.v'
+
+*** Memory Usage v#1 (Current mem = 1083.578M, initial mem = 478.105M) ***
+*** End netlist parsing (cpu=0:00:00.8, real=0:00:01.0, mem=1083.6M) ***
+#% End Load netlist data ... (date=09/09 08:54:57, total cpu=0:00:00.8, real=0:00:01.0, peak res=872.7M, current mem=872.7M)
+Set top cell to aska_dig.
+Hooked 608 DB cells to tlib cells.
+** Removed 1 unused lib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell aska_dig ...
+*** Netlist is unique.
+** info: there are 607 modules.
+** info: there are 1187 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1104.992M, initial mem = 478.105M) ***
+Start create_tracks
+Extraction setup Started 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+Reading Capacitance Table File CAPTBL/xh018_xx43_MET4_METMID_METTHK_max.capTbl ...
+Process name: XH018.
+Reading Capacitance Table File CAPTBL/xh018_xx43_MET4_METMID_METTHK_min.capTbl ...
+Process name: XX018.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: slow_functional_mode
+    RC-Corner Name        : max_rc
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : 'CAPTBL/xh018_xx43_MET4_METMID_METTHK_max.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+ 
+ Analysis View: fast_functional_mode
+    RC-Corner Name        : min_rc
+    RC-Corner Index       : 1
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : 'CAPTBL/xh018_xx43_MET4_METMID_METTHK_min.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../genus2/genus_output/design.sdc' ...
+Current (total cpu=0:00:17.8, real=0:05:48, peak res=1165.8M, current mem=1165.8M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../genus2/genus_output/design.sdc, Line 9).
+
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../genus2/genus_output/design.sdc, Line 10).
+
+aska_dig
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../genus2/genus_output/design.sdc, Line 319).
+
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX2 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell BUJI3VX16 in any library for view fast_functional_mode.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (EMS-27):	Message (IMPCTE-290) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+INFO (CTE): Reading of timing constraints file ../genus2/genus_output/design.sdc completed, with 3 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1207.2M, current mem=1207.2M)
+Current (total cpu=0:00:17.8, real=0:05:48, peak res=1207.2M, current mem=1207.2M)
+Total number of combinational cells: 147
+Total number of sequential cells: 76
+Total number of tristate cells: 8
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 72
+List of usable buffers: BUJI3VX1 BUJI3VX0 BUJI3VX12 BUJI3VX16 BUJI3VX2 BUJI3VX3 BUJI3VX4 BUJI3VX6 BUJI3VX8
+Total number of usable buffers: 9
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INJI3VX1 INJI3VX0 INJI3VX12 INJI3VX16 INJI3VX2 INJI3VX3 INJI3VX4 INJI3VX6 INJI3VX8
+Total number of usable inverters: 9
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1JI3VX1 DLY2JI3VX1 DLY4JI3VX1 DLY8JI3VX1
+Total number of identified usable delay cells: 4
+List of identified unusable delay cells: STEJI3VX1 STEJI3VX2 STEJI3VX3 STEJI3VX4
+Total number of identified unusable delay cells: 4
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPOAX-1594          2  While reading %s of cell '%s' from libra...
+WARNING   IMPOAX-1645          2  '%s' constraint is not supported on laye...
+WARNING   IMPOAX-718           4  %s '%g' on %s %s is not aligned to manuf...
+WARNING   IMPOAX-722           2  Layer '%s' read from technology data is ...
+WARNING   IMPOAX-740           2  Viarule '%s' specified in NonDefault Use...
+WARNING   IMPOAX-773           6  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPOAX-6021          2  Blockages for cell can not read for cell...
+WARNING   IMPCTE-290          32  Could not locate cell %s in any library ...
+WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+*** Message Summary: 55 warning(s), 0 error(s)
+
+<CMD> clearGlobalNets
+<CMD> globalNetConnect gnd3i -type pgpin -pin gnd3i -instanceBasename * -hierarchicalInstance {}
+<CMD> globalNetConnect vdd3i -type pgpin -pin vdd3i -instanceBasename * -hierarchicalInstance {}
+<CMD> saveDesign aska_dig_ld
+Design is saved in OA mode instead of non-OA mode with library name as 'FEOADesignlib'. Upgrading is done because RefLibs are available and Lef files are not present.
+#% Begin save design ... (date=09/09 08:55:56, mem=1246.9M)
+----- oaOut ---------------------------
+Saving OpenAccess database: Lib: FEOADesignlib, Cell: aska_dig, View: aska_dig_ld
+FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+Special routes: 0 strips and 0 vias are created in OpenAccess database.
+Signal Routes: Created 0 routes.
+Created 1187 insts; 2374 instTerms; 1252 nets; 0 routes.
+TIMER: Write OA to disk: 0h 0m  0.01s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: Purge OA from memory: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: oaOut total process: 0h 0m  0.08s cpu {0h 0m 0s elapsed} Memory = 0.0.
+% Begin Save ccopt configuration ... (date=09/09 08:55:57, mem=1249.7M)
+% End Save ccopt configuration ... (date=09/09 08:55:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=1250.6M, current mem=1250.6M)
+% Begin Save AAE data ... (date=09/09 08:55:57, mem=1250.7M)
+Saving AAE Data ...
+% End Save AAE data ... (date=09/09 08:55:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=1250.7M, current mem=1250.7M)
+Saving preference file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2/FEOADesignlib/aska_dig/aska_dig_ld/inn_data/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+Saving thumbnail file...
+% Begin Save power constraints data ... (date=09/09 08:55:57, mem=1254.9M)
+% End Save power constraints data ... (date=09/09 08:55:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=1255.1M, current mem=1255.1M)
+min_rc max_rc typ_rc
+Generated self-contained design: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2
+Saving property file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2/FEOADesignlib/aska_dig/aska_dig_ld/inn_data/aska_dig.prop
+*** Completed saveOALibCellAnnotation (cpu=0:00:00.0 real=0:00:00.0 mem=1517.9M) ***
+#% End save design ... (date=09/09 08:55:57, total cpu=0:00:00.4, real=0:00:01.0, peak res=1285.7M, current mem=1258.2M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_ji3v -r 0.5 0.5 0.0 0.0 0.0 0.0
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> uiSetTool ruler
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_ji3v -r 0.492462311558 0.6 0.0 0.0 0.0 0.0
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> uiSetTool ruler
+<CMD> uiSetTool ruler
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_ji3v -r 0.476319350474 0.599305 20 20 20 20
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> zoomBox -15.38400 -59.77600 418.68100 328.80500
+<CMD> zoomBox -8.73100 -15.05000 360.22500 315.24400
+<CMD> zoomBox -15.63800 -61.71400 418.42800 326.86800
+<CMD> uiSetTool ruler
+<CMD> zoomBox -11.17500 -52.53300 357.78200 277.76200
+<CMD> zoomBox -7.38000 -44.72900 306.23300 236.02200
+<CMD> zoomBox -4.15500 -38.09600 262.41700 200.54300
+<CMD> zoomBox -1.41400 -32.45800 225.17300 170.38600
+<CMD> zoomBox 0.91600 -27.66500 193.51500 144.75200
+<CMD> zoomBox 2.89700 -23.59100 166.60600 122.96300
+<CMD> zoomBox 0.91600 -27.66500 193.51500 144.75200
+<CMD> zoomBox -3.67800 -38.28800 262.89500 200.35200
+<CMD> zoomBox -9.90400 -62.98500 359.05600 267.31300
+<CMD> uiSetTool ruler
+<CMD> uiSetTool ruler
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_ji3v -r 0.5 0.598661 20.16 20.16 20.16 20.16
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_ji3v -r 0.497237569061 0.598128 20.16 20.16 20.16 20.16
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> uiSetTool ruler
+<CMD> uiSetTool ruler
+<CMD> saveDesign aska_dig_ld_fp
+Design is saved in OA mode instead of non-OA mode with library name as 'FEOADesignlib'. Upgrading is done because RefLibs are available and Lef files are not present.
+#% Begin save design ... (date=09/09 09:01:30, mem=1305.2M)
+----- oaOut ---------------------------
+Saving OpenAccess database: Lib: FEOADesignlib, Cell: aska_dig, View: aska_dig_ld_fp
+FE units: 0.001 microns/dbu, OA units: 0.001 microns/dbu, Conversion factor: 1
+Special routes: 0 strips and 0 vias are created in OpenAccess database.
+Signal Routes: Created 0 routes.
+Created 1187 insts; 2374 instTerms; 1252 nets; 0 routes.
+TIMER: Write OA to disk: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: Purge OA from memory: 0h 0m  0.00s cpu {0h 0m 0s elapsed} Memory = 0.0.
+TIMER: oaOut total process: 0h 0m  0.07s cpu {0h 0m 0s elapsed} Memory = 0.0.
+% Begin Save ccopt configuration ... (date=09/09 09:01:30, mem=1305.4M)
+% End Save ccopt configuration ... (date=09/09 09:01:30, total cpu=0:00:00.0, real=0:00:00.0, peak res=1305.4M, current mem=1305.4M)
+% Begin Save AAE data ... (date=09/09 09:01:30, mem=1305.4M)
+Saving AAE Data ...
+% End Save AAE data ... (date=09/09 09:01:30, total cpu=0:00:00.0, real=0:00:00.0, peak res=1305.4M, current mem=1305.4M)
+Saving preference file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2/FEOADesignlib/aska_dig/aska_dig_ld_fp/inn_data/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+Saving thumbnail file...
+% Begin Save power constraints data ... (date=09/09 09:01:30, mem=1305.4M)
+% End Save power constraints data ... (date=09/09 09:01:30, total cpu=0:00:00.0, real=0:00:00.0, peak res=1305.4M, current mem=1305.4M)
+min_rc max_rc typ_rc
+Generated self-contained design: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2
+Saving property file /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2/FEOADesignlib/aska_dig/aska_dig_ld_fp/inn_data/aska_dig.prop
+*** Completed saveOALibCellAnnotation (cpu=0:00:00.0 real=0:00:00.0 mem=1553.6M) ***
+#% End save design ... (date=09/09 09:01:31, total cpu=0:00:00.3, real=0:00:01.0, peak res=1335.9M, current mem=1303.6M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+
+viaInitial starts at Mon Sep  9 09:04:40 2024
+viaInitial ends at Mon Sep  9 09:04:40 2024
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {gnd3i vdd3i} -type core_rings -follow core -layer {top MET1 bottom MET1 left MET2 right MET2} -width {top 9 bottom 9 left 9 right 9} -spacing {top 0.23 bottom 0.23 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+-parameterized_via_only is set to 1. ViaGen will generate parameterized vias only, which means the DEF syntax of generated vias is with +VIARULE.
+'setViaGenMode -parameterized_via_only true' is set by default for this OA design. 
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1565.5M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  MET1  |        4       |       NA       |
+|  VIA1  |        8       |        0       |
+|  MET2  |        4       |       NA       |
++--------+----------------+----------------+
+'setViaGenMode -parameterized_via_only true' is set by default for this OA design. 
+setViaGenMode -parameterized_via_only is reset to default value: true.
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET1 -direction horizontal -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1572.8M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 6 wires.
+ViaGen created 12 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  MET1  |        6       |       NA       |
+|  VIA1  |       12       |        0       |
++--------+----------------+----------------+
+<CMD> undo
+<CMD> fit
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 100 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1572.8M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+**WARN: (IMPPP-136):	The currently specified  spacing 0.230000 in -spacing option is less than the required spacing 0.280000 for widths specified as 4.000000 and 4.000000.
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 6 wires.
+ViaGen created 12 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  VIA1  |       12       |        0       |
+|  MET2  |        6       |       NA       |
++--------+----------------+----------------+
+<CMD> undo
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1572.8M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+**WARN: (IMPPP-136):	The currently specified  spacing 0.230000 in -spacing option is less than the required spacing 0.280000 for widths specified as 4.000000 and 4.000000.
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 6 wires.
+ViaGen created 12 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  VIA1  |       12       |        0       |
+|  MET2  |        6       |       NA       |
++--------+----------------+----------------+
+<CMD> undo
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 50 -stop_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1572.8M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+**WARN: (IMPPP-136):	The currently specified  spacing 0.230000 in -spacing option is less than the required spacing 0.280000 for widths specified as 4.000000 and 4.000000.
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 6 wires.
+ViaGen created 12 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  VIA1  |       12       |        0       |
+|  MET2  |        6       |       NA       |
++--------+----------------+----------------+
+<CMD> undo
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 75 -stop_offset 75 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1572.8M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+**WARN: (IMPPP-136):	The currently specified  spacing 0.230000 in -spacing option is less than the required spacing 0.280000 for widths specified as 4.000000 and 4.000000.
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 6 wires.
+ViaGen created 12 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  VIA1  |       12       |        0       |
+|  MET2  |        6       |       NA       |
++--------+----------------+----------------+
+<CMD> undo
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 70 -stop_offset 70 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1572.8M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+**WARN: (IMPPP-136):	The currently specified  spacing 0.230000 in -spacing option is less than the required spacing 0.280000 for widths specified as 4.000000 and 4.000000.
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 6 wires.
+ViaGen created 12 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  VIA1  |       12       |        0       |
+|  MET2  |        6       |       NA       |
++--------+----------------+----------------+
+<CMD> undo
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer METTPL -stacked_via_bottom_layer MET1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {gnd3i vdd3i} -layer MET2 -direction vertical -width 4 -spacing 0.23 -number_of_sets 3 -start_from left -start_offset 75 -stop_offset 75 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit METTPL -padcore_ring_bottom_layer_limit MET1 -block_ring_top_layer_limit METTPL -block_ring_bottom_layer_limit MET1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+Initialize fgc environment(mem: 1572.8M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1572.8M)
+**WARN: (IMPPP-136):	The currently specified  spacing 0.230000 in -spacing option is less than the required spacing 0.280000 for widths specified as 4.000000 and 4.000000.
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-4055):	The run time of addStripe will degrade with multiple cpu setting according to the number of stripe sets, ignore the setting of setMultiCpuUsage in addStripe.
+Type 'man IMPPP-4055' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 6 wires.
+ViaGen created 12 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  VIA1  |       12       |        0       |
+|  MET2  |        6       |       NA       |
++--------+----------------+----------------+
+<CMD> setSrouteMode -viaConnectToShape { stripe }
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { MET1(1) METTPL(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { MET1(1) METTPL(6) } -nets { gnd3i vdd3i } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { MET1(1) METTPL(6) }
+*** Begin SPECIAL ROUTE on Mon Sep  9 09:11:10 2024 ***
+SPECIAL ROUTE ran on directory: /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2
+SPECIAL ROUTE ran on machine: phoenix (Linux 3.10.0-1160.105.1.el7.x86_64 x86_64 3.60Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "gnd3i vdd3i"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 6
+srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring ring blockring blockpin coverpin noshape blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 6
+srouteTopTargetLayerLimit set to 6
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3065.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 13 layers, 6 routing layers, 1 overlap layer
+Read in 1 nondefault rule, 0 used
+Read in 303 macros, 56 used
+Read in 51 components
+  51 core components: 51 unplaced, 0 placed, 0 fixed
+Read in 80 logical pins
+Read in 80 nets
+Read in 2 special nets, 2 routed
+Read in 102 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the vdd3i net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
+**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the vdd3i net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net vdd3i. Check net list, or change port class in the technology file, or change option to include pin in given range.
+**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the gnd3i net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
+**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the gnd3i net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net gnd3i. Check net list, or change port class in the technology file, or change option to include pin in given range.
+CPU time for vdd3i FollowPin 0 seconds
+CPU time for gnd3i FollowPin 0 seconds
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 90
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Followpin connections: 45
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 3095.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+sroute created 135 wires.
+ViaGen created 225 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  MET1  |       135      |       NA       |
+|  VIA1  |       225      |        0       |
++--------+----------------+----------------+
+<CMD> zoomBox -0.89800 -65.40700 424.78900 315.67400
+<CMD> zoomBox 17.68800 -31.37400 379.52200 292.54500
+<CMD> zoomBox 31.59000 -2.72700 339.14900 272.60400
+<CMD> zoomBox 43.28800 21.62300 304.71300 255.65400
+<CMD> zoomBox 59.61700 60.00700 248.49700 229.09500
+<CMD> zoomBox 65.99400 74.99800 226.54200 218.72300
+<CMD> zoomBox 76.02300 98.57100 192.01900 202.41200
+<CMD> zoomBox 79.93900 107.77700 178.53600 196.04200
+<CMD> zoomBox 59.61500 60.00500 248.49800 229.09600
+<CMD> zoomBox 50.34400 51.03600 272.55900 249.96600
+<CMD> zoomBox 39.43700 40.48400 300.86600 274.51900
+<CMD> zoomBox 26.60500 28.07000 334.16900 303.40500
+<CMD> zoomBox 11.50900 13.53500 373.34900 337.45900
+Innovus terminated by internal (SEGV) error/signal...
+*** Stack trace:
+*** Stack trace:
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus[0x193bd396]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(syStackTrace+0xad)[0x193bd8c8]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus[0x6c0a936]
+/lib64/libpthread.so.0(+0xf62f)[0x7f7dc110162f]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_Z14winPixAddPixelP7winsWinP9winsLayeriii+0xfd)[0x1784b9cd]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_Z13winDrawSprViaP7winsWinP11winsViaNodeP6sysLocP11dbsStripBoxP7dbsWire+0xcf9)[0x17126e89]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus[0x17127749]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus[0x162677c5]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZNK15dbsHVTreeHVNodeIPv10dbsBoxFuncILi1EELi30EE6searchEPK18dbsHVTreeSearchArgIS0_Eiiii+0x17d)[0x1628ed4d]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZNK15dbsHVTreeHVNodeIPv10dbsBoxFuncILi1EELi30EE6searchEPK18dbsHVTreeSearchArgIS0_Eiiii+0x10a)[0x1628ecda]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZNK15dbsHVTreeHVNodeIPv10dbsBoxFuncILi1EELi30EE6searchEPK18dbsHVTreeSearchArgIS0_Eiiii+0x10a)[0x1628ecda]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZNK15dbsHVTreeHVNodeIPv10dbsBoxFuncILi1EELi30EE6searchEPK18dbsHVTreeSearchArgIS0_Eiiii+0x10a)[0x1628ecda]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZNK15dbsHVTreeHVNodeIPv10dbsBoxFuncILi1EELi30EE6searchEPK18dbsHVTreeSearchArgIS0_Eiiii+0x136)[0x1628ed06]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZNK15dbsHVTreeHVNodeIPv10dbsBoxFuncILi1EELi30EE6searchEPK18dbsHVTreeSearchArgIS0_Eiiii+0x10a)[0x1628ecda]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZNK15dbsHVTreeHVNodeIPv10dbsBoxFuncILi1EELi30EE6searchEPK18dbsHVTreeSearchArgIS0_Eiiii+0x10a)[0x1628ecda]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZN9dbsHVTreeIPv10dbsBoxFuncILi1EELi30EE5applyEP6sysBoxOSt8functionIFvS0_EEOS6_IFbS0_EEiSC_i+0x311)[0x1628f281]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZN17dbsTopCellSprData8Internal12searchKernelEiP6sysBoxOSt8functionIFvPvEEOS3_IFbS4_EEiP11dbsQueryArgSA_+0x86)[0x162727b6]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZN17dbsTopCellSprData8Internal8applyOldEP6sysBoxPFvPvS3_ES3_iP11dbsQueryArg+0x15a)[0x16272b4a]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZN8dbsQuery5applyEP6sysBoxPFvP11dbsStripBoxPvES4_iPS4_+0x548)[0x16321e08]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus[0x1712ad1f]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_Z23winDrawSprCommittedObjsP7winsWinP14sprsDrawParams+0x1b9)[0x1712cfb9]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_Z16winDrawSprNormalP7winsWinPv+0x42)[0x1712d0e2]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus[0x1716fdd2]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus[0x1717eab2]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_Z13winDbDrawViewP7winsWin+0x154)[0x171be4e4]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_Z11winXDisplayP7winsWin+0x277)[0x1783cc87]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_Z10winRefreshP7winsWin+0x3f)[0x1783d3df]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZN6winsQt10paintEventEP11QPaintEvent+0x45)[0x178551a5]
+/pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN7QWidget5eventEP6QEvent+0x1e7)[0x7f7dc804fa77]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZN6winsQt5eventEP6QEvent+0x40)[0x17855e20]
+/pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+0x9b)[0x7f7dc801109b]
+/pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN12QApplication6notifyEP7QObjectP6QEvent+0x229)[0x7f7dc8018369]
+/pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN16QCoreApplication15notifyInternal2EP7QObjectP6QEvent+0x107)[0x7f7dc87b1537]
+/pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN23QCoreApplicationPrivate16sendPostedEventsEP7QObjectiP11QThreadData+0x2dc)[0x7f7dc87b418c]
+/pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN20QEventDispatcherUNIX13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x33)[0x7f7dc8801923]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_ZN23QUnixEventDispatcherQPA13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0xc)[0x29c9556c]
+/pkg/cadence/installs/INNOVUS211/tools/lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x17a)[0x7f7dc960934a]
+/pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0xe9)[0x7f7dc87afb59]
+/pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN16QCoreApplication4execEv+0x83)[0x7f7dc87b8483]
+/pkg/cadence/installs/INNOVUS211/tools/lib/64bit/libtq.so(_ZN13TqApplication4execEv+0x176)[0x7f7dc9608896]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(_Z12edi_app_initP10Tcl_Interp+0x2cb)[0x6ce493b]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(Tcl_MainEx+0x17b)[0x2a11153b]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus(main+0x800)[0x6088be0]
+/lib64/libc.so.6(__libc_start_main+0xf4)[0x7f7dc05af554]
+/pkg/cadence/installs/INNOVUS211/tools/innovus/bin/64bit/innovus[0x6c07e96]
+========================================
+               pstack
+========================================
+Thread 20 (Thread 0x7f7db09c3700 (LWP 9680)):
+#0  0x00007f7dc11009dd in accept () from /lib64/libpthread.so.0
+#1  0x00000000288d1a9a in ProcessInfo::handleConnection(void*) ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 19 (Thread 0x7f7db01c2700 (LWP 9681)):
+#0  0x00007f7dc0682b43 in select () from /lib64/libc.so.6
+#1  0x00000000288ca69b in ProcessInfo::sampleUsage(void*) ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 18 (Thread 0x7f7daec21700 (LWP 9684)):
+#0  0x00007f7dc1100e9d in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000008d8beed in rdaiLicRecheck(void*) ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 17 (Thread 0x7f7dadc1f700 (LWP 9686)):
+#0  0x00007f7dc06529fd in nanosleep () from /lib64/libc.so.6
+#1  0x00007f7dc0652894 in sleep () from /lib64/libc.so.6
+#2  0x00000000193d7e54 in syiPeakMem(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 16 (Thread 0x7f7dacffc700 (LWP 9737)):
+#0  0x00007f7dc0680ddd in poll () from /lib64/libc.so.6
+#1  0x00007f7dc53d8022 in _xcb_conn_wait () from /lib64/libxcb.so.1
+#2  0x00007f7dc53d9c6f in xcb_wait_for_event () from /lib64/libxcb.so.1
+#3  0x00007f7dad051c09 in ?? () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007f7dc85d253a in ?? () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x0000000006ff7315 in create_head(void*) ()
+#6  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 15 (Thread 0x7f7da3932700 (LWP 9745)):
+#0  0x00007f7dc0682b43 in select () from /lib64/libc.so.6
+#1  0x000000002a155fd8 in NotifierThreadProc ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 14 (Thread 0x7f7da4133700 (LWP 9796)):
+#0  0x00007f7dc11013c1 in sigwait () from /lib64/libpthread.so.0
+#1  0x0000000006c087e0 in ctrlCHandle(void*) ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 13 (Thread 0x7f7da4934700 (LWP 9812)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f7dc85d337b in QWaitCondition::wait(QMutex*, unsigned long) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007f7dc821e8c2 in ?? () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#3  0x00007f7dc85d253a in ?? () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 12 (Thread 0x7f7d7e631700 (LWP 10703)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 11 (Thread 0x7f7d7f633700 (LWP 10704)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 10 (Thread 0x7f7d7ee32700 (LWP 10705)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 9 (Thread 0x7f7d7bf2d700 (LWP 10706)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 8 (Thread 0x7f7d63647700 (LWP 10707)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 7 (Thread 0x7f7d62e46700 (LWP 10708)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 6 (Thread 0x7f7d62645700 (LWP 10709)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7f7d5d333700 (LWP 12424)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000014d8f27b in PDCT_Cond::wait(PDCT_Mutex*) ()
+#2  0x0000000014da8105 in PDCT_ThreadX::rest_in_peace() ()
+#3  0x0000000014da8347 in PDCT_ThreadX::launcher(void*) ()
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7f7d5db34700 (LWP 12425)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000014d8f27b in PDCT_Cond::wait(PDCT_Mutex*) ()
+#2  0x0000000014da8105 in PDCT_ThreadX::rest_in_peace() ()
+#3  0x0000000014da8347 in PDCT_ThreadX::launcher(void*) ()
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7f7d5aa5f700 (LWP 12426)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000014d8f27b in PDCT_Cond::wait(PDCT_Mutex*) ()
+#2  0x0000000014da8105 in PDCT_ThreadX::rest_in_peace() ()
+#3  0x0000000014da8347 in PDCT_ThreadX::launcher(void*) ()
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7f7d5a25e700 (LWP 12427)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000014d8f27b in PDCT_Cond::wait(PDCT_Mutex*) ()
+#2  0x0000000014da8105 in PDCT_ThreadX::rest_in_peace() ()
+#3  0x0000000014da8347 in PDCT_ThreadX::launcher(void*) ()
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7f7db85d6900 (LWP 9574)):
+#0  0x00007f7dc0652659 in waitpid () from /lib64/libc.so.6
+#1  0x00007f7dc05cff62 in do_system () from /lib64/libc.so.6
+#2  0x00007f7dc05d0311 in system () from /lib64/libc.so.6
+#3  0x00000000193bd4c2 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x00000000193bd8c9 in syStackTrace ()
+#5  0x0000000006c0a937 in rdaiErrorHandler(int, siginfo_t*, void*) ()
+#6  <signal handler called>
+#7  0x000000001784b9cd in winPixAddPixel(winsWin*, winsLayer*, int, int, int) ()
+#8  0x0000000017126e8a in winDrawSprVia(winsWin*, winsViaNode*, sysLoc*, dbsStripBox*, dbsWire*) ()
+#9  0x000000001712774a in winiDrawVia(winsWin*, void*, winsViaNode*, sysLoc*, sysLoc*) ()
+#10 0x00000000162677c6 in void dbiFilterObjListAndApply<void*, dbsBoxFunc<2>, (dbsMidStatus)0, (dbsMidStatus)0>(dbsHVTreeObjContainer<void*> const*, dbsHVTreeSearchArg<void*> const*, bool) ()
+#11 0x000000001628ed4e in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#12 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#13 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#14 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#15 0x000000001628ed07 in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#16 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#17 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#18 0x000000001628f282 in dbsHVTree<void*, dbsBoxFunc<1>, 30>::apply(sysBox*, std::function<void (void*)>&&, std::function<bool (void*)>&&, int, std::function<bool (void*)>&&, int) ()
+#19 0x00000000162727b7 in dbsTopCellSprData::Internal::searchKernel(int, sysBox*, std::function<void (void*)>&&, std::function<bool (void*)>&&, int, dbsQueryArg*, std::function<bool (void*)>&&) ()
+#20 0x0000000016272b4b in dbsTopCellSprData::Internal::applyOld(sysBox*, void (*)(void*, void*), void*, int, dbsQueryArg*) ()
+#21 0x0000000016321e09 in dbsQuery::apply(sysBox*, void (*)(dbsStripBox*, void*), void*, int, void**) ()
+#22 0x000000001712ad20 in winiDrawSprCommittedObjsMT(winsWin*, sprsDrawParams*, int, bool) ()
+#23 0x000000001712cfba in winDrawSprCommittedObjs(winsWin*, sprsDrawParams*) ()
+#24 0x000000001712d0e3 in winDrawSprNormal(winsWin*, void*) ()
+#25 0x000000001716fdd3 in winiSprObjDraw(winsWin*, dbsObject*) ()
+#26 0x000000001717eab3 in winViewListIteration(winsWin*, int) [clone .constprop.0] ()
+#27 0x00000000171be4e5 in winDbDrawView(winsWin*) ()
+#28 0x000000001783cc88 in winXDisplay(winsWin*) ()
+#29 0x000000001783d3e0 in winRefresh(winsWin*) ()
+#30 0x00000000178551a6 in winsQt::paintEvent(QPaintEvent*) ()
+#31 0x00007f7dc804fa78 in QWidget::event(QEvent*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#32 0x0000000017855e21 in winsQt::event(QEvent*) ()
+#33 0x00007f7dc801109c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#34 0x00007f7dc801836a in QApplication::notify(QObject*, QEvent*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#35 0x00007f7dc87b1538 in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#36 0x00007f7dc87b418d in QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#37 0x00007f7dc8801924 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#38 0x0000000029c9556d in QUnixEventDispatcherQPA::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
+#39 0x00007f7dc960934b in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkg/cadence/installs/INNOVUS211/tools/lib/64bit/libtq.so
+#40 0x00007f7dc87afb5a in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#41 0x00007f7dc87b8484 in QCoreApplication::exec() () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#42 0x00007f7dc9608897 in TqApplication::exec() () from /pkg/cadence/installs/INNOVUS211/tools/lib/64bit/libtq.so
+#43 0x0000000006ce493c in edi_app_init(Tcl_Interp*) ()
+#44 0x000000002a11153c in Tcl_MainEx ()
+#45 0x0000000006088be1 in main ()
+========================================
+                gdb
+========================================
+Using: gdb
+Missing separate debuginfo for /pkg/cadence/installs/INNOVUS211/tools/OrbitIO/jre/lib/server/libjvm.so
+[New LWP 12427]
+[New LWP 12426]
+[New LWP 12425]
+[New LWP 12424]
+[New LWP 10709]
+[New LWP 10708]
+[New LWP 10707]
+[New LWP 10706]
+[New LWP 10705]
+[New LWP 10704]
+[New LWP 10703]
+[New LWP 9812]
+[New LWP 9796]
+[New LWP 9745]
+[New LWP 9737]
+[New LWP 9686]
+[New LWP 9684]
+[New LWP 9681]
+[New LWP 9680]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0x00007f7dc0652659 in waitpid () from /lib64/libc.so.6
+
+Thread 20 (Thread 0x7f7db09c3700 (LWP 9680)):
+#0  0x00007f7dc11009dd in accept () from /lib64/libpthread.so.0
+#1  0x00000000288d1a9a in ProcessInfo::handleConnection(void*) ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 19 (Thread 0x7f7db01c2700 (LWP 9681)):
+#0  0x00007f7dc0682b43 in select () from /lib64/libc.so.6
+#1  0x00000000288ca69b in ProcessInfo::sampleUsage(void*) ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 18 (Thread 0x7f7daec21700 (LWP 9684)):
+#0  0x00007f7dc1100e9d in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000008d8beed in rdaiLicRecheck(void*) ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 17 (Thread 0x7f7dadc1f700 (LWP 9686)):
+#0  0x00007f7dc06529fd in nanosleep () from /lib64/libc.so.6
+#1  0x00007f7dc0652894 in sleep () from /lib64/libc.so.6
+#2  0x00000000193d7e54 in syiPeakMem(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 16 (Thread 0x7f7dacffc700 (LWP 9737)):
+#0  0x00007f7dc0680ddd in poll () from /lib64/libc.so.6
+#1  0x00007f7dc53d8022 in _xcb_conn_wait () from /lib64/libxcb.so.1
+#2  0x00007f7dc53d9c6f in xcb_wait_for_event () from /lib64/libxcb.so.1
+#3  0x00007f7dad051c09 in ?? () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007f7dc85d253a in ?? () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x0000000006ff7315 in create_head(void*) ()
+#6  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 15 (Thread 0x7f7da3932700 (LWP 9745)):
+#0  0x00007f7dc0682b43 in select () from /lib64/libc.so.6
+#1  0x000000002a155fd8 in NotifierThreadProc ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 14 (Thread 0x7f7da4133700 (LWP 9796)):
+#0  0x00007f7dc11013c1 in sigwait () from /lib64/libpthread.so.0
+#1  0x0000000006c087e0 in ctrlCHandle(void*) ()
+#2  0x0000000006ff7315 in create_head(void*) ()
+#3  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 13 (Thread 0x7f7da4934700 (LWP 9812)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f7dc85d337b in QWaitCondition::wait(QMutex*, unsigned long) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007f7dc821e8c2 in ?? () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#3  0x00007f7dc85d253a in ?? () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 12 (Thread 0x7f7d7e631700 (LWP 10703)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 11 (Thread 0x7f7d7f633700 (LWP 10704)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 10 (Thread 0x7f7d7ee32700 (LWP 10705)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 9 (Thread 0x7f7d7bf2d700 (LWP 10706)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 8 (Thread 0x7f7d63647700 (LWP 10707)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 7 (Thread 0x7f7d62e46700 (LWP 10708)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 6 (Thread 0x7f7d62645700 (LWP 10709)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000029a4895e in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x0000000029a48b0f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000006ff7315 in create_head(void*) ()
+#4  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7f7d5d333700 (LWP 12424)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000014d8f27b in PDCT_Cond::wait(PDCT_Mutex*) ()
+#2  0x0000000014da8105 in PDCT_ThreadX::rest_in_peace() ()
+#3  0x0000000014da8347 in PDCT_ThreadX::launcher(void*) ()
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7f7d5db34700 (LWP 12425)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000014d8f27b in PDCT_Cond::wait(PDCT_Mutex*) ()
+#2  0x0000000014da8105 in PDCT_ThreadX::rest_in_peace() ()
+#3  0x0000000014da8347 in PDCT_ThreadX::launcher(void*) ()
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f7d5aa5f700 (LWP 12426)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000014d8f27b in PDCT_Cond::wait(PDCT_Mutex*) ()
+#2  0x0000000014da8105 in PDCT_ThreadX::rest_in_peace() ()
+#3  0x0000000014da8347 in PDCT_ThreadX::launcher(void*) ()
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f7d5a25e700 (LWP 12427)):
+#0  0x00007f7dc10fda35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x0000000014d8f27b in PDCT_Cond::wait(PDCT_Mutex*) ()
+#2  0x0000000014da8105 in PDCT_ThreadX::rest_in_peace() ()
+#3  0x0000000014da8347 in PDCT_ThreadX::launcher(void*) ()
+#4  0x0000000006ff7315 in create_head(void*) ()
+#5  0x00007f7dc10f9ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f7dc068bb0d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f7db85d6900 (LWP 9574)):
+#0  0x00007f7dc0652659 in waitpid () from /lib64/libc.so.6
+#1  0x00007f7dc05cff62 in do_system () from /lib64/libc.so.6
+#2  0x00007f7dc05d0311 in system () from /lib64/libc.so.6
+#3  0x00000000193bd4c2 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x00000000193bd8c9 in syStackTrace ()
+#5  0x0000000006c0a937 in rdaiErrorHandler(int, siginfo_t*, void*) ()
+#6  <signal handler called>
+#7  0x000000001784b9cd in winPixAddPixel(winsWin*, winsLayer*, int, int, int) ()
+#8  0x0000000017126e8a in winDrawSprVia(winsWin*, winsViaNode*, sysLoc*, dbsStripBox*, dbsWire*) ()
+#9  0x000000001712774a in winiDrawVia(winsWin*, void*, winsViaNode*, sysLoc*, sysLoc*) ()
+#10 0x00000000162677c6 in void dbiFilterObjListAndApply<void*, dbsBoxFunc<2>, (dbsMidStatus)0, (dbsMidStatus)0>(dbsHVTreeObjContainer<void*> const*, dbsHVTreeSearchArg<void*> const*, bool) ()
+#11 0x000000001628ed4e in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#12 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#13 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#14 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#15 0x000000001628ed07 in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#16 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#17 0x000000001628ecdb in dbsHVTreeHVNode<void*, dbsBoxFunc<1>, 30>::search(dbsHVTreeSearchArg<void*> const*, int, int, int, int) const ()
+#18 0x000000001628f282 in dbsHVTree<void*, dbsBoxFunc<1>, 30>::apply(sysBox*, std::function<void (void*)>&&, std::function<bool (void*)>&&, int, std::function<bool (void*)>&&, int) ()
+#19 0x00000000162727b7 in dbsTopCellSprData::Internal::searchKernel(int, sysBox*, std::function<void (void*)>&&, std::function<bool (void*)>&&, int, dbsQueryArg*, std::function<bool (void*)>&&) ()
+#20 0x0000000016272b4b in dbsTopCellSprData::Internal::applyOld(sysBox*, void (*)(void*, void*), void*, int, dbsQueryArg*) ()
+#21 0x0000000016321e09 in dbsQuery::apply(sysBox*, void (*)(dbsStripBox*, void*), void*, int, void**) ()
+#22 0x000000001712ad20 in winiDrawSprCommittedObjsMT(winsWin*, sprsDrawParams*, int, bool) ()
+#23 0x000000001712cfba in winDrawSprCommittedObjs(winsWin*, sprsDrawParams*) ()
+#24 0x000000001712d0e3 in winDrawSprNormal(winsWin*, void*) ()
+#25 0x000000001716fdd3 in winiSprObjDraw(winsWin*, dbsObject*) ()
+#26 0x000000001717eab3 in winViewListIteration(winsWin*, int) [clone .constprop.0] ()
+#27 0x00000000171be4e5 in winDbDrawView(winsWin*) ()
+#28 0x000000001783cc88 in winXDisplay(winsWin*) ()
+#29 0x000000001783d3e0 in winRefresh(winsWin*) ()
+#30 0x00000000178551a6 in winsQt::paintEvent(QPaintEvent*) ()
+#31 0x00007f7dc804fa78 in QWidget::event(QEvent*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#32 0x0000000017855e21 in winsQt::event(QEvent*) ()
+#33 0x00007f7dc801109c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#34 0x00007f7dc801836a in QApplication::notify(QObject*, QEvent*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#35 0x00007f7dc87b1538 in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#36 0x00007f7dc87b418d in QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#37 0x00007f7dc8801924 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#38 0x0000000029c9556d in QUnixEventDispatcherQPA::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
+#39 0x00007f7dc960934b in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkg/cadence/installs/INNOVUS211/tools/lib/64bit/libtq.so
+#40 0x00007f7dc87afb5a in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#41 0x00007f7dc87b8484 in QCoreApplication::exec() () from /pkg/cadence/installs/INNOVUS211/tools/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#42 0x00007f7dc9608897 in TqApplication::exec() () from /pkg/cadence/installs/INNOVUS211/tools/lib/64bit/libtq.so
+#43 0x0000000006ce493c in edi_app_init(Tcl_Interp*) ()
+#44 0x000000002a11153c in Tcl_MainEx ()
+#45 0x0000000006088be1 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 9574] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+[Inferior 1 (process 9574) detached]
+Crashed in AAE on net Unknown net.
+
+*** Memory Usage v#1 (Current mem = 1600.559M, initial mem = 478.105M) ***
+*** Message Summary: 77 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:39.3, real=0:22:49, mem=1600.6M) ---

@@ -5,7 +5,7 @@
 "Run Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig
 "Current Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso
 "Cadence Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/.cadence/
-"Job Signature" internal none IPVS_1721086427_18306
+"Job Signature" internal none IPVS_1725906143_27224
 "PVS Job Mode" internal none lvs
 "GUI Flow" internal none virtuoso6
 "GUI Preset" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/.preset.autosave
@@ -16,13 +16,13 @@
 "PVS Version" internal none 23.10-p043
 "Binary Name" internal none pvsgui
 "PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
-"PVS Job Time" internal none 1721086427
+"PVS Job Time" internal none 1725906146
 "DFII version" internal none 6.1.8.0
 "Rule File" input text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/.config.rul
 "Rule File" input text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/.technology.rul
 "Layout Scale" internal none 0.001
 "Layout TechLib" internal none TECH_XH018
-"Layout Library Name" internal none ASKA_DIG
+"Layout Library Name" internal none ASKA_DIG2
 "Layout Cell Name" internal none aska_dig
 "Layout View Name" internal none layout
 "Layout Layermap" internal text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/.xkit/setup/xh018/cadence/PDK/TECH_XH018_1143/strmInOut.layertable
@@ -37,7 +37,7 @@
 "Intermediate OASIS File creation Errors" output none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/PIPO1.LOG
 "Layout ReplaceBusBitChar" input none nil
 "Layout NoConvertHalfWidthPath" input none nil
-"Schematic Library Name" internal none ASKA_DIG
+"Schematic Library Name" internal none ASKA_DIG2
 "Schematic Cell Name" internal none aska_dig
 "Schematic View Name" internal none schematic
 "Schematic Top Cell" internal none aska_dig
@@ -57,8 +57,8 @@
 "SI Output" log text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/SI.OUT
 "SI OSS Directory" internal none /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/
 "Simulator Mode" internal none auCdl
-"Input Layout" input none OA: ASKA_DIG aska_dig layout
-"Input Schematic" input none OA: ASKA_DIG aska_dig schematic
+"Input Layout" input none OA: ASKA_DIG2 aska_dig layout
+"Input Schematic" input none OA: ASKA_DIG2 aska_dig schematic
 "Output Layout Cellmap I" internal text /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/lay_cellMap.txt
 "Binary Name" internal none pvsvirt
 "Comparison Report" output cls /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/aska_dig_lvs.sum.cls
@@ -70,7 +70,7 @@
 "ERC Result" internal none EMPTY
 "UI Data" internal none ENABLED
 "Lvs Replicate Devices" internal none ENABLED
-"PVS Mode Info" internal none JMCFLAHFIECMHPFPLGDFKCLHGNNKOJNH
+"PVS Mode Info" internal none HBDFOAHEJDPMOKFLJCHOKHIHKABGOAMN
 "Report MaxResults" internal none 1000
 "Binary Name" internal none pvs
 "Comparison Result" internal none MISMATCH
@@ -78,4 +78,4 @@
 "PVS Version" internal none 23.10-p043
 "Binary Name" internal none pvsnvn
 "PVS Build Date" internal none "Mon Oct 2 18:09:08 PDT 2023"
-"PVS Job Time" internal none 1721086439
+"PVS Job Time" internal none 1725906159

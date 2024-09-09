@@ -3,7 +3,7 @@
 #####                                         PVS LVS COMPARISON
 #####  
 #####  Version                       :   23.10-p043
-#####  NVN Run Start                 :   Mon Jul 15 19:33:59 2024
+#####  NVN Run Start                 :   Mon Sep  9 14:22:39 2024
 #####  ERC Summary File              :   aska_dig.sum
 #####  Extraction Report File        :   aska_dig_lvs.sum
 #####  Comparison Report File        :   aska_dig_lvs.sum.cls
@@ -22,7 +22,7 @@
 #####                                :   [INFO]  ERC Results: Empty
 #####                                :   [INFO]  Extraction Clean
 #####  
-#####  Layout Design                 :   ASKA_DIG aska_dig layout
+#####  Layout Design                 :   ASKA_DIG2 aska_dig layout
 #####  Schematic File                :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/aska_dig.cdl (cdl)
 #####  Rules File                    :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/.config.rul
 #####                                :   /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/PvsLVS/aska_dig/.technology.rul
@@ -33,10 +33,10 @@
 #####  Extraction Peak Memory Usage  :   59.00MB
 #####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
 #####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
-#####  NVN Peak Memory Usage         :   401.53MB
+#####  NVN Peak Memory Usage         :   386.01MB
 #####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
 #####  LVS Total Exec Time           :   0h 0m 3s - (3s)                 
-#####  LVS Total Peak Memory Usage   :   401.53MB
+#####  LVS Total Peak Memory Usage   :   386.01MB
 #####  
 ##############################################################################################################
 
@@ -487,17 +487,17 @@ Effective LVS Rule Values
 Cell                  |    lay    :   sch    |    lay    :   sch    |    lay    :    sch    |  lay   :  sch
 ----------------------+-----------+----------+-----------+----------+-----------+-----------+--------+--------
 MP [4 pins]           |           :          |           :          |           :           |        :        
- MP(PE3I)             |   *13,383 :   12,315 |   *13,383 :   12,315 |    12,211 :    12,211 |      0 :       0
+ MP(PE3I)             |   *13,433 :   12,388 |   *13,433 :   12,388 |    12,280 :    12,280 |      0 :       0
 MN [4 pins]           |           :          |           :          |           :           |        :        
- MN(NE3I)             |   *13,452 :   12,477 |   *13,452 :   12,477 |    12,377 :    12,377 |      0 :       0
+ MN(NE3I)             |   *13,496 :   12,552 |   *13,496 :   12,552 |    12,452 :    12,452 |      0 :       0
 (D [2 pins], -)       |           :          |           :          |           :           |        :        
  (D(P_DDNWMV), -)     |        *1 :        0 |         0 :        0 |         - :         - |      - :       -
- (D(P_DIPDNWMV), -)   |       *23 :        0 |         0 :        0 |         - :         - |      - :       -
+ (D(P_DIPDNWMV), -)   |       *22 :        0 |         0 :        0 |         - :         - |      - :       -
 ----------------------+-----------+----------+-----------+----------+-----------+-----------+--------+--------
-Total                 |    26,859 :   24,792 |    26,835 :   24,792 |    24,588 :    24,588 |      0 :       0
+Total                 |    26,952 :   24,940 |    26,929 :   24,940 |    24,732 :    24,732 |      0 :       0
 ======================+===========+==========+===========+==========+===========+===========+========+========
 Pins                  |           :          |           :          |       *80 :        82 |      0 :       0
-Nets                  |           :          |           :          |   *13,570 :    13,568 |      0 :       0
+Nets                  |           :          |           :          |   *13,667 :    13,665 |      0 :       0
 ======================+===========+==========+===========+==========+===========+===========+========+========
 
 +===[aska_dig]================================================================================================
@@ -509,9 +509,9 @@ Nets                  |           :          |           :          |   *13,570 
 Cell            |    lay    :   sch   |   lay   :   sch   |    lay    :   sch
 ----------------+-----------+---------+---------+---------+-----------+----------
 MP [4 pins]     |           :         |         :         |           :          
- MP(PE3I)       |     1,172 :     104 |       - :       - |         0 :         0
+ MP(PE3I)       |     1,153 :     108 |       - :       - |         0 :         0
 MN [4 pins]     |           :         |         :         |           :          
- MN(NE3I)       |     1,075 :     100 |       - :       - |         0 :         0
+ MN(NE3I)       |     1,044 :     100 |       - :       - |         0 :         0
 ----------------+-----------+---------+---------+---------+-----------+----------
 
 +===[aska_dig]================================================================================================
@@ -541,8 +541,8 @@ Pin  | clk DAC<0> DAC<1> DAC<2> DAC<3> DAC<4> DAC<5> down_switches<0> down_switc
 
 Labeled Schematic Pin     | Matched Layout Pin     | Matched Layout Net
 --------------------------+------------------------+-----------------------
-gnd3i!                    | ** missing pin **      | 1
-vdd3i!                    | ** missing pin **      | 3
+gnd3i!                    | ** missing pin **      | 1362
+vdd3i!                    | ** missing pin **      | 1364
 
 
 ##############################################################################################################

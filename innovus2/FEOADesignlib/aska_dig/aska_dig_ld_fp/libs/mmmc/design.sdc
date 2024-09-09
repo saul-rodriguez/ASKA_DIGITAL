@@ -1,0 +1,1 @@
+/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/genus2/genus_output/design.sdc

@@ -6,17 +6,17 @@
 
 *Info*    Configuring the session ...
 
-	Library      = ASKA_DIG
+	Library      = ASKA_DIG2
 	Cell         = DIG_stimulus_tb
 	View         = config
 	Simulator    = ams
 	State Path   = $AXL_SETUPDB_DIR/test_states
-	State Name   = ASKA_DIG:DIG_stimulus_tb:1_none_Interactive.9
-	Results DB   = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.9.rdb
-	Results Dir  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG:DIG_stimulus_tb:1
-	Results Loc  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data
+	State Name   = ASKA_DIG2:DIG_stimulus_tb:1_none_Interactive.5
+	Results DB   = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.5.rdb
+	Results Dir  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.5/1/ASKA_DIG2:DIG_stimulus_tb:1
+	Results Loc  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data
 	Project Dir  = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim
-	Setup DB loc = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG/DIG_stimulus_tb/adexl
+	Setup DB loc = /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/ASKA_DIG2/DIG_stimulus_tb/adexl
 	File Encoding = 0
 
 
@@ -29,21 +29,23 @@
 
 
 *Info*    Run start for Point ID (5 1) on testbench [
-          ASKA_DIG:DIG_stimulus_tb:1 ].
+          ASKA_DIG2:DIG_stimulus_tb:1 ].
 
 Resetting statistical vars
 
 *Info*    Setting parameter values ...
 
+Setting var ADDR_0 = "0"
+Setting var ADDR_1 = "0"
 Setting var temperature = "27"
 Setting temp(T) = 27
 
 *Info*    Netlist Directory =
-          /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG:DIG_stimulus_tb:1/netlist
+          /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.5/1/ASKA_DIG2:DIG_stimulus_tb:1/netlist
 
 
 *Info*    Data Directory    =
-          /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG:DIG_stimulus_tb:1
+          /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.5/1/ASKA_DIG2:DIG_stimulus_tb:1
 
 
 *Info*    Creating Netlist for Point ID (5 1)
@@ -55,9 +57,9 @@ INFO (AMS-2031): The instances bound to the views specified in the 'Netlist usin
  analog primitives using the Spectre CDF simulation information.
 function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
-Begin Netlisting Jun  5 17:53:08 2024
+Begin Netlisting Sep  9 15:56:07 2024
 INFO (VLOGNET-60): The stimulus name mapped table will not be printed in the 
-"/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG:DIG_stimulus_tb:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
+"/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.5/1/ASKA_DIG2:DIG_stimulus_tb:1/netlist/digital/testfixture.verilog" file. To print the stimulus name mapped table, set 
 simVerilogPrintStimulusNameMappingTable = t either in CIW or the .simrc file 
 before invoking Verilog netlister.
  
@@ -80,7 +82,7 @@ INFO (VLOGNET-117): Re-netlisting the entire design.
 INFO (VLOGNET-118): Using connection by name (explicit connections) for all stopping and 
 non-stopping cells.
  
-WARNING (VLOGNET-110): The cell 'ASKA_DIG/DIG_stimulus_tb/schematic' has no ports. Make sure that this was the intended 
+WARNING (VLOGNET-110): The cell 'ASKA_DIG2/DIG_stimulus_tb/schematic' has no ports. Make sure that this was the intended 
 design.
  
 INFO (VLOGNET-126): ---------- Beginning netlist configuration information ----------
@@ -90,28 +92,29 @@ INFO (VLOGNET-126): ---------- Beginning netlist configuration information -----
 LIB NAME                    CELL NAME                   VIEW NAME            NOTE             
 ---------                   ---------                   ---------            ----             
 
-ASKA_DIG                    DIG_stimulus                verilogams           *Stopping View*  
 analogLib                   res                         spectre              *Stopping View*  
-ASKA_DIG                    aska_npg                    functional           *Stopping View*  
-ASKA_DIG                    aska_spi                    functional           *Stopping View*  
-ASKA_DIG                    DIG_stimulus_tb             schematic                             
-ASKA_DIG                    aska_dig                    functional                            
+ASKA_DIG2                   DIG_stimulus                verilogams           *Stopping View*  
+analogLib                   vdc                         spectre              *Stopping View*  
+ASKA_DIG2                   aska_npg                    functional           *Stopping View*  
+ASKA_DIG2                   aska_spi                    functional           *Stopping View*  
+ASKA_DIG2                   DIG_stimulus_tb             schematic                             
+ASKA_DIG2                   aska_dig                    functional                            
 
 ---------- End of netlist configuration information   ----------
 function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
 function ansCdlCompPrim redefined
 Initializing the control file using cp:
-    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG:DIG_stimulus_tb:1/netlist/analog/control
+    cp /home/saul/cadence/installs/IC618/tools.lnx86/dfII/etc/si/control.spectre /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.5/1/ASKA_DIG2:DIG_stimulus_tb:1/netlist/analog/control
 Copying Spectre source file 'spectre.inp'
 Copying Spectre command file 'spectre.sim'
-WARNING (OSSHNL-159): The primitive, 'ASKA_DIG/DIG_stimulus/verilogams', has been updated since the last netlisting session
+WARNING (OSSHNL-159): The primitive, 'ASKA_DIG2/DIG_stimulus/verilogams', has been updated since the last netlisting session
 in this current run directory. Therefore, re-netlisting all cell views where
 this primitive is instantiated.
 
 Running netlist assembly..
-........
-End netlisting Jun  5 17:53:14 2024
+.........
+End netlisting Sep  9 15:56:12 2024
 INFO (AMS-1241): AMS UNL netlisting has completed successfully.
 To view the modules, right-click the test name on the Tests and Analyses 
 assistant pane and choose Netlist->Display menu option.
@@ -122,9 +125,9 @@ compose simulator input file...
       ...successful.
 
 *Info*    Running simulation on testbench [
-          ASKA_DIG:DIG_stimulus_tb:1 ] for Point ID (5 1).
+          ASKA_DIG2:DIG_stimulus_tb:1 ] for Point ID (5 1).
 
-Delete simulation data in /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG/DIG_stimulus_tb/adexl/results/data/Interactive.9/1/ASKA_DIG:DIG_stimulus_tb:1/psf.
+Delete simulation data in /home/saul/projects/ASKA_DIGITAL/ASKA_DIG/virtuoso/Sim/ASKA_DIG2/DIG_stimulus_tb/adexl/results/data/Interactive.5/1/ASKA_DIG2:DIG_stimulus_tb:1/psf.
 create cds_globals...
       ...successful.
 compose simulator input file...
@@ -142,7 +145,7 @@ reading simulation data...
 
 
 *Info*    Run complete for Point ID (5 1) on testbench [
-          ASKA_DIG:DIG_stimulus_tb:1 ].
+          ASKA_DIG2:DIG_stimulus_tb:1 ].
 
 
 
