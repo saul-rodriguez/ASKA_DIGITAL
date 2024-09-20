@@ -151,10 +151,10 @@ initial begin
 		/* First delay for program 1  */
 		/******************************/
 
-		#(75000000*SPI_CLK_DELAY); // 75 s delay
+//		#(75000000*SPI_CLK_DELAY); // 75 s delay
 //		#(7500000*SPI_CLK_DELAY); // 7.5 s delay
 //		#(750000*SPI_CLK_DELAY); // 750 ms delay
-//		#(75000*SPI_CLK_DELAY); // 75 ms delay
+		#(75000*SPI_CLK_DELAY); // 75 ms delay
 
 		$display("First delay finished");
 
@@ -276,13 +276,15 @@ initial begin
 
 	task write_SPI;		
 		begin
-			send_ASKA((8'h02 | send_address),electrode1);
-			#(20*SPI_CLK_DELAY);
-			send_ASKA((8'h03 | send_address),electrode2);
-	        	#(20*SPI_CLK_DELAY);	
+		
 			send_ASKA((8'h00 | send_address),conf0);
 			#(20*SPI_CLK_DELAY);
 			send_ASKA((8'h01 | send_address),conf1);
+	        	#(20*SPI_CLK_DELAY);	
+			send_ASKA((8'h02 | send_address),electrode1);
+			#(20*SPI_CLK_DELAY);
+			send_ASKA((8'h03 | send_address),electrode2);
+
 		end
 	endtask
 
