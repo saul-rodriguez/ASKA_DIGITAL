@@ -105,8 +105,8 @@ initial begin
     		electrode2 = `ELE2;
 
 		/* ON/OFF TIME 1s for 50 Hz*/
-//		ON_time = 50;
-//  		OFF_time = 50;
+		ON_time = 50;
+  		OFF_time = 50;
 
 		/* ON/OFF TIME 1s/3s for 50 Hz*/
 		//ON_time = 50;
@@ -114,11 +114,11 @@ initial begin
 
 		/* ON/OFF TIME 1s for 10 Hz*/
 	   	//ON_time = 10;
-		//OFF_time = 10;
+		//OFF_time = 10; 
 
 		/* ON/OFF TIME 1s for 10 Hz*/
-		ON_time = 10;
-   		OFF_time = 30;
+		//ON_time = 10;
+  		//OFF_time = 30;
 
 		/****************************/
 		/*     Reset                */
@@ -139,12 +139,12 @@ initial begin
 	    //conf_freq_amp_pha_ramp(400,50,4,50); // 50Hz, 50mA, ramp 1s  (Long sim required)
  	    //conf_freq_amp_pha_ramp(400,25,4,50); // 50Hz, 25mA, ramp 1s  (Long sim required)
  	    //conf_freq_amp_pha_ramp(2000,50,4,5); // 10Hz, 50mA ramp 0.5s (Long sim required, change ON_time = 10)
- 	    conf_freq_amp_pha_ramp(2000,20,4,1); // 10Hz, 20mA ramp 0s (Long sim required, change ON_time = 10)
+ 	    //conf_freq_amp_pha_ramp(2000,20,4,1); // 10Hz, 20mA ramp 0s (Long sim required, change ON_time = 10)
 		//conf_freq_amp_pha_ramp(400,50,4,0); // 50 Hz no ramp
 		//conf_freq_amp_pha_ramp(400,50,4,1); // 50 Hz no ramp
 		//conf_freq_amp_pha_ramp(40,50,1,10); // 500 Hz, 20ms ramp
 		//conf_freq_amp_pha_ramp(10,50,1,4); // 0.5ms, short ramp (Short simulation)
-		//conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
 		write_SPI;
 
 		/******************************/
@@ -197,9 +197,8 @@ initial begin
 	end
 
 	initial begin
-		//    $sdf_annotate ("/home/saul/projects/TEST_LIB2/innovus/output/typ_functional_1_8V_25C.sdf",I3,, "sdf.log", "MAXIMUM");
-		//    $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus/output/design_slow.sdf",I2,, "sdf.log", "MAXIMUM");
-		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/ASKA_DIG/innovus2/output/design_slow.sdf",I2,, "sdf.log", "MAXIMUM");
+//		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus2/output/design_slow.sdf",I0.I3,, "sdf.log", "MAXIMUM");
+//		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus2/output/design_slow.sdf",I0.I1.I3,, "sdf.log", "MAXIMUM");
 	end
 
 	reg[8*6:1] str1;
