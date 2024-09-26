@@ -137,14 +137,14 @@ initial begin
 
 		enable = 1'b1;
 	    //conf_freq_amp_pha_ramp(400,50,4,50); // 50Hz, 50mA, ramp 1s  (Long sim required)
- 	    //conf_freq_amp_pha_ramp(400,25,4,50); // 50Hz, 25mA, ramp 1s  (Long sim required)
+ 	    conf_freq_amp_pha_ramp(400,25,4,50); // 50Hz, 25mA, ramp 1s  (Long sim required)
  	    //conf_freq_amp_pha_ramp(2000,50,4,5); // 10Hz, 50mA ramp 0.5s (Long sim required, change ON_time = 10)
  	    //conf_freq_amp_pha_ramp(2000,20,4,1); // 10Hz, 20mA ramp 0s (Long sim required, change ON_time = 10)
 		//conf_freq_amp_pha_ramp(400,50,4,0); // 50 Hz no ramp
 		//conf_freq_amp_pha_ramp(400,50,4,1); // 50 Hz no ramp
 		//conf_freq_amp_pha_ramp(40,50,1,10); // 500 Hz, 20ms ramp
 		//conf_freq_amp_pha_ramp(10,50,1,4); // 0.5ms, short ramp (Short simulation)
-		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		//conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
 		write_SPI;
 
 		/******************************/
@@ -155,6 +155,7 @@ initial begin
 		#(7500000*SPI_CLK_DELAY); // 7.5 s delay
 //		#(750000*SPI_CLK_DELAY); // 750 ms delay
 //		#(75000*SPI_CLK_DELAY); // 75 ms delay
+//		#(7500*SPI_CLK_DELAY); // 7.5 ms delay
 
 		$display("First delay finished");
 
@@ -168,14 +169,20 @@ initial begin
 		//#1;	send_ASKA(8'h01,conf1);
 		send_ASKA((8'h01 | send_address),conf1);
 
-		#(5000000*SPI_CLK_DELAY); 
+		//#(5000000*SPI_CLK_DELAY); 
+		#(100000*SPI_CLK_DELAY); // 100 ms
 
 		/*****************************/
 		/*  Test New Program             */
 		/*****************************/
 
 		enable = 1;
-		conf_freq_amp_pha_ramp(400,25,4,25); // amp 25 mA, rampup/dwn 0.5s freq 50Hz
+		ON_time = 10;
+		OFF_time = 10;
+
+		//conf_freq_amp_pha_ramp(2000,20,4,1); // 10Hz, 20mA ramp 0s (Long sim required, change ON_time = 10)
+		//conf_freq_amp_pha_ramp(400,25,4,1); // amp 25 mA, no ramp freq 50Hz
+		conf_freq_amp_pha_ramp(2000,50,4,5); // 10Hz, 50mA ramp 0.5s (Long sim required, change ON_time = 10)
 		write_SPI;
 
 		#(10000000*SPI_CLK_DELAY);
@@ -198,7 +205,7 @@ initial begin
 
 	initial begin
 //		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus2/output/design_slow.sdf",I0.I3,, "sdf.log", "MAXIMUM");
-//		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus2/output/design_slow.sdf",I0.I1.I3,, "sdf.log", "MAXIMUM");
+//		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus2/output/design_slow.sdf",I0.I3.I1.I3,, "sdf.log", "MAXIMUM");
 	end
 
 	reg[8*6:1] str1;

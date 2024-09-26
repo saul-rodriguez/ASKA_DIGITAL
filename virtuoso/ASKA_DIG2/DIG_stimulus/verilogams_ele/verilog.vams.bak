@@ -27,6 +27,20 @@
 //`define OFF_TIME  50
 `define ELE1  32'b0000_0000_0000_0000_0000_0000_0000_0001
 `define ELE2  32'b0000_0000_0000_0000_0000_0000_0000_0010
+`define ELE3   32'b0000_0000_0000_0000_0000_0000_0000_0100
+`define ELE4   32'b0000_0000_0000_0000_0000_0000_0000_1000
+`define ELE5   32'b0000_0000_0000_0000_0000_0000_0001_0000
+`define ELE6   32'b0000_0000_0000_0000_0000_0000_0010_0000
+`define ELE7   32'b0000_0000_0000_0000_0000_0000_0100_0000
+`define ELE8   32'b0000_0000_0000_0000_0000_0000_1000_0000
+`define ELE9   32'b0000_0000_0000_0000_0000_0001_0000_0000
+`define ELE10  32'b0000_0000_0000_0000_0000_0010_0000_0000
+`define ELE11  32'b0000_0000_0000_0000_0000_0100_0000_0000
+`define ELE12  32'b0000_0000_0000_0000_0000_1000_0000_0000
+`define ELE13  32'b0000_0000_0000_0000_0001_0000_0000_0000
+`define ELE14  32'b0000_0000_0000_0000_0010_0000_0000_0000
+`define ELE15  32'b0000_0000_0000_0000_0100_0000_0000_0000
+`define ELE16  32'b0000_0000_0000_0000_1000_0000_0000_0000
 
 // Select one physical address of the IC 
 `define  IC_ADDRESS 8'h00
@@ -101,8 +115,11 @@ initial begin
 		//IC_addr = 2'b00;
 		send_address = `IC_ADDRESS;
 
-		electrode1 = `ELE1;
-    		electrode2 = `ELE2;
+	//	electrode1 = `ELE1;
+    //		electrode2 = `ELE2;
+
+	electrode1 = `ELE2;
+    		electrode2 = `ELE1;
 
 		/* ON/OFF TIME 1s for 50 Hz*/
 		ON_time = 50;
@@ -147,15 +164,183 @@ initial begin
 		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
 		write_SPI;
 
+	
+		//Channel 3
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+	//	electrode2 = `ELE3;
+		electrode1 = `ELE3;
+		
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+	   //Channel 4
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE4;
+		electrode1 = `ELE4;		
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+  		//Channel 5
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE5;
+		electrode1 = `ELE5;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+		//Channel 6
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE6;
+		electrode1 = `ELE6;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+		//Channel 7
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE7;
+		electrode1 = `ELE7;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+		//Channel 8
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE8;
+		electrode1 = `ELE8;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+		//Channel 9
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE9;
+		electrode1 = `ELE9;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+	//Channel 10
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE10;
+		electrode1 = `ELE10;	
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+	//Channel 11
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE11;
+		electrode1 = `ELE11;		
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+	//Channel 12
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE12;
+		electrode1 = `ELE12;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+	//Channel 13
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE13;
+		electrode1 = `ELE13;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+	//Channel 14
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		//electrode2 = `ELE14;
+		electrode1 = `ELE14;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+	//Channel 15
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		electrode2 = `ELE15;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+	//Channel 16
+		#(4500*SPI_CLK_DELAY); // 7.5 ms delay
+		enable = 0;
+	    update_config;	
+		send_ASKA((8'h01 | send_address),conf1);
+
+		electrode2 = `ELE16;
+		enable = 1;
+		conf_freq_amp_pha_ramp(10,50,2,6); // 0.5ms, short ramp (Short simulation)
+		write_SPI;
+
+
 		/******************************/
 		/* First delay for program 1  */
 		/******************************/
 
 //		#(75000000*SPI_CLK_DELAY); // 75 s delay
-		#(7500000*SPI_CLK_DELAY); // 7.5 s delay
+//		#(7500000*SPI_CLK_DELAY); // 7.5 s delay
 //		#(750000*SPI_CLK_DELAY); // 750 ms delay
-//		#(75000*SPI_CLK_DELAY); // 75 ms delay
-//		#(7500*SPI_CLK_DELAY); // 7.5 ms delay
+		#(75000*SPI_CLK_DELAY); // 75 ms delay
 
 		$display("First delay finished");
 
@@ -169,20 +354,14 @@ initial begin
 		//#1;	send_ASKA(8'h01,conf1);
 		send_ASKA((8'h01 | send_address),conf1);
 
-		//#(5000000*SPI_CLK_DELAY); 
-		#(100000*SPI_CLK_DELAY); // 100 ms
+		#(5000000*SPI_CLK_DELAY); 
 
 		/*****************************/
 		/*  Test New Program             */
 		/*****************************/
 
 		enable = 1;
-		ON_time = 10;
-		OFF_time = 10;
-
-		//conf_freq_amp_pha_ramp(2000,20,4,1); // 10Hz, 20mA ramp 0s (Long sim required, change ON_time = 10)
-		//conf_freq_amp_pha_ramp(400,25,4,1); // amp 25 mA, no ramp freq 50Hz
-		conf_freq_amp_pha_ramp(2000,50,4,5); // 10Hz, 50mA ramp 0.5s (Long sim required, change ON_time = 10)
+		conf_freq_amp_pha_ramp(400,25,4,25); // amp 25 mA, rampup/dwn 0.5s freq 50Hz
 		write_SPI;
 
 		#(10000000*SPI_CLK_DELAY);
@@ -205,7 +384,7 @@ initial begin
 
 	initial begin
 //		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus2/output/design_slow.sdf",I0.I3,, "sdf.log", "MAXIMUM");
-//		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus2/output/design_slow.sdf",I0.I3.I1.I3,, "sdf.log", "MAXIMUM");
+		 $sdf_annotate ("/home/saul/projects/ASKA_DIGITAL/innovus2/output/design_slow.sdf",I0.I3.I1.I3,, "sdf.log", "MAXIMUM");
 	end
 
 	reg[8*6:1] str1;
